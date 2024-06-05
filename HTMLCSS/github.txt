@@ -11,6 +11,7 @@ github.com
 Sign Up
 
 git : 소스코드를 내 컴퓨터에서 인터넷으로 올려주는 역할
+윈도메뉴 클릭후 git 입력후 Git Bash 클릭
 git config --global user.email "이메일주소" 엔터
 git config --global user.name "사용자이름" 엔터
 git config --list
