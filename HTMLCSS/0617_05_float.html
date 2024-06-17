@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{width: 1200px;margin: 0 auto;border: 1px solid;}
+        .one{overflow: hidden;}
+        .one>div{float: left;}
+        .one>div:nth-child(1){width: 20%;background-color: red;}
+        .one>div:nth-child(2){width: 60%;background-color: blue;}
+        .one>div:nth-child(3){width: 20%;background-color: yellow;}
+        .two{background-color: green;}
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="one">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+        <div class="two">1</div>
+    </div>
+</body>
+</html>
