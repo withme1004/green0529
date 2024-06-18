@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		@font-face {
+			font-family: solid;
+			src: url(webfonts/fa-solid-900.woff2) format("woff2");
+		}
+		@font-face {
+			font-family: brands;
+			src: url(webfonts/fa-brands-400.woff2) format("woff2");
+		}
+		@font-face {
+			font-family: aritab;
+			src: url(webfonts/Arita-buriB.otf) format("opentype");
+		}
+		@font-face {
+			font-family: arital;
+			src: url(webfonts/Arita-buriL.otf) format("opentype");
+		}
+		p{font: 30px solid;}
+		p::before{content: "\f09a";font-family: brands;}
+		h1{font-family: aritab;}
+		h2{font-family: arital;}
+	</style>
+</head>
+<body>
+	<p>&#xf007;</p>
+	<div>abc</div>
+	<h1>abc존경하는 88만 청주시민 여러분!</h1>
+	<h2>존경하는 88만 청주시민 여러분!</h2>
+</body>
+</html>
