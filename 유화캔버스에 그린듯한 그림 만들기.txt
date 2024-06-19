@@ -1,0 +1,19 @@
+유화캔버스에 그린듯한 그림 만들기
+1. canvas.jpg파일에 tree.jpg파일을 드레그 드롭한후 더블클릭한다.
+2. tree 레이어 필터갤러리 atristic(예술화)-->paint daubs(페인트바르기) brush size 5 sharpness 1
+사진의 섬세한 느낌은 줄이고 그림 느낌을 더한다.
+새레이어만들기 brush strokes(브러시획)-->angled strokes(각진획) direction balance 80 stroke lenght 10
+붓으로 덧칠한 느낌을 더한다.
+distort(왜곡)-->glass(유리) distortion 2 smoothness 5
+texture-->texturizer scling 190% light top Right 캔버스 질감을 만든다.
+3. ctrl+j레이어 복제
+4. 색조/채도 조정레이어 채도 -100 alt클릭으로 해당 채도를 하위레이어 하나에만 적용되도록 설정한다.
+5. tree copy레이어를 클릭하고 필터>스타일>엠보스
+height 10 amount 60% 유화 물감의 입체적인 느낌을 더한다. 블랜딩모드 소프트라이트
+6. 컨트롤키를 누른상태로 tree 레이어 선택후 그룹(ctrl+G)
+7. 그룹레이어를 선택후 alt를 누룬채로 레이어 마스크아이콘을 클릭한다.
+8. 그룹레이어 레이어마스크를 선택 후thick heavy brushes(대형브러시)-->rough flat bristle(거친기본강모)
+흰색으로 캔버스 이미지 위를 드래그하여 붓으로 그린 듯한 모양을 만든다.
+9. ctrl 을 누른채로 레이어 마스크 섬네일을 클릭해서 브러시로 칠한 부분을 선택 영역으로 지정한다.
+10. 새레이어를 추가하고 회색(#777777) 채우고 베벨 엠보스 depth 50% angle 139 altitude 42
+블랜딩모드 소프트라이트
