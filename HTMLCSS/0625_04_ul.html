@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/all.css">
+	<style>
+		@font-face {
+			font-family: NanumBarunGothic;
+			src: url(webfonts/NanumBarunGothic.otf) format("opentype");
+		}
+		*{margin: 0;padding: 0;}
+		section div{width: 200px;height: 200px;border-radius: 50%;background-color: #000;text-align: center;color: #fff;}	
+		section div h3{padding: 50px 0 30px;position: relative;}
+		section div h3:after{content: "";width: 30px;height: 2px;background-color: #ccc;position: absolute;bottom: 15px;left: 85px;}
+		section > p{color: #f00;width: 50px;height: 200px;text-align: center;line-height: 200px;font-size: 20px;}
+		section div,section>p{float: left;}
+	</style>
+</head>
+<body>
+	<section>
+		<div>
+			<h3>경영이념</h3>
+			<p>사회적 책임을 근간으로 <br>하는 경영이념</p>
+		</div>
+		<p><i class="fa-solid fa-angle-right"></i></p>
+	</section>
+	
+</body>
+
+</html>
