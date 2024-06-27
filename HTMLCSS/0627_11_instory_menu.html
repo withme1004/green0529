@@ -9,26 +9,52 @@
 		body{}
 		/* .wrapper{width: 1000px;margin: 0 auto;} */
 		.wrapper{background-color: #d3222a;}
-		.top{text-align: right;width: 1000px;margin: 0 auto;}
+		.top{text-align: right;width: 1000px;margin: 0 auto;overflow: hidden;}
+		.top ul{float: right;list-style: none;}
+		.top ul li{float: left;}
+		.top ul li a{color: #fff;text-decoration: none;text-transform: uppercase;line-height: 50px;}
+		.top ul li a:after{content: "|";padding: 0 10px;}
+		.top ul li:last-child a:after{content: "";}
 		.pattern{background-image: url(images/pattern.gif);height: 82px;}
 		.pattern_inner{width: 1000px;margin: 0 auto;}
 		.main{width: 1000px;margin: 0 auto;height: 625px;overflow: hidden;}
-		.main>div{float: left;}
+		.main>div{float: left;position: relative;}
+		.main>div ul{position: absolute;top:220px;left: 50px;list-style: none;}
+		.main>div ul li a{color: #000;text-decoration: none;text-transform: capitalize;}
 		.main>div:last-child{width: 514px;height: 100%;background-image: url(images/index_main_02.gif);}
+		.main>div:last-child p{color: #fff;font-size: 24px;}
 		.foot{clear: left;height: 100px;background-color: #fff;border-bottom: 1px solid #ccc;}
 		.foot_inner{width: 1000px;margin: 0 auto;text-align: center;line-height: 100px;}
 	</style>
 </head>
 <body>
 	<div class="wrapper">
-		<div class="top"><img src="images/index_top.gif" alt="top"></div>
+		<div class="top">
+			<ul>
+				<li><a href="#">회원가입</a></li>
+				<li><a href="#">로그인</a></li>
+				<li><a href="#">japanese</a></li>
+				<li><a href="#">chinese</a></li>
+				<li><a href="#">italian</a></li>
+			</ul>
+		</div>
 		<div class="pattern">
 			<div class="pattern_inner">
 				<img src="images/index_pattern.gif" alt="pattern">
 			</div>
 		</div>
 		<div class="main">
-			<div><img src="images/index_main_01.gif" alt="main"></div>
+			<div>
+				<img src="images/index_main_01.gif" alt="main">
+				<ul>
+					<li><a href="#">home</a></li>
+					<li><a href="#">instory</a></li>
+					<li><a href="#">portfolio</a></li>
+					<li><a href="#">product</a></li>
+					<li><a href="#">illustrator</a></li>
+					<li><a href="#">contact</a></li>
+				</ul>
+			</div>
 			<div><p>Home 메인 페이지입니다</p></div>
 		</div>
 		<div class="foot">
