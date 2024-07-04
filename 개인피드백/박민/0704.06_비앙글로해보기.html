@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    ul{list-style: none;}
+    a{color: #000; text-decoration: none;}
+    header{height: 100px;}
+    #wrap header .top{margin: 0 20px; background-color: #f9f9f9;}
+    #wrap .logo{float: left; width: 126px; height: 40px; position: relative;}
+    #wrap .logo a{display: block; width: 100%; top: 70%; height: 40px; position: absolute;}
+    #wrap .menu{position: relative;}
+    #wrap .menu > ul{height: 100px;}
+    #wrap .menu > ul > li{float: left; position: relative; width: 150px;}
+    #wrap .menu > ul > li:last-child{float: right; width: 400px; line-height: 100px;}
+    #wrap .menu > ul > li:last-child p{float: left; width: 30%; text-align: center;}
+    #wrap .menu > ul > li > a{display: block; line-height: 100px; text-align: center;}
+    #wrap .menu > ul .sub{height: 0; overflow: hidden; 
+      transition: 0.5s; position: absolute; left: 0; top: 100px; width: 100%; z-index: 2;}
+    #wrap .menu > ul:hover .sub{height: 320px; padding: 20px 0;}  
+    #wrap .menu > ul .sub li{line-height: 30px; text-align: center;}
+    #wrap .menu > ul .sub li a{color: #999;}
+    #wrap .menu > ul .sub li:hover a{color: darkgreen; display: block; text-decoration: underline;}
+    .bg{position: absolute; left: 0; top: 100px; background-color: #f9f9f9; width: 100%; height: 0px;
+      transition: 0.5s; z-index: 1;}
+    #wrap .menu > ul:hover ~ .bg{height: 280px;}
+    header .main{width: 1800px; height: 800px; margin: 0 auto; position: relative;}
+    header .main > div{width: 100%; height: 100%; background-image: url(images/maindata125374_0.jpg); background-repeat: no-repeat; position: absolute; border-radius: 10px;}
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <header>
+      <div class="top">
+        <div class="logo"><a href="#"><img src="images/logo.svg" alt=""></a></div>
+        <div class="menu">
+          <ul>
+            <li>
+              <a href="#">products</a>
+              <ul class="sub">
+                <li><a href="#">quadthera</a></li>
+                <li><a href="#">hot & cool glow on</a></li>
+                <li><a href="#">hot & cool glow on petite</a></li>
+                <li><a href="#">haute liang</a></li>
+                <li><a href="#">glow boosting gel</a></li>
+                <li><a href="#">all</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">about us</a>
+              <ul class="sub">
+                <li><a href="#">our story</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">articles</a>
+              <ul class="sub">
+                <li></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">support</a>
+              <ul class="sub">
+                <li><a href="#">how to use</a></li>
+                <li><a href="#">faq</a></li>
+                <li><a href="#">get in touch</a></li>
+              </ul>
+            </li>
+            <li>
+              <p><a href="#">faq</a></p>
+              <p><a href="#">get in touch</a></p>
+              <p><a href="#">en</a></p>
+            </li>
+          </ul>
+          <div class="bg"></div>
+        </div>
+      </div>
+      <div class="main">
+        <div></div>
+      </div>
+    </header>
+  </div>
+</body>
+</html>
