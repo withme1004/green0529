@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+*{margin: 0;padding: 0;}
+
+ul{list-style: none;}
+a{color: #333;text-decoration: none;}
+body{background-color: #f5f5f5;}
+#wrap{}
+#wrap header{height: 100px;width: 1862px;}
+#wrap header:hover{}
+#wrap header .top{width: 1675.8px;margin: 0 auto;}
+#wrap .logo{float: left;width: 134px;height: 100px;position: relative;}
+#wrap .logo img{display: block;width: 100%;position: absolute;top: 50%;transform: translateY(-50%);vertical-align: middle;}
+#wrap .menu{float: left;}
+#wrap .menu >ul{height: 100px;} 
+#wrap .menu >ul > li{float: left;position: relative;width: 140px;}
+#wrap .menu >ul > li>a{display: block;line-height: 100px;text-align: center;position: relative;font-weight: bold;font-size: 16px}
+#wrap .menu >ul > li>a:after{content: "";position: absolute;left: 0;bottom: 0;width: 100%;height: 4px;transition: 0.5s;}
+#wrap .menu >ul > li:hover>a::after{transform: scaleX(1);}
+#wrap .menu >ul .sub{height: 0;overflow: hidden;transition: 0.5s;position: absolute;left: 0;top: 100px;width: 100%;z-index: 1;}
+#wrap .menu >ul:hover .sub{height: 280px;padding: 10px 0;}
+#wrap .menu >ul .sub li{line-height: 40px;text-align: center;}
+
+#wrap .menu >ul .sub li:hover a{color: green;text-decoration: underline; display: block;}
+.bg{position: absolute;left: 0;top: 100px;width: 100%;height: 0px;transition: 0.4s;border-top: 1px solid transparent;}
+#wrap .menu >ul:hover ~ .bg{height: 280px;}
+
+div.right ul{float: right;}
+div.right ul li{float: left;font-weight: bold;margin: 30px 20px;}
+div
+div.bg img{position: absolute; width: 1769px;margin-left: 50px;border-radius: 10px;}
+/*'~'은 형제를 찾을때, 형제도 아래 형제만 찾을 수 있다. */
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <div class="top">
+                <div class="logo"><img src="images/logo.svg" alt=""></div>
+                <div class="menu left">
+                    <ul>
+                        <li>
+                            <a href="#">products</a>
+                            <ul class="sub">
+                                <li><a href="#">Quadthera</a></li>
+                                <li><a href="#">Hot&Cool Glow On</a></li>
+                                <li><a href="#">Hot&Coom Glow On Petite</a></li>
+                                <li><a href="#">Haute Liang</a></li>
+                                <li><a href="#">Glow Boosting Gel</a></li>
+                                <li><a href="#">All</a></li>
+                             
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">투자정보</a>
+                            <ul class="sub">
+                                <li><a href="#">Our story</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">대리점안내</a>
+                            <ul class="sub">
+                                <li><a href="#">대리점소개</a></li>
+                                
+                
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">SUPPORT</a>
+                            <ul class="sub">
+                                <li><a href="#">How to Use</a></li>
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">GET oin Touch</a></li>	
+                                    
+                            </ul>
+                        </li></ul>
+                        
+                      
+                    
+                    <div class="bg"></div>
+                </div>
+                <div class="right">
+                        <ul>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Get in Touch↗</a></li>
+                            <li><a href="#">EN</a></li>
+                        </ul>
+                    </div>
+                    <div class="bg"><img src="images/maindata125350_0.jpg" alt=""></div>
+            </div>
+            
+        </header>
+        
+    </div>
+</body>
+</html>
