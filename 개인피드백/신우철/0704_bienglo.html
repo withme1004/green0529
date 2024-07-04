@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  a{
+    color: #333;
+    text-decoration: none;
+  }
+
+  #wrap header {
+    height: 100px;
+  }
+
+  #wrap header .top {
+    width: 1480px;
+    margin: 0 auto;
+  }
+
+  #wrap .logo {
+    float: left;
+    width: 140px;
+    height: 100px;
+    position: relative;
+    margin-right: 55px;
+  }
+
+  #wrap .logo a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url(images/logo.svg);
+    background-repeat: no-repeat;
+    background-size: 134px 85px;
+    position: absolute;
+    top: 10%;
+  }
+
+  #wrap .menu{
+    float: left;
+  }
+
+  #wrap .rightmenu {
+    float: right;
+  }
+
+
+  #wrap .menu > ul, #wrap .rightmenu > ul {
+    height: 100px;
+  }
+
+  #wrap .menu > ul > li {
+    float: left;
+    width: 180px;
+    position: relative;
+    text-align: center;
+  }
+
+  #wrap .rightmenu > ul > li {
+    float: left;
+    width: 100px;
+    position: relative;
+    text-align: center;
+  }
+
+  #wrap .menu > ul > li > a {
+    text-transform: uppercase;
+    line-height: 100px;
+    text-align: center;
+    position: relative;
+  }
+
+  #wrap .rightmenu > ul > li a{
+    line-height: 100px;
+    text-align: center;
+    position: relative;
+  }
+
+  #wrap .menu > ul .sub {
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 80px;
+    line-height: 50px;
+    width: 100%;
+    text-transform: capitalize;
+    transition: 0.5s;
+    z-index: 1;
+    font-size: 14px;
+  }
+
+  #wrap .menu > ul:hover .sub{
+    height: 400px;
+    padding: 10px 0;
+  }
+
+  #wrap .menu > ul .sub li:hover {
+    line-height: 30px;
+  }
+
+  #wrap .menu > ul .sub li:hover a {
+    text-decoration: underline;
+    color:rgb(178, 255, 107);
+    font-weight: bold;
+    display: block;
+  }
+
+  .bg {
+    position: absolute;
+    left: 0;
+    top: 100px;
+    background-color: #fff;
+    width: 100%;
+    height: 0px;
+    transition: 0.4s;
+    border-top: 1px solid transparent;
+  }
+
+  #wrap .menu > ul:hover ~.bg {
+    height: 320px;
+  }
+
+  .slide {
+    padding: 0 30px;
+  }
+
+</style>
+<body>
+  <div id="wrap">
+    <header>
+      <div class="top">
+        <div class="logo">
+          <a href="#"></a>
+        </div>
+        <div class="menu">
+          <ul>
+            <li><a href="#">products</a>
+              <ul class="sub">
+                <li><a href="">quadthera</a></li>
+                <li><a href="">hot & cool glow on</a></li>
+                <li><a href="">hot & cool glow on petite</a></li>
+                <li><a href="">haute liang</a></li>
+                <li><a href="">glow boosting gel</a></li>
+                <li><a href="">all</a></li>
+              </ul>
+            </li>
+            <li><a href="#">about us</a>
+              <ul class="sub">
+                <li><a href="">our story</a></li>
+              </ul>
+            </li>
+            <li><a href="#">articles</a>
+              <ul class="sub">
+                
+              </ul>
+            </li>
+            <li><a href="#">support</a>
+              <ul class="sub">
+                <li><a href="">how to use</a></li>
+                <li><a href="">FAQ</a></li>
+                <li><a href="">get in touch</a></li>
+              </ul>
+            </li>
+         </ul>
+         <div class="bg">
+          
+        </div>
+        </div>
+        <div class="rightmenu">
+          <ul>
+            <li><a href="">FAQ</a></li>
+            <li><a href="">Get in Touch</a></li>
+            <li><a href="">EN</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div class="slide"><img src="images/bienglo.png" alt=""></div>
+  </div>
+</body>
+</html>
