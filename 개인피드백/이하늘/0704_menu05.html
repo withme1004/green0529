@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>메뉴</title>
+    <style>
+      @font-face {
+        font-family: "PretendardVariable";
+        src: url(./webfonts/PretendardVariable.woff2) format(woff);
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #000;
+      }
+      #wrap {
+        width: 1200px;
+        margin: 0 auto;
+      }
+      #wrap header {
+        height: 100px;
+      }
+
+      #wrap .logo {
+        float: left;
+        width: 200px;
+        height: 40px;
+        background-image: url(./images/logo.svg);
+        background-repeat: no-repeat;
+      }
+      #wrap .menu > ul > li {
+        float: left;
+        width: 25%;
+      }
+      #wrap .menu {
+        font-family: "PretendardVariable";
+
+        float: left;
+      }
+      #wrap .menu > ul > li > a {
+        display: block;
+    
+        line-height: 50px;
+        text-align: center;
+        background-color: #fff;
+      }
+   
+
+      #wrap .menu > ul {
+        width: 800px;
+        height: 50px;
+        margin-left: 50px;
+        margin-top: 20px;
+      }
+      #wrap .menu > ul .sub li a{color: #ccc;}
+    </style>
+  </head>
+
+  <body>
+    <div id="wrap">
+      <header>
+        <div class="top">
+          <div class="logo"><a href="#"></a></div>
+          <div class="menu">
+            <ul>
+              <li>
+                <a href="#">PRODUCTS</a>
+                <ul class="sub">
+                  <li>
+                    <a href="#">Quadthera</a>
+                  </li>
+                  <li>
+                    <a href="#">Hot & Cool Glow On</a>
+                  </li>
+                  <li>
+                    <a href="#">Haute Liang</a>
+                  </li>
+                  <li>
+                    <a href="#">Glow Boosting Gel</a>
+                  </li>
+                  <li>
+                    <a href="#">ALL</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#">ABOUT US</a>
+                <ul class="sub">
+                  <li>
+                    <a href="#">our story</a>
+                  </li>
+                </ul>
+              </li>
+
+            
+
+              <li>
+                <a href="#">ARTICLES </a>
+              </li>
+
+                <li>
+                  <a href="#">SUPPORT</a>
+                  <ul class="sub">
+                    <li>
+                      <a href="#">HOW TO USE</a>
+                    </li>
+                    <li>
+                      <a href="#">FAQ</a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        GET IN TOUCH</a>
+                    </li>
+                   
+                  </ul>
+                </li>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </header>
+    </div>
+  </body>
+</html>
