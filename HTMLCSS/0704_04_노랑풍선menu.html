@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		*{margin: 0;padding: 0;}
+		ul{list-style: none;}
+		a{color: #333;text-decoration: none;}
+		body{background-color: antiquewhite;}
+		#wrap{}
+		#wrap header{height: 100px;}
+		#wrap header .top{width: 1480px;margin: 0 auto;}
+
+		#wrap .logo{float: left;width: 134px;height: 100px;position: relative;}
+		#wrap .logo a{display: block;width: 100%;height: 38px;background-image: url(images/logo_yellow.png);background-repeat: no-repeat;background-size: 134px 85px;position: absolute;top: 50%;transform: translateY(-50%);}
+
+
+		#wrap .menu{float: right;}
+		#wrap .menu > ul{width: 800px;height: 50px;margin-right: 20px;margin-top: 20px;}
+		#wrap .menu > ul > li{float: left;width: 25%;position: relative;}
+		#wrap .menu > ul > li > a{display: block;border: 1px solid #333;border-left: none;line-height: 50px;text-align: center;background-color: #fff;}
+		#wrap .menu > ul > li:first-child > a{border-left: 1px solid #333;}
+		#wrap .menu > ul .sub{background-color: #000;height: 0;overflow: hidden;transition: 0.8s;position: absolute;left: 0;top: 52px;width: 100%;z-index: 1;}
+		#wrap .menu > ul .sub a{color: #fff;}
+		#wrap .menu > ul:hover .sub{height: 160px;}
+		#wrap .menu > ul .sub li{line-height: 40px;text-align: center;}
+		
+		#wrap .menu > ul>li:hover>a{background-color: #000;color: #fff;}
+		#wrap .menu > ul .sub li:hover a{background-color: #fff;color: #000;display: block;}
+		.bg{position: absolute;left: 0;top: 72px;background-color: #000;width: 100%;height: 0;transition: 0.8s;}
+		#wrap .menu > ul:hover ~ .bg{height: 160px;}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<header>
+			<div class="top">
+				<div class="logo"><a href="#"></a></div>
+				<div class="menu">
+					<ul>
+						<li>
+							<a href="#">회사소개</a>
+							<ul class="sub">
+								<li><a href="#">회사소개</a></li>
+								<li><a href="#">대표인사말</a></li>
+								<li><a href="#">연혁</a></li>
+								<li><a href="#">고객만족경영</a></li>
+								<li><a href="#">윤리경영</a></li>
+								<li><a href="#">CI소개</a></li>
+								<li><a href="#">오시는길</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">투자정보</a>
+							<ul class="sub">
+								<li><a href="#">재무정보</a></li>
+								<li><a href="#">공고사항</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">대리점안내</a>
+							<ul class="sub">
+								<li><a href="#">대리점소개</a></li>
+								<li><a href="#">개설신청안내</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">홍보센터</a>
+							<ul class="sub">
+								<li><a href="#">사회공헌</a></li>
+								<li><a href="#">보도기사</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">채용정보</a>
+							<ul class="sub">
+								<li><a href="#">인재상</a></li>
+								<li><a href="#">복지제도</a></li>
+								<li><a href="#">채용정보</a></li>
+							</ul>
+						</li>
+					</ul>
+					<div class="bg"></div>
+				</div>
+			</div>
+			
+		</header>
+		
+	</div>
+</body>
+</html>
