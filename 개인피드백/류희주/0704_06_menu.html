@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
+    <style>
+        *{margin: 0;padding: 0;}
+        ul{list-style: none;}
+        a{color: #333;text-decoration: none;}
+        body{background-color: #fff;}
+        #wrap{
+            margin: 0 auto;
+        }
+        #wrap header{
+            height: 100px;    
+        }
+        #wrap header:hover{
+            background-color: #fff;
+        }
+        #wrap header .top{
+            width: 1700px;
+            margin: 0 auto;
+        }
+        #wrap .logo{
+            float: left;
+            width: 126px;
+            height: 100px;
+            position: relative;
+        }
+        #wrap .logo a{
+            width: 100%;
+            height: 40px;
+            display: block;
+            background-image: url(./images/bienglo_logo.svg);
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        #wrap .menu{
+            float: left;
+        }
+        #wrap .menu > ul{
+            height: 100px;
+            margin-left: 80px;
+        }
+        #wrap .menu > ul > li{
+            float: left;
+            position: relative;
+            width: 140px;
+        }
+        #wrap .rightmenu > ul > li > a{
+            display: block;/*a는 인라인속성이라..*/
+            line-height: 100px;/*그냥높이만주면텍스트를 또 옮겨야함..*/
+            text-align: center;
+            position: relative;
+            font-family: "Pretendard";
+            font-weight: 600;
+            cursor: pointer;
+        }
+        #wrap .rightmenu > ul{
+            float: right;
+            position: relative;
+            
+        }
+        #wrap .rightmenu > ul > li{
+            padding-left: 20px;
+            float: left;           
+        }
+        #wrap .menu > ul > li > a{
+            display: block;/*a는 인라인속성이라..*/
+            line-height: 100px;/*그냥높이만주면텍스트를 또 옮겨야함..*/
+            text-align: center;
+            position: relative;
+            font-family: "Pretendard";
+            font-weight: 600;
+            cursor: pointer;
+        }
+        #wrap .menu > ul .sub{
+            height: 0;
+            overflow: hidden;
+            transition: 0.5s;
+            position: absolute;
+            left: 0;
+            top: 100px;
+            width: 100%;
+            z-index: 1;
+        }
+        #wrap .menu > ul:hover .sub{
+            height: 320px;
+            padding: 3px 0;
+        }
+        #wrap .menu > ul .sub li{
+            line-height: 40px;
+            text-align: center;
+        }
+        #wrap .menu > ul .sub li a{
+            color: #b8b8b8;
+        }
+        #wrap .menu > ul .sub li:hover a{
+            color: #1e4200;
+            display: block;
+            text-decoration: underline;
+        }
+        .bg{
+            position: absolute;
+            left: 0;
+            top: 100px;
+            width: 100%;
+            height: 0px;
+            transition: 0.4s;
+        }
+        #wrap .menu > ul:hover ~ .bg{
+            background-color: #fff;
+            height: 360px;
+        }
+        .banner{
+            width: 95%;
+            margin: 0 auto;
+        }
+        .banner img{
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <div class="top">
+                <div class="logo">
+                    <a href="#"></a>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li>
+                            <a href="#">PRODUCTS</a>
+                            <ul class="sub">
+                                <li><a href="#">Quadthera</a></li>
+                                <li><a href="#">Hot & Cool Glow On</a></li>
+                                <li><a href="#">Hot & Cool Glow On Petite</a></li>
+                                <li><a href="#">Haute Liang</a></li>
+                                <li><a href="#">Glow Boosting Gel</a></li>
+                                <li><a href="#">ALL</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">ABOUT US</a>
+                            <ul class="sub">
+                                <li><a href="#">Our Story</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">ARTICLES</a>
+                        </li>
+                        <li>
+                            <a href="#">SUPPORT</a>
+                            <ul class="sub">
+                                <li><a href="#">How to use</a></li>
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">Get in touch</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="bg"></div>
+                </div>
+                <div class="rightmenu">
+                    <ul>
+                        <li>
+                            <a href="#">FAQ</a>
+                        </li>
+                        <li>
+                            <a href="#">Get in Touch</a>
+                            <span></span>
+                        </li>
+                        <li>
+                            <a href="#">EN</a>
+                        </li>
+                    </ul>
+                    <div class="bg"></div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="banner">
+                <a href="#">
+                    <img src="./images/bienglo.jpg" alt="bienglo">
+                </a>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
