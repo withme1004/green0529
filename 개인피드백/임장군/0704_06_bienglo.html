@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      ul li a {
+        text-decoration: none;
+      }
+      #wrap header {
+        height: 100px;
+      }
+      #wrap header .left {
+        width: 1700px;
+        margin: 0 auto;
+      }
+      #wrap .logo {
+        float: left;
+        width: 126px;
+        height: 100px;
+        margin-right: 100px;
+      }
+      #wrap .logo a {
+        line-height: 100px;
+      }
+      #wrap .logo a img {
+        vertical-align: middle;
+      }
+      #wrap .menu > ul {
+        height: 100px;
+      }
+      #wrap .menu > ul > li {
+        width: 140px;
+        float: left;
+        text-align: center;
+        position: relative;
+      }
+      #wrap .menu > ul > li > a {
+        display: block;
+        line-height: 100px;
+      }
+      #wrap .menu .sub {
+        height: 0;
+        overflow: hidden;
+        transition: 0.5s;
+        position: absolute;
+        left: 0;
+        width: 100%;
+      }
+      #wrap .menu > ul:hover .sub {
+        height: 300px;
+      }
+      #wrap .menu > ul:hover .sub li {
+        line-height: 30px;
+        font-size: 13px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <header>
+        <div class="left">
+          <div class="logo">
+            <a href="#"><img src="images/bienglo.svg" alt="logo" /></a>
+          </div>
+          <div class="menu">
+            <ul>
+              <li>
+                <a href="#">products</a>
+                <ul class="sub">
+                  <li><a href="#">quarthera</a></li>
+                  <li><a href="#">hot & cool glow on</a></li>
+                  <li>
+                    <a href="#">hot & cool glow on<br />petite</a>
+                  </li>
+                  <li><a href="#">haute liang</a></li>
+                  <li><a href="#">glow boostiong gel</a></li>
+                  <li><a href="#">all</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">about us</a>
+                <ul class="sub">
+                  <li><a href="#">our story</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">articles</a>
+              </li>
+              <li>
+                <a href="#">support</a>
+                <ul class="sub">
+                  <li><a href="#">how to use</a></li>
+                  <li><a href="#">FAQ</a></li>
+                  <li><a href="#">get in touch</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="right">
+          <ul>
+            <li>FQA</li>
+            <li>Get in Touch</li>
+            <li></li>
+          </ul>
+        </div>
+      </header>
+    </div>
+  </body>
+</html>
