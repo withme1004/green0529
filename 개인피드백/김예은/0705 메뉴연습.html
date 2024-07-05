@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    ul{list-style: none; ;}
+    a{color: #000;text-decoration: none;}
+
+    
+header{width: 1800px;height: 100px; margin: 0 auto;overflow: hidden;}
+
+.left{float: left; overflow: hidden;}
+.left .menu>li{float: left; padding: 0 20px; width: 140px;height: 100px;text-align: center; }
+.left .menu>li>a{line-height: 100px;}
+.left .menu>li:nth-child(1)>a>img{width: 126px;height: 41px; margin-right: 50px;vertical-align: middle;}
+
+.bg{position: absolute;left: 0; top: 100px; height: 0;width: 100%; transition: 0.4s;}
+
+.left .menu .sub{z-index: 1; position: absolute; top: 100px; height: 0; overflow: hidden;}
+.left .menu:hover .sub li{transition: 0.5s;padding: 10px 0; width: 140px;}
+.left:hover .sub{height: 240px;}
+.left:hover ~ .bg{height: 240px;background-color:#fff; }
+.left .menu:hover .sub li a{display: block; font-size: 14px; color:darkgray;}
+
+.left .menu:hover .sub li:hover a{color: green; text-decoration: underline;}
+
+.right{float: right;overflow: hidden; width: 300px;}
+.right .faq>li{float: left; padding: 0 20px; line-height: 100px;}
+.right .faq{height: 100px;}
+
+
+.slide{width: 1800px; margin: 0 auto; border-radius: 20px; overflow: hidden;}
+
+
+  </style>
+</head>
+
+<body>
+  
+<div class="wrap">
+
+<header>
+<div class="left">
+<ul class="menu">
+  <li>
+    <a href="#"><img src="images/logo.svg" alt=""></a></li>
+  <li>
+    <a href="#">PRODUCT</a>
+     <ul class="sub">
+      <li><a href="#">Quadthera</a></li>
+      <li><a href="#">Hot & Cool Glow On</a></li>
+      <li><a href="#">Hot & Cool Glow On<br>Petite</a></li>
+      <li><a href="#">Haute Liang</a></li>
+      <li><a href="#">Glow Boosting Gel</a></li>
+      <li><a href="#">All</a></li>
+     </ul>
+  </li>
+  <li>
+    <a href="#">ABOUT US</a>
+      <ul class="sub">
+        <li><a href="#">Our Story</a></li>
+      </ul>
+  </li>
+  <li>
+    <a href="#">ARTICLES</a>
+    <ul class="sub"></ul>
+  </li>
+  <li>
+    <a href="#">SUPPORT</a>
+      <ul class="sub">
+        <li><a href="#">How To Use</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Get In Touch</a></li>
+      </ul>
+  </li>
+</ul>
+</div>
+
+<div class="right">
+  <ul class="faq">
+    <li><a href="">FAQ</a></li>
+    <li><a href="">Get in Touch</a></li>
+    <li><a href="">EN</a></li>
+  </ul>
+</div>
+
+<div class="bg"></div>
+</header>
+
+<div class="slide"><img src="images/bienglo.png" alt=""></div>
+
+</div>
+
+
+</body>
+</html>
