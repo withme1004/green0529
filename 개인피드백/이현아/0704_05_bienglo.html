@@ -21,14 +21,14 @@
     #wrap .menu > ul{height: 100px; margin: 50px 30px;}
     #wrap .menu > ul >li{float: left; width: 160px; position: relative;}
     #wrap .menu > ul > li > a{display:block; color: #000; font-size: 20px; position: relative; text-align: center;}
-    #wrap .menu > ul .sub{height: 0; text-align: center; overflow: hidden;transition: 0.5s;position: absolute;left: 0;top: 50px;width: 100%;z-index: 1;}
+    #wrap .menu > ul .sub{height: 0; text-align: center; overflow: hidden;transition: 0.5s;position: absolute;left: 0;top: 50px;width: 100%;z-index: 1;background-color: #ccc;}
     #wrap .menu > ul:hover .sub{height: 333px; padding: 20px 0;}
     #wrap .menu > ul .sub li{line-height: 40px;text-align: center;}
     #wrap .menu > ul .sub > li > a{color: #999; }
     #wrap .menu > ul .sub > li:hover a{color: green; text-decoration: underline #000;}
     #wrap .menu > ul:last-child{position: absolute; right: 0; top: 0px;}
-
-
+    #wrap .bg{position: absolute; top: 100px; left: 0;background-color: #ccc;height: 0;width: 100%;transition: 0.5s;}
+    #wrap .menu ul:first-child:hover ~ .bg{height: 373px;}
     .main{ width: 1325px; margin:0 auto;}
     .main .con{width: 100%; height: 800px; overflow: hidden;float: left;background-image: url(./images/maindata125374_0.jpg); background-size:contain; background-repeat: no-repeat;} 
     .main .con .text{margin-left: 5%; margin-top: 10%;}
@@ -72,13 +72,14 @@
                 <li><a href="#">Get in Touch</a></li>
               </ul>
             </li>
-          </ul>
+          </ul><div class="bg"></div>  
           <ul>
             <li><a href="#">FAQ</a></li>
             <li><a href="#">Get in Touch<span>↗</span></a></li>
             <li><a href="#">EN</a></li>
           </ul>    
-        </div>   
+        </div> 
+        
       </div>
 
     </header>
