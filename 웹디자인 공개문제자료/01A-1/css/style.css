@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+*{margin: 0;padding: 0;}
+ul{list-style: none;}
+a{text-decoration: none;color: #333;}
+.contents{width: 1200px;margin: 50px auto;height: 200px;}
+.contents>div{width: calc(100% /3);float: left;position: relative;}
+.contents>div.left input[type="radio"]{display: none;}
+.contents>div.left ul.title li{position: absolute;width: 100px;background: #ccc;text-align: center;line-height: 40px;border: 1px solid #333;z-index: 1;}
+.contents>div.left ul.title li:nth-child(2){
+	left: 100px;
+}
+.contents>div.left ul.content{
+	position: relative;
+	top: 40px;
+	border: 1px solid #333;
+}
