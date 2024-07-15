@@ -1,0 +1,27 @@
+@charset "utf-8";
+*{margin: 0;padding: 0;}
+ul{list-style: none;}
+
+.businessWrap{background: #ededed;}
+.business{width: 1280px;margin: 0 auto; overflow: hidden;position: relative;padding: 200px 0;}
+.business .left ul{width: 400px;}
+.business .left ul li{overflow: hidden;height: 80px;  line-height: 80px;padding: 0 20px;border-bottom: 1px solid;cursor: pointer;}
+.business .left ul li label{display: block;width: 100%;height: 100%;cursor: pointer;}
+.business .left ul li p:first-child{float: left;width: 72px;height: 72px;background-color: #000;mask-repeat: no-repeat;}
+.business .left ul li p:last-child{float: right;}
+.business .left ul li span{margin-left: 20px;}
+.business .left ul li img{vertical-align: middle;}
+.business .left ul li:first-child p:first-child{background-color: #be8226;mask-image: url(../images/ico_business_item01.svg);}
+.business .left ul li:nth-child(2) p:first-child{mask-image: url(../images/ico_business_item02.svg);}
+.business .left ul li:nth-child(2):hover p:first-child{mask-image: url(../images/ico_business_item02.svg);background-color: #be8226;}
+.business .left ul li:nth-child(3) p:first-child{mask-image: url(../images/ico_business_item03.svg);}
+.business .left ul li:nth-child(3):hover p:first-child{mask-image: url(../images/ico_business_item03.svg);background-color: #be8226;}
+.business .left ul li:nth-child(4) p:first-child{mask-image: url(../images/ico_business_item04.svg);}
+.business .left ul li:nth-child(4):hover p:first-child{mask-image: url(../images/ico_business_item04.svg);background-color: #be8226;}
+.business .left ul li:nth-child(5) p:first-child{mask-image: url(../images/ico_business_item05.svg);}
+.business .left ul li:nth-child(5):hover p:first-child{mask-image: url(../images/ico_business_item05.svg);background-color: #be8226;}
+.business .left ul li:nth-child(6) p:first-child{mask-image: url(../images/ico_business_item06.svg);}
+.business .left ul li:nth-child(6):hover p:first-child{mask-image: url(../images/ico_business_item06.svg);background-color: #be8226;}
+.business .left ul li:first-child,ul li:hover{border-bottom-color: #be8226;}
+.business .left ul li:first-child p,ul li:hover p{color: #be8226;;}
+.business .left ul li:hover img{content: url(../images/ico_circle_arrow_active.png);}
