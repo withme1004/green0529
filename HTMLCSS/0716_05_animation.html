@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		*{margin: 0;padding: 0;}
+		body{text-align: center;}
+		ul{list-style: none;}
+		ul.box{position: relative;width: 500px;height: 500px;margin: 50px auto;}
+		ul.box li{position: absolute;width: 100%;height: 100%;}
+		ul.box li.pipe{background-image: url(images/pipe.png);}
+		ul.box li.pro{background-image: url(images/propeller.png);}
+		label{border: 1px solid;padding: 10px 20px;border-radius: 50px;cursor: pointer;}
+
+		@keyframes left {
+			0%{transform: rotate(0deg);}
+			100%{transform: rotate(-1080deg);}
+		}
+		@keyframes right {
+			0%{transform: rotate(0deg);}
+			100%{transform: rotate(1080deg);}
+		}
+		#left:checked ~ .box li.pro{animation: left 2s linear infinite;}
+		#right:checked ~ .box li.pro{animation: right 2s linear infinite;}
+		#off:checked ~.box li.pro{animation-play-state: paused;}
+
+		#left:checked ~ label:first-of-type,
+		#right:checked ~ label:nth-of-type(2),
+		#off:checked ~ label:nth-of-type(3)
+		{background: #000;color: #fff;}
+	</style>
+</head>
+<body>
+	<input type="radio" name="btn" id="left" checked>
+	<input type="radio" name="btn" id="right">
+	<input type="radio" name="btn" id="off">
+	<ul class="box">
+		<li class="pipe"></li>
+		<li class="pro"></li>
+	</ul>
+	<label for="left">Turn Left</label>
+	<label for="right">Turn Right</label>
+	<label for="off">off</label>
+</body>
+</html>
