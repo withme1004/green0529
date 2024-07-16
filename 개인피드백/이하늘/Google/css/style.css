@@ -1,0 +1,87 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+@font-face {
+  font-family: NotoSans;
+  src: url(../webfonts/NotoSans-Light.woff) format(woff);
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.main {
+  width: 1800px;
+  height: 20px;
+  padding: 20px;
+  margin: 0 auto;
+  font-family: NotoSans;
+}
+.main ul li {
+  margin: 0 10px;
+}
+
+.left > li {
+  float: left;
+}
+.right > li {
+  float: right;
+}
+.right li:nth-child(2) {
+  width: 90px;
+  height: 40px;
+  position: relative;
+  top: -10px;
+  left: -10px;
+  background-color: #0b57d0;
+
+  border-radius: 50px;
+}
+.right li:nth-child(2) > a {
+  position: absolute;
+  line-height: 40px;
+  margin: 0 20px;
+  color: #fff;
+}
+.googleimg img {
+  margin: 0 150px;
+  width: 300px;
+}
+
+.googleimg {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 350px;
+  left: 600px;
+  margin: 0 auto;
+}
+.googleicon {
+  font-family: NotoSans;
+  position: relative;
+  top: 380px;
+  left: 650px;
+  width: 500px;
+  height: 30px;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  padding: 5px;
+}
+
+.googleicon ul div {
+  padding: 0 5px;
+}
+.googleicon ul .iconleft a {
+  float: right;
+  margin: 5px;
+}
+.googleicon ul .iconright a {
+  padding: 5px;
+  float: left;
+}

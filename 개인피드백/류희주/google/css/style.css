@@ -1,0 +1,179 @@
+@charset "utf-8";
+*{margin: 0;padding: 0;}
+ul{list-style: none;}
+a{text-decoration: none; color: #333;}
+.top{
+    width: 100%;
+    height: 60px;
+    padding: 6px 0;
+}
+.top>ul{
+    position: relative;
+    top: 25%;
+}
+.top>ul.left{
+    float: left;
+    padding: 6px;
+    margin: 0 5px 0 15px;
+}
+.top>ul.left li{
+    float: left;
+    padding: 0 10px;
+}
+.top>ul.left li:hover a{
+    text-decoration: underline;
+}
+.top>ul.left li>a{
+    font-size: 14px;
+}
+.top>ul.right{
+    float: right;
+    padding: 6px;
+    margin: 0 5px 0 15px;
+}
+.top>ul.right li{
+    float: left;
+    padding: 0 12px;
+}
+.top>ul.right li:hover a{
+    text-decoration: underline;
+}
+.top>ul.right li>a{
+    font-size: 13px;
+}
+.top>ul.right li:nth-child(3){
+    background-image: url(../image/Asset\ 1.svg);
+    width: 18px;
+    height: 18px;
+    background-repeat: no-repeat;
+}
+.top>ul.right li:nth-child(4){
+    background-image: url(../image/menu.svg);
+    width: 18px;
+    height: 18px;
+    background-repeat: no-repeat;
+}
+main{
+    width: 100%;
+    margin-top: 150px;
+}
+main>p{
+    width: 272px;
+    height: 92px;
+    margin: 0 auto;
+}
+.searchbox{
+    width: 582px;
+    height: 46px;
+    margin: 30px auto;
+    background: #fff;
+}
+.searchbox>input[type="search"]{
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    position: relative;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    background-color: #fff;
+    background-image: url(../image/search.svg);
+    background-repeat: no-repeat;
+    background-position: 15px 12px;
+    background-size: 20px;
+}
+.searchbox>input:hover{
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+.searchbox>.icon{
+    width: 100%;
+    height: 20px;
+    top: -32px;
+    position: relative;
+}
+.searchbox>.icon>.right{
+    float: right;
+    padding: 0 20px;
+}
+.searchbox>.icon>.right>p:first-child{
+    background-image: url(../image/keyboard.gif);
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    float: left;
+    padding: 0 10px;
+    position: relative;
+    top: 3px;
+}
+.searchbox>.icon>.right>p:nth-child(2){
+    background-image: url(../image/mic.svg);
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    float: left;
+    padding: 0 10px;
+}
+.searchbox>.icon>.right>p:nth-child(3){
+    background-image: url(../image/camera.svg);
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    float: left;
+}
+.buttons{
+    width: 584px;
+    height: 58px;
+    margin: 0 auto;
+}
+.buttons>p{
+    position: relative;
+    left: 50%;
+    top: 0;
+    transform: translate(-25%,-50%);
+}
+.buttons>p>a{
+    display: inline-block;
+    text-align: center;
+    float: left;
+    height: 100%;
+    padding: 10px 20px;
+    background: #f8f9fa;
+    margin: 0 10px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+footer{
+    position : fixed;
+    bottom : 0;
+    width: 100%;
+    height: 100px;
+    background: #f2f2f2;
+}
+footer>div{
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid #ccc;
+    line-height: 50px;
+    padding-left: 10px;
+}
+footer>div>p{
+    font-size: 15px;
+}
+footer>ul>li{
+    float: left;
+    padding: 15px;
+}
+footer>ul>li>P{
+    font-size: 14px;
+}
+footer>ul>li.left>p{
+    float: left;
+    padding-right: 10px;
+}
+footer>ul>li.right{
+    float: right;
+}
+footer>ul>li.right>p{
+    float: left;
+    padding-right: 10px;
+}

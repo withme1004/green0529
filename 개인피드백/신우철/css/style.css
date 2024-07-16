@@ -1,0 +1,153 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+ul{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  color: #333;
+}
+
+.head{
+  width: 1920px;
+  height: 60px;
+  float: left;
+}
+
+.head .left{
+  width: 10%;
+  height: auto;
+}
+
+.left ul li,
+.right ul li{
+  float: left;
+  font-size: 14px;
+  padding: 5px;
+  margin: 0 5px;
+  margin-top: 15px;
+  margin-left: 10px;
+}
+
+.left ul li:first-child{
+  margin-left: 15px;
+}
+
+.head .right{
+  width: 15%;
+  height: auto;
+}
+
+.right{
+  width: 90%;
+  float: right;
+  height: 100%;
+}
+
+.right ul li:last-child{
+  padding: 10px 20px;
+  background: #4386f9;
+  border-radius: 40px;
+  margin-top: 10px;
+}
+
+.right ul li:last-child a {
+  color: #fff;
+}
+
+.mainimg {
+  width: 1920px;
+  height: 350px;
+  text-align: center;
+}
+
+.mainimg img{
+  width: 272px;
+  height: 92px;
+  margin-top: 200px;
+}
+
+.search{
+  width: 1920px;
+  height: 160px;
+  padding: 20px;
+}
+
+.search .search2{
+  width: 584px;
+  height: 48px;
+  border: 1px solid #ccc;
+  margin: 0 auto;
+  border-radius: 50px;
+  position: relative;
+}
+
+.search .button{
+  width: 584px;
+  height: 88px;
+  margin: 20px auto;
+}
+
+.search .button input{ 
+  width: 110px;
+  height: 36px;
+  float: left;
+  margin: 11px 4px;
+  padding: 0 16px;
+  display: flex;
+  transform: translate(160px, -20%);
+  border: none;
+  background-color: #f8f9fa;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.search .button input:nth-child(2){
+  width: 150px;
+}
+
+.search .button input:hover{
+  border: 1px solid #ccc;
+}
+
+.search2>div {
+  float: left;
+}
+
+.search .search2 .searchicon{
+  height: 48px;
+  width: 48px;
+}
+
+.search .search2 .searchicon img{
+  padding: 13px 14px;
+}
+
+.search .search2 .searchtext{
+  width: 400px;
+  padding: 10px 0;
+}
+
+.search .search2 .searchtext input{
+  border: none;
+  outline: none;
+}
+
+.search .search2 .searchimg ul li a img{
+  width: 20px;
+  height: 20px;
+  float: left;
+  padding: 12px;
+}
+
+.searchimg{
+  float: right;
+}
+
+.searchimg ul li {
+  float: left;
+}
