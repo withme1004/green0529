@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    @font-face {
+      font-family: googleF;
+      src: url(webfonts/Apple_산돌고딕_Neo/AppleSDGothicNeoR.ttf) format("woff2");
+    }
+    *{margin: 0; padding: 0;}
+    a,li,p{text-decoration: none; font-family: googleF; color: #000;}
+    a{vertical-align: middle;}
+    ul{list-style: none;}
+    .googleWrap{width: 100%; height: 960px; position: relative;}
+    .googleWrap .head{width: 100%;}
+    .googleWrap .head ul{width: 100%; height: 60px;}
+    .googleWrap .head ul li{line-height: 60px;}
+    
+    .googleWrap .head .headLeft ul{float: left; width: 300px; position: absolute; left: 0; top: 0;}
+    .googleWrap .head .headLeft ul li{float: left;}
+    .googleWrap .head .headLeft ul li a{padding: 5px; margin: 0 5px; font-size: 14px; color: #202124;}
+    .googleWrap .head .headLeft ul li:first-child a{margin: 0 5px 0 15px;}
+
+    .googleWrap .head .headRight ul{float: right; width: 300px; position: absolute; right: 0; top: 0;}
+    .googleWrap .head .headRight ul li{float: left; display: block;}
+    .googleWrap .head .headRight ul li a{font-size: 13px; color: #1f1f1f; font-family: arial, sans-serif;
+      text-align: center; }
+    .googleWrap .head .headRight ul li:nth-child(3){border-radius: 50%;}
+    .googleWrap .head .headRight ul li:nth-child(3) a img{vertical-align: middle;}
+    .googleWrap .head .headRight ul li:nth-child(4) a{color: #fff; border-radius: 50px;
+      padding: 5px 15px; margin-left: 30px; background: #0b57d0; vertical-align: middle;}
+    
+    .googleWrap .head .headRight ul li:nth-child(3):hover{}
+
+    .googleWrap .main{width: 100%; height: 700px; overflow: hidden;}
+    .googleWrap .main > div p{left: 0; top: 0; position: absolute;
+      left: 50%; top: 30%; transform: translate(-50%, -50%);}
+    .googleWrap .main > div form{left: 0; top: 0; position: absolute; left: 50%; top: 38%;  transform: translate(-50%, -50%);} 
+    .googleWrap .main > div form input{width: 480px; height: 45px; border: 1px solid #ccc; border-radius: 50px;
+      background-image: url(images/google/image/search_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg);
+      background-repeat: no-repeat;
+      background-position: 10px 10px;
+      padding: 0 40px;
+    }
+    
+    .googleWrap .main > .txt{left: 0; top: 0; position: absolute;
+      left: 50%; top: 30%; transform: translate(-50%, -50%);}
+    .googleWrap .main > .txt ul{margin-top: 300px;}
+    .googleWrap .main > .txt ul li{float: left;}
+    .googleWrap .main > .txt ul li a{background: #f8f9fa; margin: 11px 4px; padding: 5px 16px; display: block; border: 1px solid #f8f9fa; color: #202124; border-radius: 5px;}
+    .googleWrap .main > .txt ul li:hover a{border: 1px solid #ccc;}
+
+    .googleWrap .foot{width: 100%; height: 100px; overflow: hidden; position: absolute;
+      bottom: 0; line-height: 50px; background: #ecedee;}
+    .googleWrap .foot .foot1{width: 100%; height: 50px; float: left; padding-left: 35px;  border-bottom: 1px solid #ccc; box-sizing: border-box;}
+    .googleWrap .foot .foot1 p{color: #202124; font-size: 15px;}
+
+    .googleWrap .foot .foot2{height: 50px;}
+    .googleWrap .foot .foot2 .footLeft ul li{float: left; padding-left: 20px;}
+    .googleWrap .foot .foot2 .footLeft ul li a{padding: 16px;  color: #202124; font-size: 14px;}
+
+    .googleWrap .foot .foot2 .footRight ul{float: right;}
+    .googleWrap .foot .foot2 .footRight ul li{float: left;}
+    .googleWrap .foot .foot2 .footRight ul li a{padding: 16px; color: #202124; font-size: 14px;}
+
+    a:hover{text-decoration: underline;}
+
+  </style>
+</head>
+<body>
+  <div class="googleWrap">
+    <div class="head">
+      <div class="headLeft">
+        <ul>
+          <li><a href="#">Google 정보</a></li>
+          <li><a href="#">스토어</a></li>
+        </ul>
+      </div>
+      <div class="headRight">
+        <ul>
+          <li><a href="#">Gmail</a></li>
+          <li><a href="#">이미지</a></li>
+          <li><a href="#"><img src="images/google/image/al-icon.png" alt="icon"></a></li>
+          <li><a href="#">로그인</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="main">
+      <div>
+        <p><img src="images/google/image/glogo.png" alt="logo"></p>
+        <form action="">
+          <input type="textarea" name="search" size="16">
+        </form>
+      </div>
+      <div class="txt">
+        <ul>
+          <li><a href="#">Google 검색</a></li>
+          <li><a href="#">I'm Feeling Lucky</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot">
+      <div class="foot1">
+        <p>대한민국</p>
+      </div>
+      <div class="foot2">
+        <div class="footLeft">
+          <ul>
+            <li><a href="#">광고</a></li>
+            <li><a href="#">비즈니스</a></li>
+            <li><a href="#">검색의 원리</a></li>
+          </ul>
+        </div>
+        <div class="footRight">
+          <ul>
+            <li><a href="#">개인정보처리방침</a></li>
+            <li><a href="#">약관</a></li>
+            <li><a href="#">설정</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
