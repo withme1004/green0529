@@ -20,6 +20,9 @@ a{text-decoration: none; color: #333;}
     float: left;
     padding: 0 10px;
 }
+.top>ul.left li:hover a{
+    text-decoration: underline;
+}
 .top>ul.left li>a{
     font-size: 14px;
 }
@@ -31,6 +34,9 @@ a{text-decoration: none; color: #333;}
 .top>ul.right li{
     float: left;
     padding: 0 12px;
+}
+.top>ul.right li:hover a{
+    text-decoration: underline;
 }
 .top>ul.right li>a{
     font-size: 13px;
