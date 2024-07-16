@@ -76,6 +76,9 @@ main>p{
     background-position: 15px 12px;
     background-size: 20px;
 }
+.searchbox>input:hover{
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
 .searchbox>.icon{
     width: 100%;
     height: 20px;
