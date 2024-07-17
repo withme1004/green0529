@@ -3,6 +3,8 @@
 *{margin: 0;padding: 0;}
 ul{list-style: none;}
 a{text-decoration: none;color: #333;}
+
+#wrap{position: relative;height: 100vh;min-height: 600px;}
 header{height: 60px;padding: 10px;}
 header ul li{line-height: 60px;}
 header ul li a{font-size: 14px;line-height: 60px;padding: 0 10px;position: relative;}
@@ -43,7 +45,7 @@ header ul li a:hover{text-decoration: underline;}
 header ul.right li:nth-child(3) a:hover,
 header ul.right li:last-child a:hover{text-decoration: none;}
 
-main{height: calc(100vh - 160px);text-align: center;padding-top: 20%;box-sizing: border-box;}
+main{text-align: center;position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);}
 main ul.search{width: 800px;margin: 50px auto;border: 1px solid #ccc;height: 40px;border-radius: 50px;line-height: 40px;}
 main ul.search li{float: left;}
 main ul.search li input{width: 650px;padding: 10px;border: none;}
@@ -54,7 +56,7 @@ main ul.btn{text-align: center;}
 main ul.btn li{display: inline-block;padding: 10px 20px;border: 1px solid #ccc;border-radius: 5px;}
 
 
-footer{background: #f2f2f2;}
+footer{background: #f2f2f2;position: fixed;left: 0;bottom: 0;width: 100%;}
 footer p{height: 50px;line-height: 50px;padding: 0 20px;}
 
 footer .foot{
