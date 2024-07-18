@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		*{margin: 0;padding: 0;}
+		ul{list-style: none;}
+		a{text-decoration: none;color: #fff;}
+		.list{width: 1504px;margin: 0 auto;}
+		.list > ul{display: flex;flex-wrap: wrap;font-size: 0;}
+		.list > ul > li{position: relative;}
+		.list > ul > li .over{font-size: 16px;position: absolute;left: 0;top: 0;display: flex;justify-content: center;align-items: center;width: 100%;height: 100%;text-align: center;background: rbga(0,0,0,0);
+			transition: 0.5s;}
+		.list > ul > li:hover .over{background: rgba(0,0,0,0.5);}
+		/* .list>ul img{display: block;} */
+		.list > ul > li .over p{color: #fff;text-transform: uppercase;}
+		.list > ul > li .over .inner{transform: translateY(0);transition: 0.5s;}
+		.list > ul > li .over .inner p:first-child{opacity: 0;transition: 0.5s 0.2s;}
+		.list > ul > li .over .inner a{opacity: 0;transition: 0.5s 0.2s;}
+		.list > ul > li:hover .over .inner p:first-child{opacity: 1;}
+		.list > ul > li:hover .over .inner a{opacity: 1;}
+		.list > ul > li:hover .over .inner{transform: translateY(-20px);}
+	</style>
+</head>
+<body>
+	<div class="list">
+		<ul>
+			<li>
+				<img src="images/img01.png" alt="img01">
+				<div class="over">
+					<div class="inner">
+						<p><img src="images/m-icon_brand.png" alt="brand"></p>
+						<p>bread & starter</p>
+						<a href="#">자세히 보기</a>
+					</div>
+				</div>
+			</li>
+			<li>
+				<ul>
+					<li><img src="images/img02.png" alt="img02"></li>
+					<li><img src="images/img03.png" alt="img03"></li>
+				</ul>
+			</li>
+			<li><img src="images/img04.jpg" alt="img04"></li>
+			<li><img src="images/img05.png" alt="img05"></li>
+			<li><img src="images/img06.jpg" alt="img06"></li>
+			<li><img src="images/img07.jpg" alt="img07"></li>
+			<li><img src="images/img08.jpg" alt="img08"></li>
+		</ul>
+	</div>
+</body>
+</html>
