@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    ul{list-style: none;}
+    a{text-decoration: none; color: #fff;}
+    .wrap ul{width: 1753px; height: 570px; display: flex; margin: 50px auto; gap: 30px;}
+    .wrap ul li{border-radius: 10px; background-size: cover; background-position: center; position: relative; overflow: hidden; transition: 0.8s; cursor: pointer;}
+    .wrap ul li::after{
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.8);
+    }
+    .wrap ul li:hover:after{
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.3);
+    }
+    .wrap ul li:first-child{background-image: url(images/main_esg1.jpg); }
+    .wrap ul li:nth-child(2){background-image: url(images/main_esg2.jpg); }
+    .wrap ul li:nth-child(3){background-image: url(images/main_esg3.jpg); }
+
+    .wrap ul li a{display: block; position: relative; z-index: 1; padding-left: 50px;
+      padding-top: 100px;}
+    .wrap ul li a p{font-weight: bold; text-shadow: 0px, 0px, 5px, black;}
+    .wrap ul li a p:first-child{font-size: 24px;}
+    .wrap ul li a p:nth-child(2){font-size: 40px;}
+    .wrap ul li a p:nth-child(3){font-size: 28px; opacity: 0; margin-top: 40px; transition: 0;}
+    .wrap ul li a p:nth-child(4){opacity: 0; margin-top: 30px; transition: 0;}
+
+    .wrap ul li:hover a p:nth-child(2){margin-top: 20px; font-size: 64px;}
+    .wrap ul li:hover a p:nth-child(3), .wrap ul li:hover a p:nth-child(4){
+      opacity: 1;  transition: 0.5s 0.3s;
+    }
+
+    .wrap ul li:hover{width: 60%;}
+    .wrap ul li:not(:hover){width: 30%;}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <ul>
+      <li>
+        <a href="#">
+          <p>environmental</p>
+          <p>환경</p>
+          <p>
+            자연과 함께 맛으로 행복한 세상을<br>
+            만들기 위한 의미 있는 걸음을<br>
+            내딛습니다.
+          </p>
+          <p><img src="images/btn_more_wh_pc.svg" alt="btn"></p>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <p>social</p>
+          <p>사회</p>
+          <p>
+            기업활동에 반하는 어떠한 행위도<br>
+            허용하지 않으며, 깨끗하고 정직한<br>
+            기업문화를 만들어갑니다.
+          </p>
+          <p><img src="images/btn_more_wh_pc.svg" alt="btn"></p>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <p>governance</p>
+          <p>지배구조</p>
+          <p>
+            모든 이해관계자의 권익을 증진하는<br>
+            건전한 지배구조의 기업으로<br>
+            도약하고자 합니다.
+          </p>
+          <p><img src="images/btn_more_wh_pc.svg" alt="btn"></p>
+        </a>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>
