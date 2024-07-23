@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0blank">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: OttogiSans-Medium;
+            src: url(webfonts/OttogiSans-Medium.otf) format("opentype");
+        }
+        @font-face {
+            font-family: OttogiSans-li;
+            src: url(webfonts/OttogiSans-Light.otf) format("opentype");
+        }
+        *{margin: 0;padding: 0;}
+        ul{list-style: none;}
+        a{text-decoration: none;}
+        .wrap{width: 1753px;margin: 50px auto;}
+        .wrap h1{font-size: 48px;text-align: center;margin: 50px 0;font-family: OttogiSans-Medium;font-weight: normal;}
+        .wrap ul{display: flex;justify-content: center;gap: calc(5% / 2);}
+        .wrap ul li{width: calc(70% / 3);display: flex;justify-content: center;transition: 0.5s;}
+        .wrap ul li a{display: block;width: 100%;height: 570px;background-size: cover; background-position: center;border-radius: 10px;overflow: hidden; position: relative;}
+        .wrap ul li a::after{content: "";width: 100%;height: 100%;background-color: rgba(0, 0, 0, 0.2);position: absolute;left: 0;top: 0;}
+
+        .wrap ul li:nth-child(1) a{background-image: url(https://www.ottogi.co.kr/images/common/main_esg1.jpg);background-position: 50%;}
+        .wrap ul li:nth-child(2) a{background-image: url(https://www.ottogi.co.kr/images/common/main_esg2.jpg);background-position: center 60%;}
+        .wrap ul li:nth-child(3) a{background-image: url(https://www.ottogi.co.kr/images/common/main_esg3.jpg);background-position: 60%;}
+        
+        .wrap ul li a p{color: #fff;text-transform: capitalize; position: relative;z-index: 1;word-break: keep-all;margin-left: 60px;font-family: OttogiSans-Medium;font-weight: normal;}
+        .wrap ul li a p:nth-child(1){font-size: 24px;position: absolute;top: 20%;}
+        .wrap ul li a p:nth-child(2){font-size: 40px;position: absolute;top: 25%;}
+        .wrap ul li a p:nth-child(3){font-size: 28px;width: 55%;position: absolute; opacity: 0;transition: 0s;font-family: OttogiSans-li;}
+        .wrap ul li a span{position: absolute;top: 77%;margin-left: 60px;z-index: 1;opacity: 0; transition: 0s;}
+
+        .wrap ul:hover li:hover{width: 45%;}
+        .wrap ul:hover li:not(:hover){width: 20%;}
+        .wrap ul li:not(:hover) a::after{background-color: rgba(0, 0, 0, 0.7);}
+        .wrap ul:hover li:hover a p:nth-child(2){font-size: 64px;top: 30%;}
+        .wrap ul:hover li:hover a p:nth-child(3){top: 50%; opacity: 1;transition: 0.5s 0.5s;}
+        .wrap ul:hover li:hover a span{opacity: 1; transition: 0.5s 0.5s;}
+        .wrap ul li a span:hover{animation-name: move;animation-timing-function: linear;animation-duration: 0.5s;animation-iteration-count: infinite;animation-direction: alternate;}
+
+        @keyframes move{
+            0%{transform: translateX(0px);}
+            100%{transform: translateX(10px);}
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <h1>미래가치를 창조하고,<br>
+            지속가능한 식문화를 만들어 가겠습니다.
+        </h1>
+        <ul>
+            <li>
+                <a href="#">
+                    <p>environmental</p>
+                    <p>환경</p>
+                    <p>자연과 함께 맛으로 행복한 세상을 만들기 위한 의미 있는 걸음을 내딛습니다.</p>
+                    <span><img src="https://www.ottogi.co.kr/images/common/btn_more_wh_pc.svg" alt="btn"></span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <p>social</p>
+                    <p>사회</p>
+                    <p>기업활동에 반하는 어떠한 행위도 허용하지 않으며, 깨끗하고 정직한 기업문화를 만들어갑니다.</p>
+                    <span><img src="https://www.ottogi.co.kr/images/common/btn_more_wh_pc.svg" alt="btn"></span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <p>governance</p>
+                    <p>지배구조</p>
+                    <p>모든 이해관계자의 권익을 증진하는 건전한 지배구조의 기업으로 도약하고자 합니다.</p>
+                    <span><img src="https://www.ottogi.co.kr/images/common/btn_more_wh_pc.svg" alt="btn"></span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
