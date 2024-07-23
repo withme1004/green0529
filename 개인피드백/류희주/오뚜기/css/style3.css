@@ -36,7 +36,7 @@ a{text-decoration: none;}
     transition: 0.5s;
 }
 .cnb ul li:nth-child(1){
-    width: 38%;
+    width: 67%;
     background-image: url(https://www.ottogi.co.kr/images/common/main_esg1.jpg);
 }
 .cnb ul li:nth-child(2){
