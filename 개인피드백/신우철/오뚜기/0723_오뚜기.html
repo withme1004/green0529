@@ -41,9 +41,9 @@
       border-radius: 30px;
       position: relative;
       overflow: hidden;
-      transition: 0.5s;
+      transition: width 0.5s;
     }
-
+    .ottogi ul:hover li:first-child:after,
     .ottogi ul li::after{
       content: "";
       position: absolute;
@@ -55,18 +55,18 @@
     }
 
     .ottogi ul li:nth-child(1){
-      background: url(images/main_esg1.jpg);
-      background-position: 40%;
+      background: url(images/main_esg1.jpg) center/cover;
+      /* background-position: 40%; */
     }
 
     .ottogi ul li:nth-child(2){
-      background: url(images/main_esg2.jpg);
-      background-position: 40%;
+      background: url(images/main_esg2.jpg) center/cover;
+      /* background-position: 40%; */
     }
 
     .ottogi ul li:nth-child(3){
-      background: url(images/main_esg3.jpg);
-      background-position: 30%;
+      background: url(images/main_esg3.jpg) center/cover;
+      /* background-position: 30%; */
     }
 
     .ottogi ul li a p{
@@ -102,12 +102,17 @@
       opacity: 0;
       transition: 0s;
     }
-
-    .ottogi ul:hover li:hover{
+    .ottogi ul li:first-child{
+      width: 250%;
+    }
+    .ottogi ul:hover li:hover,
+    .ottogi ul:hover li:first-child:hover{
       width: 250%;
       background-size: cover;
     }
-
+    .ottogi ul:hover li:first-child{
+      width: 100%;
+    }
     .ottogi ul li:hover a p:nth-child(1){
       font-size: 24px;
     }
@@ -121,9 +126,9 @@
       opacity: 1;
       transition: 4s;
     }
-
-    .ottogi ul li:hover::after{
-      background: rgba(0,0,0,0.7);
+   
+    .ottogi ul li:not(:hover)::after{
+      background: rgba(0,0,0,0.6);
     }
   </style>
 </head>
