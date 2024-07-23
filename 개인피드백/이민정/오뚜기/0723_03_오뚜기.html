@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오뚜기</title>
+    <style>
+        @font-face {
+            font-family: OttogiSans-Medium;
+            src: url(webfonts/OttogiSans-Medium.otf) format("opentype");
+        }
+        @font-face {
+            font-family: OttogiSans-Light;
+            src: url(webfonts/OttogiSans-Light.otf) format("opentype");
+        }
+
+        *{margin: 0; padding: 0;}
+        a{text-decoration: none; color: #fff;}
+
+        .wrap{width: 1753px; margin: 50px auto; display: flex; gap: 43px;}
+        .wrap > div{border-radius: 11px; overflow: hidden; transition: 0.7s; position: relative;}
+        .wrap > div:nth-child(1){width: 80%;}
+
+        .wrap:hover > div:hover{width: 60%;}
+        .wrap:hover > div:not(:hover){width: 30%;}
+    
+        .wrap > div a{display: block;}
+        .wrap > div a > p{height: 570px;}
+        .wrap > div a > p img{width: 100%; height: 100%; object-fit: cover;}
+
+        .wrap > div a .txt{position: absolute; left: 0; top: 0; width: 100%; height: 100%; padding: 100px 0 0 60px; box-sizing: border-box;}
+        .wrap > div a .txt::after{content: ""; width: 100%; height: 100%; background: rgba(0,0,0,0.7); position: absolute; left: 0; top: 0;}
+        .wrap > div:hover a .txt::after{background: rgba(0,0,0,0.3);}        
+
+        .wrap > div a .txt p{position: relative; z-index: 1;}
+        .wrap > div a .txt > p:nth-child(1){font-size: 24px; font-family: OttogiSans-Medium;}
+        .wrap > div a .txt > p:nth-child(2){font-size: 40px; font-family: OttogiSans-Medium;}
+        .wrap > div:nth-child(2):hover a .txt > p:nth-child(2),
+        .wrap > div:nth-child(3):hover a .txt > p:nth-child(2)
+        {font-size: 64px; padding: 20px 0 0;}
+
+        .wrap > div a .txt .txt-op{font-size: 28px; opacity: 0; white-space: nowrap; font-family: OttogiSans-Light;}
+        .wrap > div a .txt .txt-op p:nth-child(1){padding: 40px 0 30px;}
+        .wrap > div:hover a .txt .txt-op{opacity: 1; transition: 0.1s 0.5s;}
+
+        .wrap > div a .txt .txt-op p:nth-child(2):hover{animation-name: moving; animation-duration: 0.5s; animation-iteration-count: infinite; animation-direction: alternate; animation-timing-function: ease-in-out;}
+
+        .wrap > div:nth-child(1) a .txt::after{background: rgba(0,0,0,0.3);}        
+        .wrap:hover > div:nth-child(1):not(:hover) a .txt::after{background: rgba(0,0,0,0.7);}        
+        .wrap > div:nth-child(1) a .txt > p:nth-child(2){font-size: 64px; padding: 20px 0 0;}
+        .wrap:hover > div:nth-child(1):not(:hover) a .txt > p:nth-child(2){font-size: 40px; padding: 0;}
+        .wrap > div:nth-child(1) a .txt .txt-op{opacity: 1;}
+        .wrap:hover > div:nth-child(1):not(:hover) a .txt .txt-op{opacity: 0; white-space: nowrap;}
+
+        @keyframes moving {
+            0%{transform: translateX(0px);}
+            100%{transform: translateX(12px);}
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="img1">
+            <a href="#">
+                <p><img src="images/main_esg1.jpg" alt="esg1"></p>
+                <div class="txt">
+                    <p>Envitonmental</p>
+                    <p>환경</p>
+                    <div class="txt-op">
+                        <p>자연과 함께 맛으로 행복한 세상을<br>만들기 위한 의미 있는 걸음을<br>내딛습니다.</p>
+                        <p><img src="images/btn_more_wh_pc.svg" alt="more"></p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="img2">
+            <a href="#">
+                <p><img src="images/main_esg2.jpg" alt="esg2"></p>
+                <div class="txt">
+                    <p>Social</p>
+                    <p>사회</p>
+                    <div class="txt-op">
+                        <p>기업활동에 반하는 어떠한 행위도<br>허용하지 않으며, 깨끗하고 정직한<br>기업문화를 만들어갑니다.</p>
+                        <p><img src="images/btn_more_wh_pc.svg" alt="more"></p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="img3">
+            <a href="#">
+                <p><img src="images/main_esg3.jpg" alt="esg3"></p>
+                <div class="txt">
+                    <p>Governance</p>
+                    <p>지배구조</p>
+                    <div class="txt-op">
+                        <p>모든 이해관계자의 권익을 증진하는<br>건전한 지배구조의 기업으로<br>도약하고자 합니다.</p>
+                        <p><img src="images/btn_more_wh_pc.svg" alt="more"></p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
