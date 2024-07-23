@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>otg</title>
+  <style>
+    @font-face {
+      font-family: OttogiSans-Medium;
+      src: url(webfonts/OttogiSans-Medium.otf) format(opentype);
+    }
+    @font-face {
+      font-family: OttogiSans-Light;
+      src: url(webfonts/OttogiSans-Light.otf) format(opentype);
+    }
+
+    *{margin: 0; bottom: 0;}
+    ul{list-style: none;}
+    a{text-decoration: none; color: #fff;}
+
+    .con{
+      width: 1707px; margin: 100px auto; 
+    }
+    .con h1{font-size: 48px; text-align: center; margin-bottom: 100px;
+      font-family: OttogiSans-Light;
+    }
+    .con ul{
+      display: flex; gap: calc(5% / 2);
+      justify-content: center;
+      padding: 0;
+    }
+    .con ul li{
+      width: calc(95% / 3); height: 570px;
+      transition: .5s;
+    }
+    .con ul li a{
+      display: block;
+      width: 100%; height: 100%;
+      border-radius: 20px;
+      background-size: cover;
+      background-position: center;
+      position: relative; overflow: hidden;
+      padding: 100px 50px; box-sizing: border-box;
+      
+    }
+    .con ul li a::after{
+      content: "";
+      position: absolute; left: 0; top: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, .7);
+    }
+    .con ul li:nth-child(1) a{
+      background-image: url(https://www.ottogi.co.kr/images/common/main_esg1.jpg);
+    }
+    .con ul li:nth-child(2) a{
+      background-image: url(https://www.ottogi.co.kr/images/common/main_esg2.jpg);
+    }
+    .con ul li:nth-child(3) a{
+      background-image: url(https://www.ottogi.co.kr/images/common/main_esg3.jpg);
+    }
+    .con ul li a p{
+      margin-bottom: 30px;
+      position: absolute; z-index: 1;
+      font-family: OttogiSans-Medium;
+      text-shadow: 1px 1px 10px rgba(0, 0, 0, .5);
+    }
+    .con ul li a p:nth-child(1){
+      font-size: 24px;
+      top: 100px;
+    }
+    .con ul li a p:nth-child(2){
+      font-size: 40px;
+      top: 140px;
+    }
+    .con ul li a p:nth-child(3){
+      font-size: 28px;
+      top: 290px;
+      opacity: 0;
+      font-family: OttogiSans-Light;
+    }
+    .con ul li a p:nth-child(4){
+      top: 430px;
+      opacity: 0;
+    }
+
+
+    .con ul:hover li:hover{
+      width: 60%;
+    }
+    .con ul:not(:hover) li:first-child{
+      width: 60%;
+    }
+    .con ul:hover li:hover a:after,
+    .con ul:not(:hover) li:first-child a:after{
+      background-color: rgba(0, 0, 0, .3);
+    }
+    .con ul:hover li:hover a p:nth-child(2),
+    .con ul:not(:hover) li:first-child a p:nth-child(2){
+      font-size: 64px; top: 150px;
+    }
+    .con ul:hover li:hover a p:nth-child(3),
+    .con ul:hover li:hover a p:nth-child(4),
+    .con ul:not(:hover) li:first-child a p:nth-child(3),
+    .con ul:not(:hover) li:first-child a p:nth-child(4)
+    {
+      opacity: 1; transition: .3s .5s;
+    }
+    .con ul:hover li:hover a p:nth-child(4):hover{
+    animation: arrow .5s linear  infinite alternate;
+    }
+
+    @keyframes arrow {
+      0%{transform: translateX(0);}
+      100%{transform: translateX(20px);}
+    }
+  </style>
+</head>
+<body>
+  <div class="con">
+    <h1>미래가치를 창조하고,<br>
+      지속가능한 식문화를 만들어 가겠습니다.</h1>
+    <ul>
+      <li>
+        <a href="#">
+          <p>Environmental</p>
+          <p>환경</p>
+          <p>자연과 함께 맛으로 행복한 세상을<br>
+            만들기 위한 의미 있는 걸음을<br>
+            내딛습니다.</p>
+          <p><img src="images/otg_arrow.svg" alt="arrow"></p>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <p>Social</p>
+          <p>사회</p>
+          <p>기업활동에 반하는 어떠한 행위도<br>
+            허용하지 않으며, 깨끗하고 정직한<br>
+            기업문화를 만들어갑니다.</p>
+          <p><img src="images/otg_arrow.svg" alt="arrow"></p>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <p>Governance</p>
+          <p>지배구조</p>
+          <p>모든 이해관계자의 권익을 증진하는<br>
+            건전한 지배구조의 기업으로<br>
+            도약하고자 합니다.</p>
+          <p><img src="images/otg_arrow.svg" alt="arrow"></p>
+        </a>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>
