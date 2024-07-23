@@ -36,8 +36,8 @@
         transition: 0.5s;
         transition-timing-function: ease-in;
       }
-      .wrap ul li:nth-child(1) {
-        width: 47%;
+      .wrap ul:not(:hover) li:nth-child(1) {
+        width: 50%;
       }
       .wrap ul li:nth-child(1) a {
         background: url(images/ottogi1.jpg);
@@ -55,17 +55,14 @@
         background-size: cover;
       }
       .wrap ul:hover li:hover {
-        width: 47%;
+        width: 50%;
       }
       .wrap ul:hover li:hover a {
         width: 100%;
       }
+      .wrap ul li,
       .wrap ul:hover li:not(:hover) {
-        width: calc(((100% - 47%) - 80px) / 2);
-      }
-      .wrap ul:hover li:not(:hover) a {
-        width: 100%;
-        margin: 0 auto;
+        width: 25%;
       }
       .wrap ul li a {
         display: block;
@@ -74,7 +71,6 @@
         padding: 100px 60px 0;
         box-sizing: border-box;
         width: 100%;
-        margin: 0 auto;
         border-radius: 10px;
       }
       .wrap ul li a::after {
@@ -87,7 +83,8 @@
         height: 100%;
         background: rgba(0, 0, 0, 0.75);
       }
-      .wrap ul li a:hover:after {
+      .wrap ul:not(:hover) li:first-child a:after,
+      .wrap ul li:hover a:after {
         background: rgba(0, 0, 0, 0.3);
       }
       .wrap ul li a p {
