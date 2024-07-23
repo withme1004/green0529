@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+*{margin: 0; padding: 0;}
+ul{list-style: none;}
+p{color: #fff;}
+
+#wrap{width: 1600px;height: 570px; margin: 100px auto;}
+
+#wrap ul{width: 100%; height: 100%;display: flex;justify-content: space-between;}
+#wrap ul li{width: 400px;border-radius: 15px; overflow: hidden; transition: 0.5s; position: relative; cursor: pointer; background-size: cover; background-repeat: no-repeat;}
+#wrap ul li:first-child{background: url(images/ottogi_main_esg1.jpg); width: 750px; background-position: 70%;}
+#wrap ul li:nth-child(2){background: url(images/ottogi_main_esg2.jpg); background-position: 70%;}
+#wrap ul li:nth-child(3){background: url(images/ottogi_main_esg3.jpg);background-position: bottom}
+#wrap ul li:first-child::after{content: ""; position: absolute; background: rgba(0,0,0,0.2); left: 0; top: 0; width: 100%; height: 100%;}
+#wrap ul li::after{content: ""; position: absolute; background: rgba(0,0,0,0.6); left: 0; top: 0; width: 100%; height: 100%;}
+
+#wrap ul:hover li:hover{width: 750px; }
+#wrap ul:hover li:not(:hover){width: 400px;}
+#wrap ul:hover li:hover::after{background: rgba(0,0,0,0.2);}
+#wrap ul:hover li:not(:hover)::after{background: rgba(0,0,0,0.6);}
+
+#wrap .textbox{position: absolute; left: 10%; top: 20%; z-index: 1;}
+#wrap .textbox .text1 p:first-child{font-size: 24px;}
+#wrap .textbox .text1 p:nth-child(2){font-size: 40px; margin-top: 10px; font-weight: bold;}
+#wrap .textbox .text2{opacity: 0; transition: 0.3s;transition-delay: 0.5s; }
+#wrap .textbox .text2 p:first-child{font-size: 28px; word-spacing: -2px; margin-top: 30px;}
+#wrap .textbox .text2 p:nth-child(2){margin-top: 30px;}
+#wrap ul li:first-child .textbox .text2{opacity: 0;}
+#wrap ul li .textbox .text2 p{transition-delay: 0;}
+
+#wrap ul:hover li:hover .textbox .text1 p:nth-child(2){font-size: 64px;}
+#wrap ul:hover li:hover .textbox .text2{opacity: 1;}
+#wrap li:not(:hover) .textbox .text2 p{opacity: 0;}
+
+
+  </style>
+</head>
+<body>
+  <div id="wrap">
+<ul>
+  <li>
+    <div class="textbox">
+      <div class="text1">
+        <p>Environmental</p>
+        <p>환경</p>
+      </div>
+      <div class="text2">
+        <p>자연과 함께 맛으로 행복한 세상을<br>만들기 위한 의미 있는 걸음을<br>내딛습니다.</p>
+        <p><img src="images/ottogi_btn_more_wh_pc.svg" alt="arrow"></p>
+      </div>
+    </div>
+  </li>
+  <li>
+    <div class="textbox">
+      <div class="text1">
+        <p>Social</p>
+        <p>사회</p>
+      </div>
+      <div class="text2">
+        <p>기업활동에 반하는 어떠한 행위도<br>허용하지 않으며, 깨끗하고 정직한<br>기업문화를 만들어갑니다.</p>
+        <p><img src="images/ottogi_btn_more_wh_pc.svg" alt="arrow"></p>
+      </div>
+    </div>
+  </li>
+  <li>
+    <div class="textbox">
+      <div class="text1">
+        <p>Governance</p>
+        <p>지배구조</p>
+      </div>
+      <div class="text2">
+        <p>모든 이해관계자의 권익을 증진하는<br>건전한 지배구조의 기업으로<br>도약하고자 합니다.</p>
+        <p><img src="images/ottogi_btn_more_wh_pc.svg" alt="arrow"></p>
+      </div>
+    </div>
+  </li>
+</ul>
+  </div>
+
+</body>
+</html>
