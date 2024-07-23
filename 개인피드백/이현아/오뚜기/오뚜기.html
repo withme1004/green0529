@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>오뚜기</title>
+  <style>
+    @font-face {
+      font-family:"OTTOGISans-light";
+      src: url(./font/OttogiSans-Light.otf)
+    }
+    @font-face {
+      font-family:"OTTOGISans-medium";
+      src: url(./font/OttogiSans-Medium.otf)
+    }
+    @font-face {
+      font-family:"OTTOGISans-bold";
+      src: url(./font/OttogiSans-Bold.otf)
+    }
+    *{margin: 0;padding: 0;}
+    ul{list-style: none;}
+    a{text-decoration: none;}
+    .wrap{width: 1700px; margin: 50px auto; }
+    .wrap ul{display: flex; gap: calc(10% / 3);}
+    .wrap ul li{width: calc(90% / 3); border-radius: 20px;height: 570px; position: relative; overflow: hidden; transition: 0.5s; background-size: cover; cursor: pointer; }
+    .wrap ul li::after{content: ""; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7);}
+
+    .wrap ul li:nth-child(1){background-image: url(./images/main_esg1.jpg);}
+    .wrap ul li:nth-child(2){background-image: url(./images/main_esg2.jpg);}
+    .wrap ul li:nth-child(3){background-image: url(./images/main_esg3.jpg);}
+
+    .wrap ul li p{color: #fff; position: relative; z-index: 1; margin-left: 40px; width: 100%;line-height: 50px;font-family: 'OTTOGISans-medium', 'Malgun Gothic', '맑은 고딕', "돋움", sans-serif; box-sizing: border-box;}
+    .wrap ul li p:nth-child(1){font-size: 24px; margin-top: 70px;}
+    .wrap ul li p:nth-child(2){font-size: 40px; margin-top: 20px;}
+    .wrap ul li p:nth-child(3){font-size: 28px; opacity: 0;font-family: 'OTTOGISans-light', 'Malgun Gothic',sans-serif; margin-top: 80px;}
+    .wrap ul li p:nth-child(4){opacity: 0; margin-top: 30px;}
+
+    .wrap ul:hover li:hover{width: 70%;}
+    .wrap ul:not(:hover) li:not(:hover){width: 30%;}
+    .wrap ul:hover li:hover:after{background: rgba(0,0,0,0.2);}
+    .wrap ul:hover li:hover p:nth-child(2){font-size: 64px;}
+    .wrap ul:hover li:hover p:nth-child(3){opacity: 1;transition: 0.5s 0.5s;}
+    .wrap ul:hover li:hover p:nth-child(4){opacity: 1;transition: 0.5s 0.5s; animation-name: transform; animation-duration: 0.5s; animation-timing-function:linear; animation-iteration-count: infinite; animation-direction: alternate;}
+
+    @keyframes transform{
+      0%{transform: translateX(-5px);}
+      100%{transform: translateX(5px);}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <ul>
+      <li>
+        <a href="#">
+          <p>Environmental</p>
+          <p>환경</p>
+          <p>자연과 함께 맛으로 행복한 세상을<br>만들기 위한 의미 있는 걸음을<br>내딛습니다.</p>
+          <p><img src="./images/btn_more_wh_pc.svg" alt="btn"></p>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <p>Social</p>
+          <p>사회</p>
+          <p>기업활동에 반하는 어떠한 행위도<br>허용하지 않으며, 깨끗하고 정직한<br>기업문화를 만들어갑니다.</p>
+          <p><img src="./images/btn_more_wh_pc.svg" alt="btn"></p>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <p>Governance</p>
+          <p>지배구조</p>
+          <p>모든 이해관계자의 권익을 증진하는<br>건전한 지배구조의 기업으로<br>도약하고자 합니다.</p>
+          <p><img src="./images/btn_more_wh_pc.svg" alt="btn"></p>
+        </a>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>
