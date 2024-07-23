@@ -10,18 +10,20 @@
     ul{list-style: none;}
     .cnb h1{text-align: center;margin-bottom: 50px;}
     .cnb{width: 1707px;margin: 50px auto;}
-    .cnb ul{display: flex;gap:calc(5% / 2)}
-    .cnb ul li{width: calc(100% / 3);
-        transition: 0.5s;display: flex;justify-content: center;}
+    .cnb ul{display: flex;gap:40px}
+    .cnb ul li{
+        transition: 0.5s;display: flex;height: 570px;}
     .cnb ul li a{display: block;width: 100%;height: 570px;border-radius: 12px;
         color: #fff;background-size: cover;
         background-position: center;position: relative;overflow: hidden;}
-    .cnb ul li:nth-of-type(1){border: 4px dotted #000;border-radius: 12px;flex-basis: 70%;}
-    .cnb ul li:nth-child(1) a{background-image: url(./images/main_esg1.jpg);}
-    .cnb ul li:nth-child(2) a{background-image: url(./images/main_esg2.jpg);}
-    .cnb ul li:nth-child(3) a{background-image: url(./images/main_esg3.jpg);}
+    /* .cnb ul li:nth-of-type(1){border: 4px dotted #000;border-radius: 12px;} */
+    .cnb ul li:nth-child(1) a{background-image: url(https://www.ottogi.co.kr/images/common/main_esg1.jpg);}
+    .cnb ul li:nth-child(2) a{background-image: url(https://www.ottogi.co.kr/images/common/main_esg2.jpg);}
+    .cnb ul li:nth-child(3) a{background-image: url(https://www.ottogi.co.kr/images/common/main_esg3.jpg);}
   
     .cnb ul li a::after{content: "";position:absolute;width: 100%;height: 100%;background: rgba(0,0,0,0.5);left: 0;top: 0;}
+    .cnb ul:not(:hover) li:first-child a::after,
+.cnb ul li:hover a::after{background: rgba(0,0,0,0.2);}
 
     .cnb ul li p{text-align: center; position: relative;z-index: 1;}
     .cnb ul li p:first-child{font-size: 24px;font-weight: bold;position: absolute;left: 10%;top: 10%;}
@@ -31,10 +33,13 @@
     .cnb ul li .txt p img{display: block;margin-top: 150px;}
 
 
-    .cnb ul:hover li:hover{flex-basis: 70%;background-size: 150%;transition: 1s;}
-    .cnb ul:hover li:not(:hover){flex-basis: 30%; }
+    .cnb ul:hover li:hover,
+    .cnb ul:not(:hover) li:first-child
+    {width: 50%;}
+    .cnb ul li,
+    .cnb ul:hover li:not(:hover){width: 25%;}
     .cnb ul:hover li:hover .txt{opacity: 1;}
-    .cnb ul:hover li:hover::after{background:rgba(0,0,0,0.0);}
+    .cnb ul:hover li:hover::after{}
     
 </style>
 </head>
@@ -48,7 +53,7 @@
                     <p>환경</p>
                     <div class="txt">
                         <p>자연과 함께 맛으로 행복한 세상을 <br>만들기 위한 의미있는 걸음을  <br>내딛습니다.</p>
-                        <p><img src="images/btn_more_wh_pc.svg" alt=""></p>
+                        <p><img src="https://www.ottogi.co.kr/images/common/btn_more_wh_pc.svg" alt=""></p>
                     </div>
                 </a>
             </li>
@@ -58,7 +63,7 @@
                     <p>사회</p>
                     <div class="txt">
                         <p>기업활동에 반하는 어떠한 행위도 <br>허용하지 않으며, 깨끗하고 정직한 <br>기업문화를 만들어갑니다.</p>
-                        <p><img src="images/btn_more_wh_pc.svg" alt=""></p>
+                        <p><img src="https://www.ottogi.co.kr/images/common/btn_more_wh_pc.svg" alt=""></p>
                     </div>
                 </a>
             </li>
@@ -68,7 +73,7 @@
                     <p>지배구조</p>
                     <div class="txt">
                         <p>모든 이해관계자의 권익을 증진하는 <br>건전한 지배구조의 기업으로 <br>도약하고자 합니다.</p>
-                        <p><img src="images/btn_more_wh_pc.svg" alt=""></p>
+                        <p><img src="https://www.ottogi.co.kr/images/common/btn_more_wh_pc.svg" alt=""></p>
                     </div>
                 </a>
             </li>
