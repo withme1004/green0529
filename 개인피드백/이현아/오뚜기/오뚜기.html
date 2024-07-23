@@ -22,8 +22,8 @@
     ul{list-style: none;}
     a{text-decoration: none;}
     .wrap{width: 1700px; margin: 50px auto; }
-    .wrap ul{display: flex; gap: calc(10% / 3);}
-    .wrap ul li{width: calc(90% / 3); border-radius: 20px;height: 570px; position: relative; overflow: hidden; transition: 0.5s; background-size: cover; cursor: pointer; }
+    .wrap ul{display: flex; gap: 40px;}
+    .wrap ul li{border-radius: 20px;height: 570px; position: relative; overflow: hidden; transition: 0.5s; background-size: cover; cursor: pointer; }
     .wrap ul li::after{content: ""; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7);}
 
     .wrap ul li:nth-child(1){background-image: url(./images/main_esg1.jpg);}
@@ -35,9 +35,13 @@
     .wrap ul li p:nth-child(2){font-size: 40px; margin-top: 20px;}
     .wrap ul li p:nth-child(3){font-size: 28px; opacity: 0;font-family: 'OTTOGISans-light', 'Malgun Gothic',sans-serif; margin-top: 80px;}
     .wrap ul li p:nth-child(4){opacity: 0; margin-top: 30px;}
+		
+		.wrap ul:not(:hover) li:first-child,
+    .wrap ul:hover li:hover{width: 50%;}
+		.wrap ul li,
+    .wrap ul:hover li:not(:hover){width: 25%;}
 
-    .wrap ul:hover li:hover{width: 70%;}
-    .wrap ul:not(:hover) li:not(:hover){width: 30%;}
+		.wrap ul:not(:hover) li:first-child:after,
     .wrap ul:hover li:hover:after{background: rgba(0,0,0,0.2);}
     .wrap ul:hover li:hover p:nth-child(2){font-size: 64px;}
     .wrap ul:hover li:hover p:nth-child(3){opacity: 1;transition: 0.5s 0.5s;}
