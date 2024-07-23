@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>노랑풍선 회사소개 [여행을 가볍게]</title>
+    <style>
+        @font-face {
+            font-family: YbFontLight;
+            src: url(webfonts/YbFontLight.woff) format("woff");
+        }
+
+        *{margin: 0; padding: 0;}
+        ul{list-style: none;}
+
+        .wrap .title{width: 1480px; text-align: center; margin: 50px auto 80px;}
+        .wrap .title h1{font-family: YbFontLight; font-size: 36px;}
+
+        .wrap .con {width: 1480px; height: 500px; margin: 0 auto; display: flex; justify-content: space-between;}
+        .wrap .con li{height: 100%; flex-basis: 15%; transition-timing-function: cubic-bezier(.25,.25,.75,.75); transition: 0.7s;}
+        .wrap .con li div{width: 91%; height: 100%; border-radius: 10px; text-align: center; margin: 0 auto; background-repeat: no-repeat; background-position: center; overflow: hidden; position: relative;}
+        
+        .wrap .con li:hover{flex-basis: 30%;}
+        .wrap .con li:not(:hover){flex-basis: 15%;}
+        .wrap .con li:hover div{width: 95%;}
+        .wrap .con li:not(:hover) div{width: 91%;}
+        
+        .wrap .con .con1 div{background-image: url(images/bg_category_1.jpg);}
+        .wrap .con .con2 div{background-image: url(images/bg_category_2.jpg);}
+        .wrap .con .con3 div{background-image: url(images/bg_category_3.jpg);}
+        .wrap .con .con4 div{background-image: url(images/bg_category_4.jpg);}
+        .wrap .con .con5 div{background-image: url(images/bg_category_5.jpg);}
+        .wrap .con .con6 div{background-image: url(images/bg_category_6.jpg);}
+        .wrap .con .con7 div{background-image: url(images/bg_category_7.jpg);}
+        .wrap .con .con8 div{background-image: url(images/bg_category_8.jpg);}
+
+        .wrap .con li div h1{font-size: 24px; color: #fff; padding: 220px 0;}
+        .wrap .con li div p{width: 100%; color: #fff; font-weight: bold; line-height: 30px; position: absolute; left: 0; top: 50%; transform: translateY(-15%); white-space: nowrap; opacity: 0;}
+
+        .wrap .con li:hover div h1{font-size: 36px; height: 550px; background: rgba(0,0,0,.7); transform: translateY(-40px); transition: transform 0s 0.3s;}
+        .wrap .con li:nth-child(3):hover div h1, .wrap .con li:nth-child(6):hover div h1{transform: translateY(-80px);}
+        .wrap .con li:hover div p{opacity: 1; transition: 0.3s 0.3s;}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="title">
+            <h1>노랑풍선이 만드는 여행</h1>
+        </div>
+        <ul class="con">
+            <li class="con1">
+                <div>
+                    <h1>Package</h1>
+                    <p>전세계 맞춤 패키지여행으로<br>연인, 친구, 가족과 함께<br>행복한 추억을 만듭니다.</p>
+                </div>
+            </li>
+            <li class="con2">
+                <div>
+                    <h1>Honeymoon</h1>
+                    <p>신혼부부의 취향과 조건에 맞춘<br>특별한 여행으로<br>낭만적인 순간을 함께합니다.</p>
+                </div>
+            </li>
+            <li class="con3">
+                <div>
+                    <h1>Golf<br>& Theme</h1>
+                    <p>골프투어, 가족여행, 크루즈여행,<br>휴양여행, 성지순례, 문화탐방 등<br>원하는 테마로 여행할 수 있습니다.</p>
+                </div>
+            </li>
+            <li class="con4">
+                <div>
+                    <h1>Air Ticket</h1>
+                    <p>세계 주요 도시 및<br>국내 항공 권 예약·발권과<br>단체 그룹 예약까지 가능합니다.</p>
+                </div>
+            </li>
+            <li class="con5">
+                <div>
+                    <h1>Hotel</h1>
+                    <p>마음에 맞는 전세계 및 국내 호텔을<br>쉽고 빠르게 예약할 수 있습니다.</p>
+                </div>
+            </li>
+            <li class="con6">
+                <div>
+                    <h1>Tour<br>& Ticket</h1>
+                    <p>배낭여행 및 개별여행을 위한<br>유레일 패스 등 교통권과 현지투어,<br>입장티켓을 예약할 수 있습니다.</p>
+                </div>
+            </li>
+            <li class="con7">
+                <div>
+                    <h1>Domestic</h1>
+                    <p>국내의 문화유적, 제주 패키지,<br>골프 및 렌터카, 특급 호텔 예약을<br>제공합니다.</p>
+                </div>
+            </li>
+            <li class="con8">
+                <div>
+                    <h1>Incentive</h1>
+                    <p>국제회의 및 박람회, 기업·단체 연수<br>단체 포상, 대학교, 지역 모임 등<br>인센티브 여행을 함께합니다.</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
