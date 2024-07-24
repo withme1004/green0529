@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		*{margin: 0;padding: 0;}
+		section{position: relative;width: 450px;height:500px;}
+		section p{clip-path: url(#path1);
+			position: absolute;left: 0;top: 0;width: 100%;height: 100%;}
+		section p img{width: 100%;height: 100%;object-fit: cover;}
+		svg{position: absolute;left: 0;top: 0;width: 100%;height: 100%;}
+	</style>
+</head>
+<body>
+	<section>
+		<p><img src="https://www.ottogi.co.kr/images/common/clip2_1.jpg" alt=""></p>
+		<svg class="svg">
+			<clipPath id="path1" clipPathUnits="objectBoundingBox">
+				<path d="M0.5,1 C0.469,1,0.439,0.996,0.419,0.989 L0.049,0.855 C0.025,0.846,0,0.809,0,0.781 V0.219 C0,0.191,0.025,0.154,0.049,0.145 L0.419,0.011 C0.439,0.004,0.469,0,0.5,0 C0.531,0,0.561,0.004,0.581,0.011 L0.951,0.145 C0.975,0.154,1,0.191,1,0.219 V0.781 C1,0.809,0.975,0.846,0.951,0.855 L0.581,0.989 C0.561,0.996,0.531,1,0.5,1">
+			</clipPath>
+		</svg>
+	</section>
+</body>
+</html>
