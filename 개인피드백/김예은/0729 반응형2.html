@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+*{margin: 0; padding: 0;}
+
+
+#fixed{width: 100%; position: fixed; bottom: 0; left: 0; background-color: #000;}
+#fixed .wrap{display: flex; flex-direction: row; justify-content: space-between; padding: 20px; align-items: center;}
+#fixed .wrap .left{font-size: 14px; word-break: keep-all; width: 1101px;}
+#fixed .wrap .left p{color: #fff; margin-bottom: 4px;}
+#fixed .wrap .left a{color: #f4731f;}
+#fixed .wrap .left a:hover{color:#f89b5c; text-decoration: none;}
+#fixed .wrap .right{font-size: 17px; display: flex; padding:0 16px;background-color: #f4731f; justify-content: center;  cursor: pointer;}
+#fixed .wrap .right a{color: #fff; text-decoration: none; display: block; line-height: 58px;}
+#fixed .wrap .right:hover{background-color:#f89b5c;}
+
+@media screen and (max-width: 1206px) {
+  #fixed .wrap .left{width: 1053px;}
+}
+@media screen and (max-width: 1158px) {
+  #fixed .wrap .left{width: 900px;}
+}
+@media screen and (max-width: 1100px) {
+  #fixed .wrap .left{width: 922px;}
+}
+@media screen and (max-width: 1027px) {
+  #fixed .wrap .left{width: 753px;}
+}
+@media screen and (max-width: 858px) {
+  #fixed .wrap .left{width: 650px;}
+}
+@media screen and (max-width: 755px) {
+  #fixed .wrap .left{width: 500px;}
+}
+@media screen and (max-width: 605px) {
+  #fixed .wrap .left{width: 400px;}
+}
+@media screen and (max-width: 505px) {
+  #fixed .wrap .left{width: 300px;}
+}
+@media screen and (max-width: 405px) {
+  #fixed .wrap .left{width: 200px;}
+}
+@media screen and (max-width: 305px) {
+  #fixed .wrap .left{width: 100px;}
+}
+@media screen and (max-width: 205px) {
+  #fixed .wrap .left{width: 0px;}
+}
+
+
+  </style>
+</head>
+<body>
+  
+<div id="fixed">
+
+  <div class="wrap">
+    <div class="left">
+      <p>해당 사이트는 쿠키를 사용하며, 이는 귀하에게 유용한 정보를 파악 하고, 최적화된 정보를 제공하는 마케팅에 활용될 수 있습니다. 이 사이트를 계속 사용함으로써 쿠키 활용에 동의하게 됩니다.</p>
+      <a href="#">상세보기</a>
+    </div>
+    <div class="right">
+      <a href="#">확인</a>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
