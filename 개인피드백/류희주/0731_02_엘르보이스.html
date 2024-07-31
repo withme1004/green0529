@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        body{
+            background: #F2EFE8;
+        }
+        #wrap {
+            width: 100%;
+            height: 100vh;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px;
+            flex-wrap: wrap;
+            background: #F2EFE8;
+            padding: 40px;
+            box-sizing: border-box;
+        }
+        #wrap section{
+            width: 50%;
+            height: 100%;
+        }
+        #wrap section:nth-child(2){
+            background-image: url(https://www.hjmembers.co.kr/resources/images/main/theme-service_ellevoice-mo.png);
+            background-position-x: 20px;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        #wrap section:nth-child(1)>p{
+            margin-top: 24px;
+        }
+        #wrap section:nth-child(1)>p:nth-child(1){
+            font-size: 20px;
+            font-weight: bold;
+        }
+        #wrap section:nth-child(1)>p:nth-child(2){
+            font-size: 36px;
+            font-weight: bold;
+        }
+        #wrap section:nth-child(1)>p:nth-child(3){
+            font-size: 18px;
+            color: #666;
+            font-weight: 600;
+        }
+        #wrap section:nth-child(1) .button{
+            margin-top: 50px;
+            display: flex;
+        }
+        #wrap section:nth-child(1) .button>p{
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 20px;
+            padding: 16px 24px;
+            border: 1px solid;
+            box-sizing: border-box;
+        }
+        #wrap section:nth-child(1) .button>p span{
+            padding-left: 10px;
+            vertical-align: middle;
+        }
+        #wrap section:nth-child(1) .button>p span img{
+            width: 20px;
+            height: 20px;
+        }
+        @media screen and (max-width:1024px){
+            #wrap{
+                padding: 20px;
+            }
+            #wrap section{
+                width: 100%;
+                margin: 0 auto;
+            }
+            #wrap section:nth-child(1){
+                height: 30%;
+            }
+            #wrap section:nth-child(1)>p{
+                text-align: center;
+            }
+            #wrap section:nth-child(1) div.button{
+                margin-top:5%;
+                justify-content: center;
+            }
+            /* 뷰포트에 맞게 폰트사이즈 줄이는 방법 
+            #wrap section:nth-child(1)>p:nth-child(1){
+                font-size: 2vw;
+            }
+            #wrap section:nth-child(1)>p:nth-child(2){
+                font-size: 3.5vw;
+            }
+            #wrap section:nth-child(1)>p:nth-child(3){
+                font-size: 1.7vw;
+            }
+            #wrap section:nth-child(1) div.button{
+                margin-top: 30px;
+                justify-content: center;
+            }
+            #wrap section:nth-child(1) .button>p{
+                font-size: 1.7vw;
+            } */
+            #wrap section:nth-child(1){
+                margin-bottom: 15%;            
+            }
+            #wrap section:nth-child(2){
+                margin-top: 5%;           
+            }
+        }
+        @media screen and (max-width:600px){
+            #wrap section:nth-child(1)>p:nth-child(1){
+                font-size: 16px;
+            }
+            #wrap section:nth-child(1)>p:nth-child(2){
+                font-size: 24px;
+            }
+            #wrap section:nth-child(1)>p:nth-child(3){
+                width: 70%;
+                margin: 5% auto;
+                font-size: 14px;
+            }
+            #wrap section:nth-child(1) div.button{
+                margin-top: 30px;
+                justify-content: center;
+            }
+            #wrap section:nth-child(1) .button>p{
+                font-size: 14px;
+            }
+            #wrap section:nth-child(1) div.button p{
+                padding: 3% 6%;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <section>
+            <p>엘르보이스</p>
+            <p>여성의 삶,<br>
+            레퍼런스가 필요할 때</p>
+            <p>작가, 북튜버, 아나운서, 기자 싱어송라이터까지!<br>
+                동시대를 살아가는 여성들의 에세이 뉴스레터를 구독해보세요.</p>
+            <div class="button">
+                <p>바로가기<span><img src="	https://www.hjmembers.co.kr/resources/images/main/main-page_button-arrow-dark.svg" alt="arrow"></span></p>
+            </div>
+        </section>
+        <section>        
+        </section>
+    </div>
+</body>
+</html>
