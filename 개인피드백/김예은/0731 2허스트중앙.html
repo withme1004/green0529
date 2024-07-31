@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hearst Joongang</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    ul{list-style: none;}
+    a{text-decoration: none; color: #ccc;}
+    body{background-color: #F2EFE8;}
+
+    @font-face {
+      font-family: noto;
+      src: url(webfonts/NotoSans-Light.woff);
+    }
+    p, a{font-family: noto;}
+
+#wrap{display: flex ;max-width: 1280px; width: 90%; margin: 0 auto; justify-content: space-between; align-items: center;}
+
+    .left p{word-break: keep-all; font-weight: bold;}
+    .left p:first-child{font-size: 20px;}
+    .left p:nth-child(2){font-size: 36px; padding-top: 25px;}
+    .left p:nth-child(3){font-size: 18px; color: #666666;padding-top: 20px;}
+    .left a{margin-top: 45px; display: inline-block; padding: 10px 20px; border: 1px solid; color: #111111; line-height: 26px;}
+    .left span img{width: 20px;height: 20px; vertical-align: middle;}
+
+    .right p img{max-width: 682px; width: 100%;object-fit: cover;}
+
+@media screen and (max-width:1024px) {
+  #wrap{flex-direction: column; width: 80%;}
+  #wrap section{text-align: center;}
+    .left p:nth-child(3){font-size: 20px;}
+    .left a{margin-top: 30px;}
+    .right p img{margin-top: 40px; max-width: 100%;}
+}
+@media screen and (max-width:768px) {
+  #wrap{width: 90%;}
+    .left p:nth-child(2){font-size: 24px;}
+    .left p:nth-child(3){font-size: 14px;}
+    .right p img{margin-top: 20px;}
+
+}
+
+  </style>
+</head>
+<body>
+  
+<div id="wrap">
+  <section class="left">
+  <p>엘르보이스</p>
+  <p>여성의 삶,<Br>
+    레퍼런스가 필요할 때</p>
+  <p>작가, 북튜버, 아나운서, 기자 싱어송라이터까지!<Br>
+    동시대를 살아가는 여성들의 에세이 뉴스레터를 구독해보세요.</p>
+  <a href="#">바로가기 <span><img src="images/main-page_button-arrow-dark.svg" alt=""></span></a>
+  </section>
+  
+  <section class="right">
+    <p><img src="images/theme-service_ellevoice.png" alt="elle"></p>
+  </section>
+</div>
+
+</body>
+</html>
