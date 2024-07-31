@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    @font-face {
+      font-family: notosansKR;
+      src: url(webfonts/NotoSans-Medium.woff) format("woff");
+    }
+    *{margin: 0; padding: 0;}
+    body{background: #f2efe8;}
+    #wrap{max-width: 1280px; width: 90%; height: 100vh; display: flex; margin: 0 auto; justify-content: space-between;
+      align-items: center; padding: 0 40px; box-sizing: border-box; flex: 1 1 50%;}
+    #wrap .left{width: 30%%; white-space: nowrap; font-family: notosansKR;}
+    #wrap .left h4{font-size: 20px; color: #111;}
+    #wrap .left h1{font-size: 36px; color: #111; margin-top: 24px;}
+    #wrap .left p{font-size: 20px; color: #666; margin-top: 20px; }
+    #wrap .left a{color: #111; text-decoration: none; display: inline-block;
+      border: 1px solid #111; padding: 16px 24px; margin-top: 60px; line-height: 24px;}
+    #wrap .left a span img{vertical-align: middle; padding-left: 5px;}
+    
+    #wrap .right{width: 60%;}
+    #wrap .right p img{width: 100%; height: 100%; min-width: 427px; display: block; 
+      vertical-align: middle;}
+
+    @media screen and (max-width: 1024px) {
+      #wrap{flex-wrap: wrap; justify-content: center; padding: 40px;}
+      #wrap .left{text-align: center; width: 100%; height: 40%;}
+      #wrap .left a{margin-top: 30px;}
+      #wrap .right{width: 90%; height: 60%; }
+    }
+    @media screen and (max-width: 768px) {
+      #wrap{height: 100vh; padding: 0 20px; margin: 0; width: 100%;}
+      #wrap .left{height: 40%; padding-top: 70px; box-sizing: border-box;}
+      #wrap .left h4{font-size: 14px;}
+      #wrap .left h1{font-size: 24px; margin-top: 12px;}
+      #wrap .left p{font-size: 14px; margin-top: 10px;}
+      #wrap .left a{margin-top: 30px; padding: 10px 16px 12px 20px; font-size: 14px;}
+      
+      #wrap .right{width: 100%; height: 60%;}
+      #wrap .right p{width: 100%; max-width: 800px;}
+    }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <div class="left">
+      <h4>엘르보이스</h4>
+      <h1>여성의 삶,<br>레퍼런스가 필요할 때</h1>
+      <p>작가, 북튜버, 아나운서, 기자 싱어송라이터까지!<br>동시대를 살아가는 여성들의 에세이 뉴스레터를
+      구독해보세요.</p>
+      <a href="#">바로가기<span><img src="images/main-page_button-arrow-dark.svg" alt="화살표"></span></a>
+    </div>
+    <div class="right">
+      <p><img src="https://www.hjmembers.co.kr/resources/images/main/theme-service_ellevoice.png" alt="엘르보이스"></p>
+    </div>
+  </div>
+</body>
+</html>
