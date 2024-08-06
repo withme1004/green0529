@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      .we {
+        width: 90%;
+        max-width: 1132px;
+        margin: 0 auto;
+      }
+      .we .txt {
+        display: flex;
+        justify-content: space-between;
+      }
+      .we .txt h1 {
+        font-size: 42px;
+        color: #3f51b5;
+        font-weight: normal;
+      }
+      .we .txt p::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 2px;
+        height: 44px;
+        background-color: #e0e0e0;
+        display: block;
+      }
+      .we .txt p {
+        font-size: 16px;
+        color: #616161;
+        padding-left: 20px;
+        position: relative;
+      }
+      .we .con {
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        margin-top: 110px;
+        padding-bottom: 124px;
+        border-bottom: 2px solid #eee;
+      }
+      .we .con li a p:nth-child(2) {
+        font-size: 16px;
+        color: #3f51b5;
+        margin: 29px 20px;
+      }
+      .we .con li a p:last-child {
+        font-size: 14px;
+        color: #616161;
+      }
+      .we .con li a p img {
+        height: 52px;
+      }
+
+      @media screen and (max-width: 1132px) {
+        .we .txt {
+          display: block;
+          text-align: center;
+        }
+        .we .txt h1 {
+          margin-bottom: 30px;
+        }
+        .we .txt p::before {
+          display: none;
+        }
+      }
+      @media screen and (max-width: 768px) {
+        .we .con {
+          display: block;
+          margin-top: 68px;
+        }
+        .we .con li {
+          margin-top: 52px;
+        }
+        .we .con li a p br {
+          display: none;
+        }
+      }
+      .work {
+        display: block;
+        margin-top: 118px;
+      }
+      .work .tit {
+        width: 90%;
+        max-width: 1132px;
+        margin: 0 auto;
+        margin-bottom: 76px;
+      }
+      .work .tit h1 {
+        font-size: 42px;
+        color: #3f51b5;
+        font-weight: normal;
+      }
+      .work ul {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .work ul li {
+        width: 25%;
+      }
+      .work ul li a {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+      .work ul li:hover a::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #3f51b5;
+        opacity: 0.8;
+      }
+      .work ul li a .hideTxt {
+        position: absolute;
+        color: #fff;
+        padding: 37px;
+        box-sizing: border-box;
+        left: 0;
+        top: 0;
+      }
+      .work ul li a .hideTxt p {
+        display: none;
+        transition: 0.5s;
+      }
+      .work ul li a .hideTxt p:nth-child(1) {
+        font-size: 23px;
+        margin-bottom: 7px;
+      }
+      .work ul li a .hideTxt p:nth-child(2) {
+        font-size: 11px;
+      }
+      .work ul li:hover a .hideTxt p {
+        display: block;
+      }
+      .work ul li a p {
+        height: 100%;
+      }
+      .work ul li a img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="we">
+      <div class="txt">
+        <h1>WE ARE</h1>
+        <p>
+          Contrary to popular belief, Lorem Ipsum is not simply random text. It
+          has roots in a<br />
+          piece of classical Latin literature from 45 BC, making it over 2000
+          years old.
+        </p>
+      </div>
+      <ul class="con">
+        <li>
+          <a href="#">
+            <p><img src="images/promo01.png" alt="promo" /></p>
+            <p>HOME</p>
+            <p>
+              Lorem Ipsum is simply dummy text of the<br />
+              printing and typesetting industry.
+            </p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p><img src="images/promo02.png" alt="promo" /></p>
+            <p>WE ARE</p>
+            <p>
+              Lorem Ipsum is simply dummy text of the<br />
+              printing and typesetting industry.
+            </p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p><img src="images/promo03.png" alt="promo" /></p>
+            <p>WORK</p>
+            <p>
+              Lorem Ipsum is simply dummy text of the<br />
+              printing and typesetting industry.
+            </p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p><img src="images/promo04.png" alt="promo" /></p>
+            <p>BLOG</p>
+            <p>
+              Lorem Ipsum is simply dummy text of the<br />
+              printing and typesetting industry.
+            </p>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="work">
+      <div class="tit">
+        <h1>WORK</h1>
+      </div>
+      <ul>
+        <li>
+          <a href="#"
+            ><p><img src="images/work01.jpg" alt="work" /></p>
+            <div class="hideTxt">
+              <p>Running</p>
+              <p>work</p>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#"
+            ><p><img src="images/work02.jpg" alt="work" /></p>
+            <div class="hideTxt">
+              <p>Rugby</p>
+              <p>work</p>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#"
+            ><p><img src="images/work03.jpg" alt="work" /></p>
+            <div class="hideTxt">
+              <p>Weight</p>
+              <p>work</p>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#"
+            ><p><img src="images/work04.jpg" alt="work" /></p>
+            <div class="hideTxt">
+              <p>Marathon</p>
+              <p>work</p>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#"
+            ><p><img src="images/work05.jpg" alt="work" /></p>
+            <div class="hideTxt">
+              <p>Boxing</p>
+              <p>work</p>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p><img src="images/work06.jpg" alt="work" /></p>
+            <div class="hideTxt">
+              <p>Ice Hockey</p>
+              <p>work</p>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#"
+            ><p><img src="images/work07.jpg" alt="work" /></p>
+            <div class="hideTxt">
+              <p>Skate Board</p>
+              <p>work</p>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#"
+            ><p><img src="images/work08.jpg" alt="work" /></p>
+            <div class="hideTxt">
+              <p>Basketball</p>
+              <p>work</p>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
