@@ -8,7 +8,7 @@
 		*{margin: 0;padding: 0;}
 		ul{list-style: none;}
 		.esg{width: 95%;max-width: 940px;margin: 0 auto;text-align: center;}
-		.esg ul{display: flex;gap: 20px;}
+		.esg ul{display: flex;gap: 20px;counter-reset: number;}
 		.esg ul li{flex: 1 1 20%;background: #d2492c;border-radius: 20px;height: 305px;padding: 24px 13px 18px;box-sizing: border-box;color: #fff;font-size: 17px;}
 		.esg ul li:nth-child(1):before{background-position: 0 0;}
 		.esg ul li:nth-child(2):before{background-position: -108px 0;}
@@ -16,6 +16,7 @@
 		.esg ul li:nth-child(4):before{background-position: -324px 0;}
 		.esg ul li:nth-child(5):before{background-position: -432px 0;}
 		.esg ul li::before{content: "";width: 108px;height: 100px;background-image: url(https://www.shinsegaefood.com/images/icon/icon_voc.png);display: block;margin: 0 auto;}
+		.esg ul li p.title::before{content:counter(number);counter-increment: number;display: inline-block;background: #ecff96;border-radius: 50%;width: 18px;height: 18px;color: #d2492c;text-align: center;line-height: 18px;}
 		.esg ul li div{width: 80%;margin: 0 auto;}
 		.esg ul li div p{padding-left: 7px;letter-spacing: -1px;position: relative;}
 		.esg ul li div p::before{content: "";width: 2px;height: 2px;background: #fff;display: inline-block; margin: 13px 5px 0 -7px;border-radius: 50%;vertical-align: top;}
