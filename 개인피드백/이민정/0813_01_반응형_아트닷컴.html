@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABC마트의 패션 컨텐츠 채널, 아트닷컴</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        ul{list-style: none;}
+        a{text-decoration: none;}
+
+        section{display: flex;}
+        section .left{width: 824px; height: 100vh; position: sticky; left: 0; top: 0;}
+        section .left a{display: block; width: 100%; height: 100%; background-image: url(https://image.a-rt.com//art/display/gs/contents/202408/20240801183623984.jpg); background-repeat: no-repeat; background-size: cover;}
+        section .left a .txt{position: absolute; left: 50px; bottom: 100px;}
+        section .left a .txt p{color: #fff;}
+        section .left a .txt p:first-child{font-size: 50px; font-weight: bold; padding-bottom: 30px;}
+        section .left a .txt p:last-child{font-size: 19px;}
+
+        section .right{width: calc(100% - 824px); display: flex; flex-wrap: wrap;}
+        section .right > li{flex: 1 1 45%; border: 1px solid #b5b5b5; box-sizing: border-box; border-right: 0; border-top: 0;}
+        section .right > li > a{display: block; width: 80%; margin: 50px auto 0; }
+        section .right > li > a > p{width: 100%;overflow: hidden; padding-bottom: 50px; box-sizing: border-box; position: relative;}
+        section .right > li > a > p img{width: 100%; height: 100%; object-fit: cover; position: absolute;}
+        section .right > li > a h2{color: #000; padding: 20px 0; font-size: 24px; box-sizing: border-box; letter-spacing: -2px;}
+
+        section .right > li .dcon{margin-bottom: 50px;}
+        section .right > li .dcon li{width: 80%; margin: 30px auto 0;}
+        section .right > li .dcon li a{width: 100%; display: flex;}
+        section .right > li .dcon li a > p{width: 100px; height: 100px;}
+        section .right > li .dcon li a > p img{width: 100%; height: 100%; object-fit: cover;}
+        section .right > li .dcon li a .txt{width: calc(100% - 100px); padding: 10px 0 0 20px; box-sizing: border-box;}
+        section .right > li .dcon li a .txt p{color: #000; font-size: 13px;}
+        section .right > li .dcon li a .txt p:first-child, section .right > li .dcon li a .txt p:last-child{font-weight: bold;}
+        section .right > li .dcon li a .txt p:nth-child(2){padding: 7px 0 17px;
+        text-overflow: ellipsis; overflow: hidden; white-space: nowrap; width: 100%;}
+
+        @media screen and (max-width: 1550px) {
+            /* section .right > li{flex: 0 1 100%;}
+            section .right > li > a > p{width: 85%;}
+            section .right > li > a h2{width: 85%;}
+            section .right > li .dcon li{width: 85%;} */
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="left">
+            <a href="#">
+                <div class="txt">
+                    <p>SUMMER<br>FOR-REST</p>
+                    <p>가볍게 댓글 남기고 시원한 경품 챙겨가세요!</p>
+                </div>
+            </a>
+        </div>
+        <ul class="right">
+            <li>
+                <a href="#">
+                    <p>
+                        <img src="https://image.a-rt.com//art/display/template/202407/1722417002874.jpg?shrink=600:*" alt="01">
+                    </p>
+                    <h2>SPECIAL EVENT<br>마음을 편안하게 하는 여름휴가</h2>
+                </a>
+                <ul class="dcon">
+                    <li>
+                        <a href="#">
+                            <p>
+                                <img src="https://image.a-rt.com/art/product/2024/06/58094_1719203861629.jpg?shrink=224:224" alt="d01">
+                            </p>
+                            <div class="txt">
+                                <p>크록스</p>
+                                <p>클래식 올 터레인 클로그</p>
+                                <p>47,000원</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p>
+                                <img src="https://image.a-rt.com/art/product/2024/07/47668_1719806964132.jpg?shrink=224:224" alt="d02">
+                            </p>
+                            <div class="txt">
+                                <p>크록스</p>
+                                <p>클래식 번지 코드 클로그</p>
+                                <p>65,000원</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <p>
+                        <img src="https://image.a-rt.com//art/display/template/202408/1722587825598.jpg?shrink=600:*" alt="02">
+                    </p>
+                    <h2>클리어런스 세일<br>썸머 시즌 오프 시작합니다!</h2>
+                </a>
+                <ul class="dcon">
+                    <li>
+                        <a href="#">
+                            <p>
+                                <img src="https://image.a-rt.com/art/product/2024/06/50909_1718092719059.jpg?shrink=224:224" alt="d03">
+                            </p>
+                            <div class="txt">
+                                <p>나이키</p>
+                                <p>나이키 캄 슬라이드</p>
+                                <p>39,000원</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p>
+                                <img src="https://image.a-rt.com/art/product/2023/05/50442_1683189406143.jpg?shrink=224:224" alt="d04">
+                            </p>
+                            <div class="txt">
+                                <p>크록스</p>
+                                <p>클래식 올 터레인 샌들</p>
+                                <p>22,000원</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <p>
+                        <img src="https://image.a-rt.com//art/display/template/202408/1723076030034.jpg?shrink=600:*" alt="03">
+                    </p>
+                    <h2>모든 날 모든 순간<br>ALL DAYS!</h2>
+                </a>
+                <ul class="dcon">
+                    <li>
+                        <a href="#">
+                            <p>
+                                <img src="https://image.a-rt.com/art/product/2024/07/40765_1720406993817.jpg?shrink=224:224" alt="d05">
+                            </p>
+                            <div class="txt">
+                                <p>나이키</p>
+                                <p>우먼스 나이키스포츠웨어 링커 티셔츠</p>
+                                <p>39,000원</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p>
+                                <img src="https://image.a-rt.com/art/product/2024/07/89143_1719802454059.jpg?shrink=224:224" alt="d06">
+                            </p>
+                            <div class="txt">
+                                <p>나이키</p>
+                                <p>우먼스 나이키 코르테즈 TXT OPP1</p>
+                                <p>119,000원</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <p>
+                        <img src="https://image.a-rt.com//art/display/template/202408/1723428204905.jpg?shrink=600:*" alt="04">
+                    </p>
+                    <h2>미리 만나보는 가을<br>신상 얼리버드 쿠폰 혜택!</h2>
+                </a>
+                <ul class="dcon">
+                    <li>
+                        <a href="#">
+                            <p>
+                                <img src="https://image.a-rt.com/art/product/2024/07/25313_1721354540944.jpg?shrink=224:224" alt="d07">
+                            </p>
+                            <div class="txt">
+                                <p>나이키</p>
+                                <p>우먼스 나이키 코트 비전 로우 넥스트네이처 MS</p>
+                                <p>89,000원</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p>
+                                <img src="https://image.a-rt.com/art/product/2024/07/51720_1721364613426.jpg?shrink=224:224" alt="d08">
+                            </p>
+                            <div class="txt">
+                                <p>아디다스</p>
+                                <p>VX 조그 2.0</p>
+                                <p>79,000원</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+</body>
+</html>
