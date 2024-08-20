@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		.new{color: red;font-size: 20px;}
+		.example{color: blue;font-size: 40px;}
+	</style>
+</head>
+<body>
+	<p class="txt">하나</p>
+	<button id="add">add</button>
+	<button id="remove">remove</button>
+	<button id="replace">replace</button>
+	<button id="toggle">toggle</button>
+	<script>
+	 
+		document.getElementById("add").onclick=function(){
+			document.querySelector(".txt").classList.add("new");
+			console.log(document.querySelector(".txt").classList);
+		};
+		document.getElementById("remove").onclick=function(){
+			document.querySelector(".txt").classList.remove("new");
+		} 
+		document.getElementById("toggle").onclick=function(){
+			document.querySelector(".txt").classList.toggle("new");
+		}
+		document.getElementById("replace").addEventListener("click",function(){
+			document.querySelector(".txt").classList.replace("new","example");
+		})
+		console.log(document.querySelector(".txt").classList.contains("new"));
+		console.log(document.querySelector(".txt").classList.entries());
+	</script>	
+</body>
+</html>
