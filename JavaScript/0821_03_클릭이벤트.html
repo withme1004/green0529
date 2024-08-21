@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		*{margin: 0;padding: 0;}
+		a{text-decoration: none;color: #333;}
+		section{height: 100vh;display: flex;justify-content: center;align-items: center;}
+		section p{width: 100px;line-height: 50px;text-align: center;
+		cursor: pointer;font-size: 20px;background: rgba(0,0,0,0.5);color: #fff;}
+		section p.on{background:rgba(255,255,255,0.5);color: red;}
+		div#popup{position: fixed;left: 50%;top: 50%;transform: translate(-50%,-50%);border: 1px solid;background: #fff;width: 500px;height: 500px;}
+	</style>
+</head>
+<body>
+	<section>
+		<p><a href="#">클릭</a></p>
+	</section>
+  <div id="popup">
+		popup
+		<a href="#">close</a>
+	</div>
+	<script>
+		let btn = document.querySelector("section>p");
+		let sec = document.querySelector("#popup");
+		let secA = document.querySelector("#popup a");
+		sec.style.display = "none";
+		//btn.onclick = function(e){
+			btn.addEventListener("click",function(e){
+			e.preventDefault();
+			sec.style.display = "block";
+		})
+		secA.onclick=function(e){
+			e.preventDefault();
+			sec.style.display = "none";
+		}
+	</script>
+</body>
+</html>
