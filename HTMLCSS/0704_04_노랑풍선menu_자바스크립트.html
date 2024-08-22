@@ -26,11 +26,15 @@
 		#wrap .menu > ul > li:hover > a::after{transform: scaleX(1);}
 		#wrap .menu > ul .sub{height: 0;overflow: hidden;transition: 0.5s;position: absolute;left: 0;top: 100px;width: 100%;z-index: 1;}
 		/* #wrap .menu > ul:hover .sub{height: 320px;padding: 20px 0;} */
+		#wrap .menu > ul .sub.on{height: 320px;padding: 20px 0;} */
 		#wrap .menu > ul .sub li{line-height: 40px;text-align: center;}
 		#wrap .menu > ul>li:hover>a{}
 		#wrap .menu > ul .sub li:hover a{color:#ffc72c;display: block;}
-		.bg{position: absolute;left: 0;top: 100px;width: 100%;height: 0;transition: 0.4s;border-top: 1px solid transparent;}
+		#wrap .menu .bg{position: absolute;left: 0;top: 100px;width: 100%;height: 0;transition: 0.4s;border-top: 1px solid transparent;}
 		/* #wrap .menu > ul:hover ~ .bg{height: 320px;border-color: #ccc;background-color: #fff;} */
+		#wrap .menu .bg.on{
+			height: 320px;border-color: #ccc;background-color: #fff;
+		}
 	</style>
 </head>
 <body>
@@ -89,5 +93,21 @@
 		</header>
 		
 	</div>
+
+	<script>
+		let gnb =document.querySelectorAll("#wrap .menu > ul > li");
+		gnb.forEach(function(value,key){
+			value.onmouseenter=function(){
+				document.querySelector("#wrap header").style.backgroundColor="#fff";
+			document.querySelector("#wrap header .logo a").style.backgroundPosition="0 -47px";
+			}
+
+			value.onmouseleave=function(){
+				document.querySelector("#wrap header").style.backgroundColor="transparent";
+				document.querySelector("#wrap header .logo a").style.backgroundPosition="0 0";
+			}
+		});
+
+	</script>
 </body>
 </html>
