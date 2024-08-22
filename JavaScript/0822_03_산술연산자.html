@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	
+	<script>
+	  let a = 10;
+		let b = 20;
+		a = 30;
+		document.write("a : " + a + "<br>");
+		document.write("a + b : " , a + b, "<br>");
+		// , 는 좌우의 식을 연결
+		document.write("a - b : " + (a - b)+ "<br>");
+		document.write("a * b : " + (a * b)+ "<br>");
+		document.write("a / b : " + (a / b)+ "<br>");
+		document.write("a % b : " + (a % b)+ "<br>");
+		document.write("a ** b : " + (a ** b)+ "<br>");
+		document.write("++a : " + (++a) + "<br>");
+		//30 + 1 a = a+1 a+=1 전위연산 1씩증가
+		document.write("a++ : " + (a++) + "<br>");
+		//후위연산 1씩증가
+		document.write("a : " + a + "<br>");
+		document.write("--a : " + (--a) + "<br>");
+		// a = a-1 a-=1 전위연산 1씩감소
+		document.write("a-- : " + (a--) + "<br>");
+		//후위연산 1씩감소
+		document.write("a : " , a , "<br>");
+
+		let c = "하나";
+		let d = "둘";
+		let e = "셋";
+		let txt;
+		txt = "";
+		//txt = txt + c; //txt = 하나
+		txt += c
+		txt = txt + d; //txt = 하나 둘
+		txt = txt + e; //txt = 하나 둘 셋
+		document.write(txt);
+	</script>
+</body>
+</html>
