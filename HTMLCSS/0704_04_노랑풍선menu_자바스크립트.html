@@ -96,15 +96,22 @@
 
 	<script>
 		let gnb =document.querySelectorAll("#wrap .menu > ul > li");
+		let sub =document.querySelectorAll("#wrap .menu > ul .sub");
 		gnb.forEach(function(value,key){
 			value.onmouseenter=function(){
 				document.querySelector("#wrap header").style.backgroundColor="#fff";
-			document.querySelector("#wrap header .logo a").style.backgroundPosition="0 -47px";
-			}
+				document.querySelector("#wrap header .logo a").style.backgroundPosition="0 -47px";
+				sub.forEach(function(value,key){
+					value.classList.add("on");
+				});
+			};
 
 			value.onmouseleave=function(){
 				document.querySelector("#wrap header").style.backgroundColor="transparent";
 				document.querySelector("#wrap header .logo a").style.backgroundPosition="0 0";
+				sub.forEach(function(value,key){
+				value.classList.remove("on");
+			});
 			}
 		});
 
