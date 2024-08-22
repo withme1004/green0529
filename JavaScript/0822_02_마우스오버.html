@@ -28,7 +28,26 @@
 		<p class="enter_parent">0</p>
 	</div>
 	<script>
-		
+		let i = 0;
+		document.querySelector(".overParent").onmouseover=function(){
+			document.querySelector(".overlast").innerHTML="mouseover";
+			document.querySelector(".over_parent").innerHTML=i++;
+			document.querySelector(".over_child").innerHTML=i++;
+		}
+		document.querySelector(".overParent").onmouseout=function(){
+			document.querySelector(".overfirst").innerHTML="mouseout";
+			document.querySelector(".overlast").innerHTML="mouseout";
+		}
+		let j =0;
+		document.querySelector(".enterParent").onmouseenter=function(){
+			document.querySelector(".enterlast").innerHTML="mouseover";
+			document.querySelector(".enter_parent").innerHTML=j++;
+			document.querySelector(".enter_child").innerHTML=j++;
+		}
+		document.querySelector(".enterParent").onmouseleave=function(){
+			document.querySelector(".enterfirst").innerHTML="mouseleave";
+			document.querySelector(".enterlast").innerHTML="mouseleave";
+		}
 	</script>
 </body>
 </html>
