@@ -28,7 +28,20 @@
 		</ul>
 	</div>
 	<script>
-		
+		function clock(){
+			let x = new Date();
+			console.log(typeof null);
+			let hour = (360/12) * x.getHours()+ x.getMinutes()*0.5;
+			let minute = (360/60) * x.getMinutes();
+			let second =(360/60) * x.getSeconds();
+		/*	let h = (360/12) * hour+ minute*0.5;
+			let m = (360/60) * minute;
+			let s = (360/60) * second;*/
+			document.getElementById("hour").style.transform="rotate("+hour+"deg)";
+			document.getElementById("minute").style.transform="rotate("+minute+"deg)";
+			document.getElementById("second").style.transform="rotate("+second+"deg)";
+		}
+		setInterval(clock,1);
 	</script>
 </body>
 </html>
