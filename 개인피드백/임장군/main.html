@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <header>
+      <div class="head">
+        <div class="logo"><a href=""></a></div>
+        <div class="gnb">
+          <ul class="dep1">
+            <li>
+              <a href="">사업안내</a>
+              <ul class="dep2">
+                <li><a href="">사업개요</a></li>
+                <li><a href="">브랜드</a></li>
+                <li><a href="">참여사</a></li>
+                <li><a href="">입지안내</a></li>
+                <li><a href="">오시는 길</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="">계약안내</a>
+              <ul class="dep2">
+                <li><a href="">사전제출서류안내</a></li>
+                <li><a href="">계약안내</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="">분양안내</a>
+              <ul class="dep2">
+                <li><a href="">분양일정</a></li>
+                <li><a href="">공급안내</a></li>
+                <li><a href="">모집공고</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="">청약안내</a>
+              <ul class="dep2">
+                <li><a href="">체크포인트</a></li>
+                <li><a href="">인터넷 청약</a></li>
+                <li><a href="">특별공급</a></li>
+                <li><a href="">일반공급</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="">단지안내</a>
+              <ul class="dep2">
+                <li><a href="">단지설계</a></li>
+                <li><a href="">써밋 라운지</a></li>
+                <li><a href="">시스템</a></li>
+                <li><a href="">하이엔드 서비스</a></li>
+                <li><a href="">동호수 배치도</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="">세대안내</a>
+              <ul class="dep2">
+                <li><a href="">평면안내</a></li>
+                <li><a href="">E모델하우스</a></li>
+                <li><a href="">인테리어</a></li>
+                <li><a href="">스타일</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="">홍보센터</a>
+              <ul class="dep2">
+                <li><a href="">홍보영상</a></li>
+                <li><a href="">언론보도</a></li>
+                <li><a href="">이벤트</a></li>
+                <li><a href="">VIP 고객등록</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div class="bgWhite"></div>
+        </div>
+        <div class="head_right">
+          <div class="tel">
+            <p>CUSTOMER</p>
+            <div class="telWh"><div></div></div>
+          </div>
+          <div class="snb"></div>
+        </div>
+      </div>
+    </header>
+    <script class="gnb">
+      let nav = document.querySelectorAll("header .head .gnb .dep1");
+      nav.forEach(function (value, key) {
+        value.onmouseenter = function () {
+          document.querySelector("header").style.backgroundColor = "#fff";
+          document.querySelector("header .head .logo a").style.background =
+            "url(images/logoblack.png)";
+        };
+        value.onmouseleave = function () {
+          document.querySelector("header").style.backgroundColor =
+            "transparent";
+          document.querySelector("header .head .logo a").style.background =
+            "url(images/logowhite.png)";
+        };
+      });
+    </script>
+    <main>
+      <div id="section1" class="section">
+        <div class="mainBg"></div>
+        <div class="shadow"></div>
+        <div class="mainTxt">
+          <p>부산, 드높은 하늘 위</p>
+          <div class="line"></div>
+          <p>
+            마침내,<br />
+            단 하나의 작품이 되다
+          </p>
+          <p>블랑 써밋 74</p>
+        </div>
+        <div class="whiteBox">
+          <div class="flex">
+            <div class="txtLeft">
+              <p>부산 하늘아래, 새롭게 피어날 중심</p>
+              <p>
+                하늘과 바다가 끝없이 펼쳐지고<br />
+                북항의 비전이 세계를 향해 뻗어나가는 부산 하버시티의 정점,<br />
+                부산 주거의 새로운 중심에서 마침내, 만나게 됩니다
+              </p>
+            </div>
+            <div class="txtRight">
+              <p>부산, 가장 특별한 바다에서 피어나다</p>
+              <p>BLANC SUMMIT <span>74</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="section2" class="section">
+        <div class="mainBg"></div>
+        <div class="mainTxt">
+          <div class="txtTop">
+            <h1>블랑 써밋 74,<br />순백의 동백처럼 고귀하게 피어나다</h1>
+            <p>
+              세상 무엇과도 섞이지 않은 순백의 아름다움으로 피어나는
+              백동백처럼<br />
+              세상 무엇과도 비교할 수 없는 당신만의 삶을 꽃 피우게 할 단 하나의
+              이름, 블랑 써밋 74입니다
+            </p>
+          </div>
+          <div class="txtBot">
+            <div>
+              <p>BLANC : 순백의</p>
+              <h1>BLANC</h1>
+            </div>
+            <div>
+              <p>SUMMIT : 정점</p>
+              <h1>SUMMIT</h1>
+            </div>
+            <div>
+              <p>74 : 랜드마크 층수</p>
+              <h1>74</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="section3" class="section">
+        <div class="mainBg"></div>
+        <div class="mainBox">
+          <div class="mainLeft">
+            <h1>
+              From Camellia<br />
+              becoming<br />
+              SUMMIT BLANC WAVE
+            </h1>
+            <p>
+              White Camellia 백동백으로부터 영감을 받은<br />
+              ‘블랑 써밋 74’는 최고 69층의<br />
+              서로 다른 시선을 가진 4개의 타워가<br />
+              마치 아름다운 물결처럼 리듬감 있게 연결되어진<br />
+              부산을 대표할 초고층 랜드마크입니다
+            </p>
+          </div>
+          <div class="mainRight">
+
+            <div class="col1">
+              <p><img src="images/main3-1.jpg" alt="main3-1" /></p>
+              <p><img src="images/main3-2.jpg" alt="main3-1" /></p>
+              <p><img src="images/main3-3.jpg" alt="main3-1" /></p>
+            </div>
+            <div class="col2">
+              <p><img src="images/main3-4.jpg" alt="main3-1" /></p>
+              <div>
+                <p><img src="images/main3-5.jpg" alt="main3-1" /></p>
+                <p><img src="images/main3-6.jpg" alt="main3-1" /></p>
+              </div>
+            </div>
+            <div class="col3">
+              <p>
+                블랑 써밋 74,<br />
+                순백의 동백처럼<br />
+                당신의 삶에<br />
+                새로운 영감을 선사합니다
+              </p>
+              <p><img src="images/main3-7.jpg" alt="main3-7" /></p>
+            </div>
+            <!-- <p>
+              블랑 써밋 74,<br />
+              순백의 동백처럼<br />
+              당신의 삶에<br />
+              새로운 영감을 선사합니다
+            </p>
+            <div class="blackBox">
+              <img src="images/main3-1.jpg" alt="main3-1" />
+              <img src="images/main3-2.jpg" alt="main3-2" />
+              <img src="images/main3-3.jpg" alt="main3-3" />
+              <img src="images/main3-4.jpg" alt="main3-4" />
+              <img src="images/main3-5.jpg" alt="main3-5" />
+              <img src="images/main3-6.jpg" alt="main3-6" />
+              <img src="images/main3-7.jpg" alt="main3-7" />
+            </div> -->
+          </div>
+        </div>
+      </div>
+      <div id="section4" class="section">
+        <div class="mainLeft">
+          <h1></h1>
+          <h4></h4>
+          <strong></strong>
+          <p></p>
+          <p></p>
+        </div>
+        <div class="mainRight">
+          <div class="flower">
+            <img src="" alt="" />
+            <img src="" alt="" />
+          </div>
+          <div class="tower">
+            <img src="" alt="" />
+          </div>
+        </div>
+      </div>
+      <div id="section5" class="section">
+        <div class="mainVideo"></div>
+        <div class="mainBox videoBox">
+          <div class="txtTop">
+            <h3></h3>
+            <h2></h2>
+            <p></p>
+          </div>
+          <div class="txtBot">
+            <img src="" alt="" />
+          </div>
+        </div>
+      </div>
+      <div id="section6" class="section">
+        <div class="mainLeft">
+          <img src="" alt="" />
+        </div>
+        <div class="mainRight">
+          <div class="imgBox">
+            <img src="" alt="" />
+            <img src="" alt="" />
+            <img src="" alt="" />
+          </div>
+          <div class="txtBox">
+            <p></p>
+            <p></p>
+          </div>
+        </div>
+      </div>
+      <div id="section7" class="section">
+        <div class="mainVideo"></div>
+        <div class="mainBox videoBox">
+          <div class="txtTop">
+            <h3></h3>
+            <h2></h2>
+            <p></p>
+          </div>
+          <div class="txtBot">
+            <img src="" alt="" />
+          </div>
+        </div>
+      </div>
+      <div id="section8" class="section">
+        <div class="mainBg"></div>
+        <div class="mainTxt">
+          <h4></h4>
+          <h1></h1>
+          <p></p>
+        </div>
+        <div class="tower"><img src="" alt="" /></div>
+      </div>
+      <div id="section9" class="section">
+        <div class="mainBox amenityWh">
+          <div class="mainLeft">
+            <div class="txtBox">
+              <h3></h3>
+              <h1></h1>
+              <p></p>
+            </div>
+            <img src="" alt="" />
+          </div>
+          <div class="mainRight">
+            <img src="" alt="" />
+          </div>
+        </div>
+      </div>
+      <div id="section10" class="section">
+        <div class="mainBox amenityBl">
+          <div class="con1">
+            <div class="txtBox">
+              <h1></h1>
+              <h6></h6>
+            </div>
+            <div class="conWrap">
+              <img src="" alt="" />
+              <h3></h3>
+              <h6></h6>
+            </div>
+          </div>
+          <div class="con2">
+            <div class="conWrap">
+              <img src="" alt="" />
+              <p></p>
+            </div>
+            <h3></h3>
+            <h6></h6>
+          </div>
+          <div class="con3">
+            <img src="" alt="" />
+            <h3></h3>
+            <h6></h6>
+          </div>
+        </div>
+      </div>
+      <div id="section11" class="section">
+        <div class="mainBox amenityWh">
+          <div class="mainLeft">
+            <img src="" alt="" />
+          </div>
+          <div class="mainRight">
+            <div class="txtBox">
+              <h3></h3>
+              <h1></h1>
+              <p></p>
+            </div>
+            <img src="" alt="" />
+          </div>
+        </div>
+      </div>
+      <div id="section12" class="section">
+        <div class="mainBox amenityBl">
+          <div class="con1">
+            <div class="txtBox">
+              <h1></h1>
+              <h6></h6>
+            </div>
+            <div class="conWrap">
+              <img src="" alt="" />
+              <h3></h3>
+              <h6></h6>
+            </div>
+          </div>
+          <div class="con2">
+            <img src="" alt="" />
+            <h3></h3>
+            <h6></h6>
+          </div>
+          <div class="con3">
+            <div class="conWrap">
+              <img src="" alt="" />
+              <p></p>
+            </div>
+            <h3></h3>
+            <h6></h6>
+          </div>
+        </div>
+      </div>
+      <div id="section13" class="section">
+        <div class="mainBox">
+          <div class="mainvideo"></div>
+          <div class="mainTxt">
+            <div class="mainLeft">
+              <h3></h3>
+              <h1></h1>
+              <p></p>
+            </div>
+            <div class="mainRight">
+              <ul class="45F">
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+              <ul class="2F">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+              <ul class="1F">
+                <li></li>
+                <li></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="section14" class="section">
+        <div class="mainBg high"></div>
+        <div class="txtBox">
+          <h1></h1>
+          <p></p>
+        </div>
+      </div>
+      <div id="section15" class="section">
+        <div class="mainBg high"></div>
+        <div class="txtBox">
+          <h1></h1>
+          <p></p>
+        </div>
+      </div>
+      <div id="section16" class="section">
+        <div class="mainBg"></div>
+        <div class="mainBox">
+          <h1></h1>
+          <div class="map">
+            <p><img src="" alt="" /></p>
+            <h3></h3>
+            <div class="mapLink">
+              <div class="naverMap">
+                <a href="">
+                  <img src="" alt="" />
+                  <p></p>
+                </a>
+              </div>
+              <div class="kakaoMap">
+                <a href="">
+                  <img src="" alt="" />
+                  <p></p>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="tel">
+            <p></p>
+            <a href=""><h1></h1></a>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- <footer>
+      <div class="foot">
+        <div class="footer_up"></div>
+        <div class="logo"><img src="" alt="" /></div>
+        <div class="link">
+          <a href=""
+            ><img src="" alt="" />
+            <p></p
+          ></a>
+          <a href=""><p></p></a>
+        </div>
+        <address>
+          <p><a href=""></a></p>
+          <p></p>
+          <p></p>
+        </address>
+        <p></p>
+        <h6></h6>
+      </div>
+    </footer> -->
+  </body>
+</html>
