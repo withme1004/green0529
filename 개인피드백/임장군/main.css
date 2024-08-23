@@ -364,9 +364,9 @@ main {
 
 /* section3 */
 #section3{background: url(images/main3.jpg) bottom/cover no-repeat;}
- #section3 .mainBg {
+/* #section3 .mainBg {
   position: absolute;
-  /* background: url(images/main3.jpg) bottom/cover no-repeat; */
+   background: url(images/main3.jpg) bottom/cover no-repeat;
   background: #000;
   left: 0;
   top: 0;
@@ -374,7 +374,7 @@ main {
   height: 100%;
   z-index: 1;
   mix-blend-mode: screen;
-} 
+}  */
 #section3 .mainBox {
   width: 90%;
   max-width: 1480px;
