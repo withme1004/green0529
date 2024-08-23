@@ -36,13 +36,16 @@
 				myfnc();
 				btn[k].style.backgroundColor="#222";
 				document.querySelector(".lush").style.backgroundImage="url(images/main_value0"+(k+1)+".jpg)";
-			}
+			};
 			v.onmouseleave=function(){
 				btn.forEach(function(v,k){
 				v.style.backgroundColor="#222";
 			});
-			}
-		})
+			};
+		});
+		document.querySelector(".lush").onmouseleave=function(){
+			this.style.backgroundImage="none";
+		};
 	</script>
 </body>
 </html>
