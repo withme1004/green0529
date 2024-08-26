@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+<script>
+	const fruits = ["Banana", "Orange", "Apple", "Mango"];
+ 	document.write(typeof fruits + "<br>");
+ 	document.write(fruits.join(" * ")+ "<br>");
+ 	document.write(typeof fruits.join(" * ")+ "<br>");
+	document.write(typeof fruits + "<br>");
+	document.write(fruits[0]+" * "+fruits[1]+" * "+fruits[2]+" * "+fruits[3]+"<br>");
+	document.write(`${fruits[0]} * ${fruits[1]} * ${fruits[2]} * ${fruits[3]}<br>`);
+	fruits.pop();
+	document.write(fruits+"<br>");
+	//변수 문자 결합 +연산자
+	//좌우의 식 연결 ,연산자
+	//`${변수}<br>`
+	document.write(`${fruits}<br>`);
+	fruits.push("Kiwi");
+	document.write(`${fruits}<br>`);
+	fruits.shift();
+	document.write(`${fruits}<br>`);
+	fruits.unshift("Lemon")
+	document.write(`${fruits}<br>`);
+	document.write(`${fruits.length}<br>`);
+	const myGirls = ["Cecilie", "Lone"];
+	const myBoys = ["Emil", "Tobias", "Linus"];
+	const myChildren = myGirls.concat(myBoys); 
+	document.write(`${typeof myChildren}<br>`)
+	document.write(`${myChildren}<br>`);
+	document.write(`${myChildren.splice(2,0,"Tom")}<br>`);
+	document.write(`${myChildren}<br>`);
+	document.write(`${myChildren.splice(2,1,"Ann","Tom")}<br>`);
+	document.write(`${myChildren}<br>`);
+	document.write(`${myChildren.splice(2,2)}<br>`);
+	document.write(`${myChildren}<br>`);
+</script>
+</body>
+</html>
