@@ -11,6 +11,8 @@
 		.btn{width: 1200px;margin: 0 auto;display: flex;justify-content: center;gap: 12px;}
 		.btn li a{display: block;padding: 0 16px;line-height: 44px;background-color: #fff;border: 1px solid #ccc;font-size: 14px;}
 		.btn li a.on{background-color: #211955;color: #fff;border-color: #211955;}
+		.contents .title{width: 1200px;margin: 100px auto 50px;height: 100px;background-repeat: no-repeat;background-position: center;}
+		.contents .visual{height: 624px;background-size: cover;background-position: center;}
 	</style>
 </head>
 <body>
@@ -26,5 +28,31 @@
 		<p class="title"></p>
 		<p class="visual"></p>
 	</div>
+	<script>
+		let btn = document.querySelectorAll(".btn li");
+		let bgTiltle = "url(images/title1.svg)";
+		let bg = "url(images/img_visual1.png)";
+		btn[0].querySelector("a").classList.add("on");
+		document.querySelector(".title").style.backgroundImage = bgTiltle;
+		document.querySelector(".visual").style.backgroundImage = bg;
+		function my(){
+			btn.forEach(function(v,k){
+				v.querySelector("a").classList.remove("on");
+			});
+		}
+		btn.forEach(function(v,k){
+			//v.querySelector("a").onclick=function(e){
+				v.querySelector("a").onmouseenter=function(e){
+				e.preventDefault();
+				my();
+				console.log(k);
+				btn[k].querySelector("a").classList.add("on");
+				document.querySelector(".title").style.backgroundImage = 
+				bgTiltle.replace(bgTiltle.slice(-6,-5) , k+1);
+				document.querySelector(".visual").style.backgroundImage = 
+				bg.replace(bg.slice(-6,-5) , k+1);
+			};
+		});
+	</script>
 </body>
 </html>
