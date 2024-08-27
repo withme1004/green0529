@@ -21,6 +21,8 @@
 		ul.list .title span.on::after{transform: rotate(90deg);opacity: 0;}
 		ul.list .contents{height: 0;overflow: hidden;transition: 0.5s;}
 		ul.list .contents.on{height: 300px;}
+		ul.list .contents p{transform: translateY(-20px); opacity: 0;transition: 1.2s;}
+		ul.list .contents p.on{transform: translateY(10px); opacity: 1;}
 		ul.list .contents img{width: 100%;object-fit: cover;}
 	</style>
 </head>
@@ -45,5 +47,26 @@
 			</div>
 		</li>
 	</ul>
+	<script>
+		let listItem = document.querySelectorAll(".list li");
+		function myfnc(){
+			let bool = this.querySelector("span").classList.contains("on");
+			console.log(bool);
+			listItem.forEach(function(v,k){
+				v.querySelector("span").classList.remove("on");
+				v.querySelector(".contents").classList.remove("on");
+				v.querySelector(".contents p").classList.remove("on");
+		})
+		if(!bool){
+			this.querySelector("span").classList.add("on");
+			this.querySelector(".contents").classList.add("on");
+			this.querySelector(".contents p").classList.add("on");
+		}
+	}
+
+		listItem.forEach(function(v,k){
+			v.onclick = myfnc;
+		})
+	</script>
 </body>
 </html>
