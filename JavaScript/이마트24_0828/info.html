@@ -4,6 +4,25 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
+	<style>
+		*{margin: 0;padding: 0;}
+		ul{list-style: none;}
+		.history{width: 1130px;margin: 50px auto;}
+		.list>li{display: flex;justify-content: space-between;padding: 80px 0;border-bottom: 1px solid #231f20;cursor: pointer;}
+		.list>li>p.on{filter: invert(72%) sepia(34%) saturate(1032%) hue-rotate(351deg) brightness(101%) contrast(102%);}
+		.list > li img{width: 137px;}
+		.list >li .contents{display: flex;}
+		.list >li .contents .detail{width: 550px;}
+		.list >li .contents .detail li{display: flex;}
+		.list >li .contents .detail li p{width: 100px; text-align: center;}
+		.list >li .contents .arrow{position: relative;width: 17px;height: 17px;}
+		.list >li .contents .arrow::before,
+		.list >li .contents .arrow::after{content: "";position: absolute;top: 0;width: 3px;height: 17px;background: #231f20;}
+		.list >li .contents .arrow::before{transform: rotate(-45deg);}
+		.list >li .contents .arrow.on::before{height: 30px;transform: rotate(90deg);}
+		.list >li .contents .arrow::after{transform: translateX(10px) rotate(45deg);}
+		.list >li .contents .arrow.on::after{opacity: 0;}
+	</style>
 </head>
 <body>
 	<div class="history">
