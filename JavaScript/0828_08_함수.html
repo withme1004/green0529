@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		div{float: left;width: 100px;}
+	</style>
+</head>
+<body>
+	<p>함수호출</p>
+	<script>
+	function myfnc(){
+		document.write("JavaScript 함수는 특정 작업을 수행하도록 설계된 코드 블록입니다");
+	}
+	document.querySelector("p").onclick = function(){
+		myfnc();
+	};
+	document.querySelector("p").onmouseenter = myfnc;
+
+	myfnc();
+
+	(function(){
+		document.write("자체호출");
+	})();
+	</script>
+</body>
+</html>
