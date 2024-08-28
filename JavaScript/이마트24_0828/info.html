@@ -15,6 +15,7 @@
 		.list >li .contents .detail{width: 550px;}
 		.list >li .contents .detail li{display: flex;}
 		.list >li .contents .detail li p:first-child{width: 100px; text-align: center;}
+		.list >li .contents .detail li p span{text-indent: 10px;display: inline-block;color: #626364;}
 		.list >li .contents .arrow{position: relative;width: 17px;height: 17px;}
 		.list >li .contents .arrow::before,
 		.list >li .contents .arrow::after{content: "";position: absolute;top: 0;width: 3px;height: 17px;background: #231f20;}
@@ -34,7 +35,7 @@
 					<ul class="detail">
 						<li>
 							<p>3월</p>
-							<p>- 상품전시회 “딜리셔스 페스티벌” 개최<br>*3/8(수) ~ 10(금), 서울 양재 AT센터 </p>
+							<p>- 상품전시회 “딜리셔스 페스티벌” 개최<br><span>*3/8(수) ~ 10(금), 서울 양재 AT센터</span></p>
 						</li>
 						<li>
 							<p>8월</p>
@@ -110,5 +111,27 @@
 			</li>
 		</ul>
 	</div>
+	<script>
+		let list = document.querySelectorAll(".list li");
+		let con = document.querySelectorAll(".contents")
+		con.forEach(function(v){
+			v.querySelector(".detail").style.display = "none";
+		});
+		list.forEach(function(v){
+			v.onclick = function(){
+				let bool = this.querySelector(".detail").style.display;
+				console.log(bool);
+				if(bool == "none"){
+					this.querySelector("p").classList.add("on");
+					this.querySelector(".detail").style.display = "block";
+					this.querySelector(".arrow").classList.add("on");
+				}else{
+					this.querySelector("p").classList.remove("on");
+					this.querySelector(".detail").style.display = "none";
+					this.querySelector(".arrow").classList.remove("on");
+				}
+			}
+		});
+	</script>
 </body>
 </html>
