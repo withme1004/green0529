@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<input type="text" id="fname">
+	<script>
+		let x = document.getElementById("fname")
+		/*x.onchange = function(){
+			this.value = this.value.toUpperCase();
+		}*/
+		//키보드의 키를 눌렀을때 발생하는 이벤트
+		//keydown, keypress 키를 누르고 있을때도 이벤트 발생 keypress는 alt,ctrl,방향키도 keyCode값 반환안됨
+		/* x.onkeydown = function(e){
+		 	console.log(e.keyCode);
+		 }*/
+		/*x.onkeypress = function(e){
+			console.log(e.keyCode);
+		}*/
+		x.onkeyup = function(e){
+			console.log(e.keyCode);
+		}
+		//키보드의 키를 누르고 뗐을때 이벤트 발생 onkeyup 
+	</script>
+</body>
+</html>
