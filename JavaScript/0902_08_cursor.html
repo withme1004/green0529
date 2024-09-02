@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		/* body{height: 1000px;cursor: url(../HTMLCSS/images/twitter.png), auto;} */
+		body{height: 1000px;}
+		.custom{position: fixed;left: 0;top:0;width: 20px;height: 20px;background: red;border-radius: 50%;pointer-events: none;z-index: 999;animation: circle 1s infinite;}
+		@keyframes circle {
+			0%{transform: scale(1);}
+			50%{transform: scale(1.5);}
+			100%{transform: scale(1);}
+		}
+	</style>
+</head>
+<body>
+	<div class="custom"></div>
+	
+ <script>
+	document.querySelector("body").onmousemove = function(e){
+		let x = e.clientX;
+		let y = e.clientY;
+		document.querySelector(".custom").style.left = x+"px";
+		document.querySelector(".custom").style.top = y+"px";
+	}
+ </script>
+</body>
+</html>
