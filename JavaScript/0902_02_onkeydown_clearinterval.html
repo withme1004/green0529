@@ -48,6 +48,13 @@
 		document.getElementById("down").onclick = function(){
 			document.querySelector(".box").style.transform = "rotateX("+(x-=90)+"deg)";
 		}
+		let interval = "";
+		function myfnc(){
+			interval = setInterval(function(){
+			document.querySelector(".box").style.transform = "rotateY("+(y+=90)+"deg)";
+		},1000);
+		}
+		myfnc();
 		document.onkeydown = function(e){
 			clearInterval(interval);
 			console.log(e.keyCode);
@@ -60,10 +67,9 @@
 			}else if(e.keyCode == 40){//아래화살표
 				document.querySelector(".box").style.transform = "rotateX("+(x-=90)+"deg)";
 			}
-		}
-		let interval = setInterval(function(){
-			document.querySelector(".box").style.transform = "rotateY("+(y+=90)+"deg)";
-		},1000);
+			setTimeout(myfnc, 100);
+		};
+		
 
 		let btn = document.querySelectorAll("button");
 		btn.forEach(function(v,k){
