@@ -13,7 +13,12 @@
 			0%{opacity: 1;transform: translateY(0);}
 			100%{opacity: 0;transform: translateY(50px);}
 		}
+		@keyframes down {
+			0%{opacity: 0;transform: translateY(50px);}
+			100%{opacity: 1;transform: translateY(0);}
+		}
 		.scrUp{animation: up 1s forwards;}
+		.scrDown{animation: down 1s forwards;}
 	</style>
 </head>
 <body>
@@ -29,7 +34,7 @@
 				document.querySelector("img").className = "scrUp";
 				//document.querySelector("img").classList.add("scrUp");
 			} else{
-				document.querySelector("img").className = "";
+				document.querySelector("img").className = "scrDown";
 				//document.querySelector("img").classList.remove("scrUp");
 			} 
 		}
