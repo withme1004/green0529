@@ -98,7 +98,15 @@
 				}
 			},
 		});
-		
+		conLi.forEach(function(v,k){
+      v.onmouseenter = function(){
+        swiper.slideTo(k);
+        swiper.autoplay.stop();
+      }
+      v.onmouseleave = function(){
+        swiper.autoplay.start();
+      }
+    })
   </script>
 </body>
 
