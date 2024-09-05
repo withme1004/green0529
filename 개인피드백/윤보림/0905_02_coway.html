@@ -7,23 +7,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 <!-- Demo styles -->
-<style>
+  <style>
     *{margin: 0;padding: 0;}
-    html,
-    body {
-      position: relative;
-      height: 100%;
-    }
-
-    body {
-      background: #eee;
-      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-      font-size: 14px;
-      color: #000;
-      margin: 0;
-      padding: 0;
-    }
-
     .swiper {
       width: 100%;
       height: 100%;
@@ -48,11 +33,12 @@
       height: 100%;
       object-fit: cover;
       transform: scale(1.2);
-      transition: 2.5s;
+      transition: 3.5s;
     }
+    
     .swiper-slide.first-slide img {
-      transform: scale(1.2);
-      transition: 2.5s;
+      transform: scale(1.5);
+      transition: 3.5s;
     }
     .swiper-slide img.on{
     transform: scale(1);
@@ -94,25 +80,25 @@
         <div class="swiper mySwiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide first-slide">
-                <img src="images/visual-slide-1.jpg" alt="">
+                <img src="https://sustainability.coway.co.kr/images/main/visual-slide-1.jpg" alt="">
                 <div class="desc">
                     <h2>Company caring<br>for better Earth</h2>
                     <p>코웨이가 더 나은 지구를 만들어 나가겠습니다.</p>
                 </div>
                 </div>
-            <div class="swiper-slide"><img src="images/visual-slide-2.jpg" alt=""><div class="desc">
+            <div class="swiper-slide"><img src="https://sustainability.coway.co.kr/images/main/visual-slide-2.jpg" alt=""><div class="desc">
                 <h2>Company caring<br>for better Earth</h2>
                 <p>코웨이가 더 나은 지구를 만들어 나가겠습니다.</p>
             </div></div>
-            <div class="swiper-slide"><img src="images/visual-slide-3.jpg" alt=""><div class="desc">
+            <div class="swiper-slide"><img src="https://sustainability.coway.co.kr/images/main/visual-slide-3.jpg" alt=""><div class="desc">
                 <h2>Company caring<br>for better Earth</h2>
                 <p>코웨이가 더 나은 지구를 만들어 나가겠습니다.</p>
             </div></div>
-            <div class="swiper-slide"><img src="images/visual-slide-4.jpg" alt=""><div class="desc">
+            <div class="swiper-slide"><img src="https://sustainability.coway.co.kr/images/main/visual-slide-4.jpg" alt=""><div class="desc">
                 <h2>Company caring<br>for better Earth</h2>
                 <p>코웨이가 더 나은 지구를 만들어 나가겠습니다.</p>
             </div></div>
-            <div class="swiper-slide"><img src="images/visual-slide-5.jpg" alt=""><div class="desc">
+            <div class="swiper-slide"><img src="https://sustainability.coway.co.kr/images/main/visual-slide-5.jpg" alt=""><div class="desc">
                 <h2>Company caring<br>for better Earth</h2>
                 <p>코웨이가 더 나은 지구를 만들어 나가겠습니다.</p>
             </div></div>
@@ -133,27 +119,36 @@
           const progressCircle = document.querySelector(".autoplay-progress svg");
           const progressContent = document.querySelector(".autoplay-progress span");
           const slide=document.querySelectorAll(".swiper-slide");
+          function my(){
+            slide.forEach(function(v,k){
+              v.querySelector("img").classList.remove("on");
+            })
+          }
+          my();
           slide[0].querySelector("img").classList.add("on");
           var swiper = new Swiper(".mySwiper", {
             effect:"fade",
-            spaceBetween: 30,
-            centeredSlides: true,
-           /*autoplay: {
-              delay: 3500,
-              disableOnInteraction: false
-            },*/
+            // spaceBetween: 30,
+            // centeredSlides: true,
+            speed: 2000,
+            loop: true,
+           autoplay: {
+              delay: 4000,
+              disableOnInteraction: false,
+            },
             on: {
-              autoplayTimeLeft(s, time, progress) {
-                progressCircle.style.setProperty("--progress", 1 + progress);
-                progressContent.textContent = `${Math.ceil(time / 1000)}s`;
-                
-              },
               slideChange: function(){
                 for(let i=0;i<5;i++){
                     slide[i].querySelector("img").classList.remove("on") 
                 }
                 slide[this.realIndex].querySelector("img").classList.add("on")
               },
+              autoplayTimeLeft(s, time, progress) {
+                progressCircle.style.setProperty("--progress", 1 + progress);
+                progressContent.textContent = `${Math.ceil(time / 1000)}s`;
+                
+              },
+              
             }
           });
         </script>
