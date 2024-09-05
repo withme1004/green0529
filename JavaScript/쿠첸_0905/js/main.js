@@ -9,14 +9,14 @@ function myfnc(){
 		v.querySelector("a").classList.remove("on");
 	})
 	head_bg.style.height = 80 + "px";
-	head_bg.style.background = "none";
+	head_bg.style.backgroundColor = "transparent";
 	document.querySelector(".logo img").src = "images/logo.svg";
 }
 myfnc();
 gnb.forEach(function(v,k){
 	v.onmouseenter = function(){
 		console.log(head_bg.offsetHeight);
-		head_bg.style.background = "#fff";
+		head_bg.style.backgroundColor = "#fff";
 		document.querySelector(".logo img").src = "images/logo-d.svg";
 		try{
 			subUl.forEach(function(){
@@ -29,7 +29,6 @@ gnb.forEach(function(v,k){
 		}catch(error){
 			head_bg.style.height = 80+"px";
 		}
-		
 	}
 	v.onmouseleave = function(){
 		myfnc();
@@ -40,7 +39,7 @@ head_bg.onmouseenter = function(){
 		v.querySelector("a").classList.add("on");
 	})
 	head_bg.style.height = 80+"px";
-	head_bg.style.background = "#fff";
+	head_bg.style.backgroundColor = "#fff";
 	document.querySelector(".logo img").src = "images/logo-d.svg";
 }
 head_bg.onmouseleave =function(){
