@@ -37,7 +37,7 @@
     }
     
     .swiper-slide.first-slide img {
-      transform: scale(1.5);
+      transform: scale(1.2);
       transition: 3.5s;
     }
     .swiper-slide img.on{
@@ -119,18 +119,15 @@
           const progressCircle = document.querySelector(".autoplay-progress svg");
           const progressContent = document.querySelector(".autoplay-progress span");
           const slide=document.querySelectorAll(".swiper-slide");
-          function my(){
-            slide.forEach(function(v,k){
-              v.querySelector("img").classList.remove("on");
-            })
-          }
-          my();
-          slide[0].querySelector("img").classList.add("on");
+          setTimeout(function(){
+            slide[0].querySelector("img").classList.add("on");
+          },2000);
+          
           var swiper = new Swiper(".mySwiper", {
             effect:"fade",
             // spaceBetween: 30,
             // centeredSlides: true,
-            speed: 2000,
+            //speed: 2000,
             loop: true,
            autoplay: {
               delay: 4000,
