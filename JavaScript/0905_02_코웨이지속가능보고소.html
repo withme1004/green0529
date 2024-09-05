@@ -76,6 +76,7 @@
       stroke-dasharray: 125.6;
       transform: rotate(-90deg);
     }
+		span{position: relative;z-index: 9999;cursor: pointer;display: block;width: 48px;height: 48px;text-align: center;line-height: 48px;}
   </style>
 </head>
 
@@ -107,7 +108,7 @@
 			<svg viewBox="0 0 48 48">
         <circle cx="24" cy="24" r="20"></circle>
       </svg>
-      <span></span>
+      <span><img src="https://sustainability.coway.co.kr/images/main/visual-icon-pause.png" alt=""></span>
     </div>
   </div>
 
@@ -119,6 +120,8 @@
 		const slide = document.querySelectorAll(".swiper-slide");
     const progressCircle = document.querySelectorAll(".autoplay-progress svg");
     const progressContent = document.querySelector(".autoplay-progress span");
+		let bool = true;
+		
 		setTimeout(function(){
 			slide[0].querySelector("img").classList.add("on");
 		},1000);
@@ -141,10 +144,23 @@
         autoplayTimeLeft(s, time, progress) {
           progressCircle[1].style.setProperty("--progress", 1 - progress);
           //progressContent.textContent = `${Math.ceil(time / 1000)}s`;
-					progressContent.innerHTML = '<img src="https://sustainability.coway.co.kr/images/main/visual-icon-pause.png" alt="">'
+					//progressContent.innerHTML = '<img src="https://sustainability.coway.co.kr/images/main/visual-icon-pause.png" alt="">'
         }
       }
     });
+		
+	
+		progressContent.onclick=function(){
+			if(bool){
+				swiper.autoplay.stop();
+				this.innerHTML = '<img src="https://sustainability.coway.co.kr/images/main/visual-icon-play.png" alt="">'
+			}else {
+				swiper.autoplay.start();
+				this.innerHTML = '<img src="https://sustainability.coway.co.kr/images/main/visual-icon-pause.png" alt="">'
+			}
+			bool = !bool;
+			console.log(bool)
+		}
   </script>
 </body>
 
