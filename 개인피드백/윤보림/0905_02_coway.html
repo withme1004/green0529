@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<!-- Demo styles -->
+<style>
+    *{margin: 0;padding: 0;}
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+    .swiper .desc {position: absolute;left: 300px;top: 40%;transform: translateY(-40%);color: #fff;text-align: left;}
+    .swiper .desc h2{font-size: 65px;}
+    .swiper .desc p{font-size: 28px;}
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: scale(1.2);
+      transition: 2.5s;
+    }
+    .swiper-slide.first-slide img {
+      transform: scale(1.2);
+      transition: 2.5s;
+    }
+    .swiper-slide img.on{
+    transform: scale(1);
+    }
+    .autoplay-progress {
+      position: absolute;
+      left: 260px;
+      bottom: 300px;
+      z-index: 10;
+      width: 90px;
+      height: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .autoplay-progress svg {
+      --progress: 0;
+      position: absolute;
+      left: 0;
+      top: 0px;
+      z-index: 10;
+      width: 100%;
+      height: 100%;
+      stroke-width: 4px;
+      stroke: #fff;
+      fill: none;
+      stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
+      stroke-dasharray: 125.6;
+      transform: rotate(-90deg);
+    }
+  </style>
+</head>
+<body>
+    <body>
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide first-slide">
+                <img src="images/visual-slide-1.jpg" alt="">
+                <div class="desc">
+                    <h2>Company caring<br>for better Earth</h2>
+                    <p>코웨이가 더 나은 지구를 만들어 나가겠습니다.</p>
+                </div>
+                </div>
+            <div class="swiper-slide"><img src="images/visual-slide-2.jpg" alt=""><div class="desc">
+                <h2>Company caring<br>for better Earth</h2>
+                <p>코웨이가 더 나은 지구를 만들어 나가겠습니다.</p>
+            </div></div>
+            <div class="swiper-slide"><img src="images/visual-slide-3.jpg" alt=""><div class="desc">
+                <h2>Company caring<br>for better Earth</h2>
+                <p>코웨이가 더 나은 지구를 만들어 나가겠습니다.</p>
+            </div></div>
+            <div class="swiper-slide"><img src="images/visual-slide-4.jpg" alt=""><div class="desc">
+                <h2>Company caring<br>for better Earth</h2>
+                <p>코웨이가 더 나은 지구를 만들어 나가겠습니다.</p>
+            </div></div>
+            <div class="swiper-slide"><img src="images/visual-slide-5.jpg" alt=""><div class="desc">
+                <h2>Company caring<br>for better Earth</h2>
+                <p>코웨이가 더 나은 지구를 만들어 나가겠습니다.</p>
+            </div></div>
+          </div>
+          <div class="autoplay-progress">
+            <svg viewBox="0 0 48 48">
+              <circle cx="24" cy="24" r="20"></circle>
+            </svg>
+            <span></span>
+          </div>
+        </div>
+      
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+      
+        <!-- Initialize Swiper -->
+        <script>
+          const progressCircle = document.querySelector(".autoplay-progress svg");
+          const progressContent = document.querySelector(".autoplay-progress span");
+          const slide=document.querySelectorAll(".swiper-slide");
+          slide[0].querySelector("img").classList.add("on");
+          var swiper = new Swiper(".mySwiper", {
+            effect:"fade",
+            spaceBetween: 30,
+            centeredSlides: true,
+           /*autoplay: {
+              delay: 3500,
+              disableOnInteraction: false
+            },*/
+            on: {
+              autoplayTimeLeft(s, time, progress) {
+                progressCircle.style.setProperty("--progress", 1 + progress);
+                progressContent.textContent = `${Math.ceil(time / 1000)}s`;
+                
+              },
+              slideChange: function(){
+                for(let i=0;i<5;i++){
+                    slide[i].querySelector("img").classList.remove("on") 
+                }
+                slide[this.realIndex].querySelector("img").classList.add("on")
+              },
+            }
+          });
+        </script>
+</body>
+</html>
