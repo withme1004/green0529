@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+	<script>
+		$(function(){
+			$("a").click(function(){
+				$(this).text("변경함");
+			});
+			$('a[target="_blank"]').css("color","red");
+			$('a[target!="_blank"]').css("color","#000").css("textDecoration","none");
+			$(":button").css("background","blue");
+			$("input:even").css("background","yellow");
+			$("input:odd").css("background","red");
+			$("input:first-of-type").css("background","green");
+			$("p:only-of-type").css("border","1px solid")
+		});
+	</script>
+</head>
+<body>
+	<a href="#" target="_blank">링크태그</a>
+	<a href="#" target="_new">링크태그</a>
+	<a href="#">링크태그</a>
+	<a href="#">링크태그</a>
+	<a href="#">링크태그</a>
+	<input type="button" value="01">
+	<input type="button" value="02">
+	<input type="button" value="03">
+	<input type="button" value="04">
+	<input type="button" value="05">
+	<div><p>문단태그</p></div>
+	<div>
+		<p>문단태그</p>
+		<a href="#">링크태그</a>
+	</div>
+</body>
+</html>
