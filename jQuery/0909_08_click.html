@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		img{width: 300px;}
+	</style>
+	<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+	<script>
+		$(function(){
+			$("a").click(function(e){
+				e.preventDefault();
+				$("a").css("color","green");
+				$(this).css("color","red");
+			})
+		});
+	</script>
+</head>
+<body>
+	<a href="#">하나</a>
+	<a href="#">둘</a>
+	<a href="#">셋</a>
+	<a href="#">넷</a>
+	<a href="#">다섯</a>
+</body>
+</html>

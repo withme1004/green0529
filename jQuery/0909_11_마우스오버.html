@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		
+	</style>
+	<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+	<script>
+		$(function(){
+			/*$("p:first").mouseenter(function(){
+				$("p:last").text("mouseenter");
+			}).mouseleave(function(){
+				$("p:last").text("mouseleave");
+			});*/
+			let txt = $("p:last").text();
+			$("p:first").hover(function(){
+				//마우스 올렸을때 실행문
+				$("p:last").text("hover");
+			},function(){
+				//마우스가 이탈시 실행문
+				$("p:last").text(txt);
+			});
+		});
+	</script>
+</head>
+<body>
+	<p>마우스오버</p>
+	<p>마우스를 올렸습니다.</p>
+</body>
+</html>
