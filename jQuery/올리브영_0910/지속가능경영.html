@@ -14,29 +14,13 @@
 	<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 	<script>
 		$(function(){
-			function myover(k){
-				$(".list li").each(function(i,item){
-					$(item).find("img").attr("src",`images/img_sustain_pc_hover_${k+1}_${i+1}.jpg`)
-				})
-			}
-			function myout(){
-				$(".list li").each(function(i,item){
-					$(item).find("img").attr("src",`images/img_sustain_pc_${i+1}.jpg`)
-				})
-			}
-			$(".list li").each(function(index,ele){
-				$(ele).hover(function(){
-					myover(index);
-				},function(){
-					myout();
-				})
-			})
+		
+			
 		});
 	</script>
 </head>
 <body>
 	<ul class="list">
-		<!-- <li><img src="images/img_sustain_pc_hover_1_1.jpg" alt="pc_1"></li> -->
 		<li><img src="images/img_sustain_pc_1.jpg" alt="pc_1"></li>
 		<li><img src="images/img_sustain_pc_2.jpg" alt="pc_2"></li>
 		<li><img src="images/img_sustain_pc_3.jpg" alt="pc_3"></li>
