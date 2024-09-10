@@ -8,17 +8,25 @@
 	<script>
 		//$(document).ready(function(){
 		$(function(){
-			$("#demo").hover(function(){
+		/*	$("#demo").hover(function(){
 				$(this).text("마우스올림");
 			},function(){
 				$(this).text("마우스나감");
+			});*/
+			/*$("#demo").mousedown(function(){
+				console.log("mousedown");
+			})*/
+			$("#demo").mouseup(function(){
+				console.log("mouseup");
 			});
+			$("input").focus(function(){$(this).css("background-color", "#cccccc");})        
+			          .blur(function(){$(this).css("background-color", "#ffffff");});
 		});
 	</script>
 </head>
 <body>
 	<p id="demo">제이쿼리</p>
-
-
+	<input type="text">
+	<input type="text">
 </body>
 </html>
