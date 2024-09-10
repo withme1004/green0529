@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		*{margin: 0;padding: 0;}
+		ul{list-style: none;}
+		.list{width: 95%;max-width: 1420px;margin: 0 auto;display: flex;gap: 10px;justify-content: center;}
+		.list li{flex: 1;cursor: pointer;}
+		.list li img{width: 100%;object-fit: cover;}
+	</style>
+	<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+	<script>
+		$(function(){
+			$(".list li").hover(function(){
+				let i = $(this).index();
+				console.log(i);
+				$(".list li").each(function(index,elem){
+					console.log(elem);
+					$(".list li").find("img").attr("src","images/img_sustain_pc_hover_1_2.jpg");
+				})
+					
+			},function(){
+
+			})
+		});
+	</script>
+</head>
+<body>
+	<ul class="list">
+		<li><img src="images/img_sustain_pc_1.jpg" alt="pc_1"></li>
+		<li><img src="images/img_sustain_pc_2.jpg" alt="pc_2"></li>
+		<li><img src="images/img_sustain_pc_3.jpg" alt="pc_3"></li>
+		<li><img src="images/img_sustain_pc_4.jpg" alt="pc_4"></li>
+		<li><img src="images/img_sustain_pc_5.jpg" alt="pc_5"></li>
+	</ul>
+</body>
+</html>
