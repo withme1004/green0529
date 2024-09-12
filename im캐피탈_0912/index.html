@@ -34,6 +34,9 @@
       height: 100%;
       object-fit: cover;
     }
+		.swiper .swiper-slide.bg01{background:url(https://www.imcap.co.kr/static/web/img/main/bg_01.png) center/cover no-repeat;}
+		.swiper .swiper-slide.bg02{background:url(https://www.imcap.co.kr/static/web/img/main/bg_02.png) center/cover no-repeat;}
+		.swiper .swiper-slide.bg03{background:url(https://www.imcap.co.kr/static/web/img/main/bg_03.png) center/cover no-repeat;}
   </style>
 </head>
 
@@ -73,11 +76,18 @@
 
   <!-- Initialize Swiper -->
   <script>
+		let slide = document.querySelectorAll(".swiper-slide");
+		slide[0].classList.add("bg01");
     var swiper = new Swiper(".mySwiper", {
 			speed:1000,
 			loop:true,
 			autoplay:{
 				delay: 2500,
+			},
+			on:{
+				slideChange: function(){
+					slide[this.realIndex].classList.add("bg0"+(this.realIndex+1));
+				}
 			},
 		});
   </script>
