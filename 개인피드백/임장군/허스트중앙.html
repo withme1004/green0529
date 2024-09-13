@@ -89,6 +89,7 @@
         $(".close").click(function () {
           $(".mobNav").css("display", "none");
           //$("body").removeClass("on");
+					$('body').off('scroll touchmove mousewheel');
         });
         $(".hamberger p").click(function () {
           $(".mobNav").css("display", "block");
