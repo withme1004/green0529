@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		.box{height: 300px;}
+		p{width: 300px;height: 300px;background: #ccc;}
+		.ball{width: 50px;height: 50px;border-radius: 50%;background: #ccc;position: relative;}
+	</style>
+	<script src="js/jquery-3.7.1.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script>
+		$(function(){
+			$("#btn").click(function(){
+				$("p").animate({width:"0",backgroundColor:"red"},1000,"linear");
+			});
+			$("#move").click(function(){
+				$(".ball").animate({left:"300px"},1000)
+				.animate({top:"300px"},1000)
+				.animate({left:"0"},1000)
+				.animate({top:"0"},1000)
+			});
+			$("#move").trigger("click");
+			let inteval = setInterval(function(){
+				$("#move").click()
+			},4000);
+
+		});
+	</script>
+</head>
+<body>
+	<div class="box">
+		<p></p>
+	</div>
+	<button id="btn">클릭</button>
+	<div class="ball"></div>
+	<button id="move">move</button>
+</html>
