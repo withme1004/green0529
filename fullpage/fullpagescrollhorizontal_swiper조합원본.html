@@ -120,15 +120,15 @@
         <div class="swiper-container1">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <h1>Section2</h1>
+              <h1>Section3</h1>
               Slide 1
             </div>
             <div class="swiper-slide">
-              <h1>Section2</h1>
+              <h1>Section3</h1>
               Slide 2
             </div>
             <div class="swiper-slide">
-              <h1>Section2</h1>
+              <h1>Section3</h1>
               Slide 3
             </div>
           </div>
@@ -149,7 +149,7 @@
           anchors: ["sec1", "sec2", "sec3"],
           menu: "#menu",
           scrollingSpeed: 1000,
-          // scrollBar: true,
+          //scrollBar: true,
           onLeave: function (origin, destination, direction) {
             // 빠른전환으로 이벤트중복시 fullpage와 swiper전환시점 분리막기
             $("#fullpage").on("scroll touchmove mousewheel", function (event) {
@@ -206,6 +206,17 @@
                 else swiper.slidePrev();
               }, 100);
             },
+          },
+        });
+
+        var swiper1 = new Swiper(".swiper-container1", {
+          slidesPerView: 1,
+          spaceBetween: 0,
+          freeMode: false,
+          speed: 1000,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
           },
         });
       });
