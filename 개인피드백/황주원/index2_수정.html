@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<title>hanttam hanttam2</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="css/jquery.fullPage.css">
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="js/jquery.fullPage.js"></script>
+	<script src="js/scrolloverflow.js"></script>
+	<style>
+		/* .sec4{height: auto !important;overflow-y: scroll !important;} */
+	</style>
+	<script>
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+					verticalCentered: true,
+					scrollBar: true, // 기본 스크롤 사용
+					normalScrollElements: '.scrollable-element',
+					afterLoad: function(origin, destination, direction) {
+        if ($(".sec4").hasClass("active")) { 
+					$.fn.fullpage.setScrollingSpeed(0); // 속도 조정
+						$.fn.fullpage.setAllowScrolling(false);
+						$("#section3,#section4,#section5,#section6").css("overflowY","scroll");
+          
+        } else {
+            // 나머지 페이지는 다시 FullPage.js 사용
+						$.fn.fullpage.setScrollingSpeed(700);
+						$.fn.fullpage.setAllowScrolling(true);
+        }
+    }
+			});
+    });
+	</script>
+</head>
+<body>
+
+  <div id="header">
+    <div class="logo">
+      <img src="images/logo_white.png" alt="logo">
+    </div>
+    <ul class="nav">
+      <li><a href="#">about</a></li>
+      <li><a href="#">all</a></li>
+      <li><a href="#">민 화</a></li>
+      <li><a href="#">2024 S/S</a></li>
+    </ul>
+    <ul class="r_menu">
+      <li><a href="#">login</a></li>
+      <li><a href="#">cart</a></li>
+      <li><a href="#">search</a></li>
+    </ul>
+  </div>
+
+  
+    <!-- 0905_03_코웨이 learn 참고해서 변경예정 -->
+    <div id="fullpage">
+			<div class="section " id="section0">
+				<div class="swiper mySwiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<img class="m_bg" src="images/mp-main_real_img1.jpg" alt="mp-main_real_img1">
+						 <img src="images/mp-main_bg_gra.png" alt="mp-main_bg_gra">
+						 <img src="images/mp-main_bg_logo1.png" alt="mp-main_bg_logo1">
+						</div>
+						<div class="swiper-slide">
+							<img class="m_bg" src="images/mp-main_real_img2.jpg" alt="mp-main_real_img2">
+						 <img src="images/mp-main_bg_gra.png" alt="mp-main_bg_gra">
+						 <img src="images/mp-main_bg_logo2.png" alt="mp-main_bg_logo2">
+						</div>
+						<div class="swiper-slide">
+							<img class="m_bg" src="images/mp-main_real_img3.jpg" alt="mp-main_real_img3">
+						 <img src="images/mp-main_bg_gra.png" alt="mp-main_bg_gra">
+						 <img src="images/mp-main_bg_logo3.png" alt="mp-main_bg_logo3">
+						</div>
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+			</div>
+			<div class="section" id="section1">
+				<div class="s1">
+					<div data-aos="fade-up" data-aos-delay="0" data-aos-duration="700" class="left">
+						<img src="images/section2_textdeco.png" alt="section2_textdeco">
+						<p>
+							계절을 초월하는 심플하고 잘 디자인된 옷.<br>
+							모던한 시원함과 손쉬운 세련미가 만나는 곳,<br>
+							좋은 패션이 그렇게 어렵지 않아야 한다고<br>
+							믿는 사람들을 위해 만들어졌습니다.<br>
+							우리 브랜드는 일상의 옷장을 재해석합니다.
+						</p>
+					</div>
+					<div data-aos="fade-up" class="right">
+						<img src="images/section2_mainimg.png" alt="section2_mainimg">
+						<img data-aos="fade-up" data-aos-delay="1200" src="images/section2_logo.png" alt="section2_logo">
+					</div>
+				</div>
+			</div>
+			<div class="section" id="section2">
+				<!-- 0912_영풍문고 참고해서 변경예정 -->
+				<h1>Best items<span></span></h1>
+				<div class="swiper mySwiper2">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<a href="#">
+								<p class="bestImg"><img src="images/mp_best item1.jpg" alt="mp_best1"></p>
+								<div class="txt">
+									<h4>[ 유 자 ] 저고리 - 레이스</h4>
+									<p>138,000원</p>
+								</div>
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#">
+								<p class="bestImg"><img src="images/mp_best item2.jfif" alt="mp_best2"></p>
+								<div class="txt">
+									<h4>[ 꽃잎 무지기 ] - IVORY</h4>
+									<p>89,000원</p>
+								</div>
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#">
+								<p class="bestImg"><img src="images/mp_best item3.jpg" alt="mp_best3"></p>
+								<div class="txt">
+									<h4>[ 오 월 ] 방령깃 저고리</h4>
+									<p>138,000원</p>
+								</div>
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#">
+								<p class="bestImg"><img src="images/mp_best item4.jpg" alt="mp_best4"></p>
+								<div class="txt">
+									<h4>[ 만 덕 ] 저고리 - GREEN</h4>
+								<p>129,000원</p>
+								</div>
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#">
+								<p class="bestImg"><img src="images/mp_best item5.jfif" alt="mp_best5"></p>
+								<div class="txt">
+									<h4>폴라 워머 니트 - 옥색</h4>
+									<p>129,000원</p>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div id="btn">
+						<div class="swiper-button-next"></div>
+						<div class="swiper-button-prev"></div>
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+				<p class="circleWord"><img src="images/section3_circle_hanttam.png" alt="s3_circleWord"></p>
+			</div>
+			<div class="section sec4" id="section3">
+				<!-- 반응형 playlife_learn 참고!! -->
+				<div class="lb_wrap s3 scrollable-element">
+					<div class="left">
+						<p class="l_bg"><img src="images/section4_bg_texture.jpg" alt="section4_bg_texture"></p>
+						<h1>Look Book</h1>
+						<p class="mainImg"><img src="images/lookbook_main_img1.png" alt="lookbook_main_img1"></p>
+						<p class="logo"><img src="images/section4_logo.png" alt="section4_logo"></p>
+					</div>
+					<div class="right">
+						<div class="one">
+							<a href="#">
+								<p><img src="images/s4_subimg_1.jpg" alt="s4_img_1"></p>
+								<h4>view item</h4>
+							</a>
+							<div class="txt">
+								<img src="images/section4_textdeco.png" alt="section4_textdeco">
+								<p>[ 송 화 ] 저고리 - denim navy</p>
+								<p>121,000원</p>
+							</div>
+						</div>
+						<div class="two">
+							<div class="txt">
+								<img src="images/section4_textdeco.png" alt="section4_textdeco">
+								<p>[ 송 화 ] 저고리 - denim navy</p>
+								<p>121,000원</p>
+							</div>
+							<a href="#">
+								<p><img src="images/s4_subimg_2.jpg" alt="s4_img_2"></p>
+								<h4>view item</h4>
+							</a>
+						</div>
+						<div class="three">
+							<h3>Other color<span></span></h3>
+							<div class="otherimg">
+								<a href="#">
+									<p><img src="images/s4_subimg_3.jpg" alt="s4_img_3"></p>
+									<h4>view item</h4>
+								</a>
+								<a href="#">
+									<p><img src="images/s4_subimg_4.jpg" alt="s4_img_4"></p>
+									<h4>view item</h4>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="section sec4" id="section4">
+				<div class="lb_wrap reverse s4">
+					<div class="left">
+						<p class="l_bg"><img src="images/section5_bg_texture.jpg" alt="section5_bg_texture"></p>
+						<h1>Look Book</h1>
+						<p class="mainImg"><img src="images/lookbook_main_img2.png" alt="lookbook_main_img2"></p>
+						<p class="logo"><img src="images/section5_logo.png" alt="section5_logo"></p>
+					</div>
+					<div class="right">
+						<div class="one">
+							<a href="#">
+								<p><img src="images/s5_subimg_1.jpg" alt="s5_img_1"></p>
+								<h4>view item</h4>
+							</a>
+							<div class="txt">
+								<img src="images/section5&7_textdeco.png" alt="section5_textdeco">
+								<p>[ 송 화 ] 저고리 - denim navy</p>
+								<p>121,000원</p>
+							</div>
+						</div>
+						<div class="two">
+							<div class="txt">
+								<img src="images/section5&7_textdeco.png" alt="section5_textdeco">
+								<p>[ 송 화 ] 저고리 - denim navy</p>
+								<p>121,000원</p>
+							</div>
+							<a href="#">
+								<p><img src="images/s5_subimg_2.jpg" alt="s5_img_2"></p>
+								<h4>view item</h4>
+							</a>
+							<img class="cirWord" src="images/section5&7_circle-word.png" alt="s5_circleword">
+						</div>
+						<div class="three">
+							<h3>Other color<span></span></h3>
+							<div class="otherimg">
+								<a href="#">
+									<p><img src="images/s5_subimg_3.jpg" alt="s5_img_3"></p>
+									<h4>view item</h4>
+								</a>
+								<a href="#">
+									<p><img src="images/s5_subimg_4.jpg" alt="s5_img_4"></p>
+									<h4>view item</h4>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="section sec4" id="section5">
+				<div class="lb_wrap s5">
+					<div class="left">
+						<p class="l_bg"><img src="images/section6_bg_texture.jpg" alt="section6_bg_texture"></p>
+						<h1>Look Book</h1>
+						<p class="mainImg"><img src="images/lookbook_main_img3.png" alt="lookbook_main_img3"></p>
+						<p class="logo"><img src="images/section6_logo.png" alt="section6_logo"></p>
+					</div>
+					<div class="right">
+						<div class="one">
+							<a href="#">
+								<p><img src="images/s6_subimg_1.jpg" alt="s6_img_1"></p>
+								<h4>view item</h4>
+							</a>
+							<div class="txt">
+								<img src="images/section6_textdeco.png" alt="section6_textdeco">
+								<p>[ 송 화 ] 저고리 - denim navy</p>
+								<p>121,000원</p>
+							</div>
+						</div>
+						<div class="two">
+							<div class="txt">
+								<img src="images/section6_textdeco.png" alt="section6_textdeco">
+								<p>[ 송 화 ] 저고리 - denim navy</p>
+								<p>121,000원</p>
+							</div>
+							<a href="#">
+								<p><img src="images/s6_subimg_2.jpg" alt="s6_img_2"></p>
+								<h4>view item</h4>
+							</a>
+						</div>
+						<div class="three">
+							<h3>Other color<span></span></h3>
+							<div class="otherimg">
+								<a href="#">
+									<p><img src="images/s6_subimg_3.jpg" alt="s6_img_3"></p>
+									<h4>view item</h4>
+								</a>
+								<a href="#">
+									<p><img src="images/s6_subimg_4.jpg" alt="s6_img_4"></p>
+									<h4>view item</h4>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="section sec4" id="section6">
+				<div class="lb_wrap reverse s6">
+					<div class="left">
+						<p class="l_bg"><img src="images/section7_bg_texture.jpg" alt="section7_bg_texture"></p>
+						<h1>Look Book</h1>
+						<p class="mainImg"><img src="images/lookbook_main_img4.png" alt="lookbook_main_img4"></p>
+						<p class="logo"><img src="images/section7_logo.png" alt="section7_logo"></p>
+					</div>
+					<div class="right">
+						<div class="one">
+							<a href="#">
+								<p><img src="images/s7_subimg_1.jpg" alt="s7_img_1"></p>
+								<h4>view item</h4>
+							</a>
+							<div class="txt">
+								<img src="images/section5&7_textdeco.png" alt="section7_textdeco">
+								<p>[ 송 화 ] 저고리 - denim navy</p>
+								<p>121,000원</p>
+							</div>
+						</div>
+						<div class="two">
+							<div class="txt">
+								<img src="images/section5&7_textdeco.png" alt="section7_textdeco">
+								<p>[ 송 화 ] 저고리 - denim navy</p>
+								<p>121,000원</p>
+							</div>
+							<a href="#">
+								<p><img src="images/s7_subimg_2.jpg" alt="s7_img_2"></p>
+								<h4>view item</h4>
+							</a>
+							<img class="cirWord" src="images/section5&7_circle-word.png" alt="s5_circleword">
+						</div>
+						<div class="three">
+							<h3>Other color<span></span></h3>
+							<div class="otherimg">
+										<div>
+											<a href="#">
+												<p><img src="images/s7_subimg_3.jpg" alt="s7_img_3"></p>
+												<h4>view item</h4>
+											</a>
+											<a href="#">
+												<p><img src="images/s7_subimg_4.jpg" alt="s7_img_4"></p>
+												<h4>view item</h4>
+											</a>
+										</div>
+										<div>
+											<a href="#">
+												<p><img src="images/s7_subimg_5.jpg" alt="s7_img_5"></p>
+												<h4>view item</h4>
+											</a>
+											<p></p>
+										</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="section" id="section7">
+				<div class="s7_bg">
+					<div class="con">
+						<a href="#">2024 민화 series<br>
+							<span>바로가기</span>
+						</a>
+						<div data-aos="flip-left"
+						data-aos-easing="ease-out-cubic"
+						data-aos-duration="1200">
+							<img src="images/section8_textdeco_circle.png" alt="section8_textdeco_circle">
+						</div>
+					</div>
+				</div>
+				<p class="sec_logo"><img src="images/section8-9_logo.png" alt=""></p>
+			</div>
+			<div class="section fp-auto-height" id="footer" id="section8">
+				<ul class="left">
+					<li>
+						<p class="line">company: 한땀한땀</p>
+						<p class="line">owner: 김재은</p>
+						<p>business license: 608-33-77000</p>
+					</li>
+					<li>
+						<p>online buisness: 2023-고양일산동-1642 [사업자정보확인]</p>
+					</li>
+					<li>
+						<p class="line">phone: 070-6263-2137</p>
+						<p>cpo: 김재은(wodms737@naver.com)</p>
+					</li>
+					<li>
+						<p>address: 10358 경기 고양시 일산동구 무궁화로187번길 42 한땀한땀</p>
+					</li>
+				</ul>
+				<ul class="right">
+					<li>
+						<p><a href="#">
+							<img src="images/icon_cacao_2.png" alt="cacao">
+						</a></p>
+						<p><a href="#">
+							<img src="images/icon_instar_2.png" alt="instar">
+						</a></p>
+						<p><a href="#">
+							<img src="images/icon_twitter_2.png" alt="twitter">
+						</a></p>
+					</li>
+					<li>
+						<p>© 한땀한땀</p>
+					</li>
+					<li>
+						<p>All rights reserved.</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+    <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/hanttam.js"></script>
+</body>
+</html>
