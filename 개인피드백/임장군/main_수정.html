@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>국경없는의사회 구호활동가 채용</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script>
+      $(function () {
+        let majbar = document.querySelector(".major .bar");
+        let minbar = document.querySelector(".minor .bar");
+        let bool = true;
+        $("#cartegory1").click(function () {
+          $(majbar).css("display", "block");
+        });
+				$(".bar li").click(function(){
+					let txt = $(this).text();
+					console.log(txt);
+					$("#cartegory1").find("span").text(txt);
+					$(majbar).css("display", "none");
+				})
+        $("#field2").click(function () {
+          if (bool) {
+            $(minbar).css("display", "block");
+            $(".minor .bar li").click(function () {
+              $(minbar).css("display", "none");
+            });
+          } else {
+            $(minbar).css("display", "none");
+          }
+          bool = !bool;
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="head">
+        <div class="logo">
+          <a href="">
+            <img src="images/mainlogoblack.svg" alt="mainlogoblack" />
+          </a>
+        </div>
+        <ul class="nav">
+          <li><a href="">국경없는의사회</a></li>
+          <li><a href="">모집 분야</a></li>
+          <li><a href="">채용 과정</a></li>
+          <li><a href="">자주 묻는 질문</a></li>
+          <li><a href="">뉴스레터</a></li>
+        </ul>
+        <div class="headRight">
+          <a href=""><span>구호활동가 지원</span></a>
+          <a href=""><span>후원하기</span></a>
+        </div>
+        <p class="hamberger">
+          <img src="images/hamberger.svg" alt="hamberger" />
+        </p>
+      </div>
+    </header>
+    <main>
+      <div class="main1">
+        <div class="blend"></div>
+        <div class="mainBox">
+          <h1>국경없는</h1>
+          <div class="ani">
+            <p
+              class="typewrite"
+              data-period="3000"
+              data-type='[ "조산사", "공급망 관리자", "기술직 활동가", "역학자", "인력관리자", "약사" ]'
+            >
+              <span class="wrap"></span>
+            </p>
+            <p class="typewrite" data-period="3000" data-type='["|"]'>
+              <span class="wrap"></span>
+            </p>
+          </div>
+          <div class="search">
+            <div class="field major">
+              <label for="field1" id="cartegory1">
+                <span>전체</span>
+                <img src="images/maininputarrow.svg" alt="maininputarrow" />
+              </label>
+              <ul class="bar">
+                <li class="all">전체</li>
+                <li class="medi">의료</li>
+                <li class="non">비의료</li>
+              </ul>
+              <input type="radio" name="radio" id="field1" />
+            </div>
+            <div class="field minor">
+              <label for="field2">
+                <span>채용 분야</span>
+                <img src="images/maininputarrow.svg" alt="maininputarrow" />
+              </label>
+              <ul class="bar">
+                <li class="medi">간호사</li>
+                <li class="non">공급망 관리자</li>
+                <li class="non">기술직 활동가</li>
+                <li class="medi">마취과 전문의</li>
+                <li class="medi">보건증진 담당자</li>
+                <li class="medi">산부인과 전문의</li>
+                <li class="medi">소아과 전문의</li>
+                <li class="non">식수·위생 관리자</li>
+                <li class="medi">약사</li>
+                <li class="medi">역학자</li>
+                <li class="medi">외과 전문의</li>
+                <li class="medi">일반의</li>
+                <li class="medi">정신건강 활동 관리자</li>
+                <li class="medi">조산사</li>
+                <li class="non">프로젝트 재무 및 인력 관리자</li>
+              </ul>
+              <input type="radio" name="radio" id="field2" />
+            </div>
+            <strong>검색</strong>
+          </div>
+          <!-- <span class="mob">검색</span> -->
+        </div>
+      </div>
+      <div class="main2">
+        <div class="mainTxt">
+          <h1>
+            하지만<br />
+            여러분 없이는 해낼 수 없는 일들
+          </h1>
+        </div>
+        <div class="videoBox">
+          <video muted autoplay loop>
+            <source src="video/mainscroll.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+    </main>
+    <script>
+      var TxtType = function (el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 3000;
+        this.txt = "";
+        this.tick();
+        this.isDeleting = false;
+      };
+
+      TxtType.prototype.tick = function () {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+          this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+          this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+        this.el.innerHTML = '<span class="wrap">' + this.txt + "</span>";
+        var that = this;
+        var delta = 200 - Math.random() * 100;
+        if (this.isDeleting) {
+          delta /= 2;
+        }
+        if (!this.isDeleting && this.txt === fullTxt) {
+          delta = this.period;
+          this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === "") {
+          this.isDeleting = false;
+          this.loopNum++;
+          delta = 500;
+        }
+        setTimeout(function () {
+          that.tick();
+        }, delta);
+      };
+      window.onload = function () {
+        var elements = document.getElementsByClassName("typewrite");
+        for (var i = 0; i < elements.length; i++) {
+          var toRotate = elements[i].getAttribute("data-type");
+          var period = elements[i].getAttribute("data-period");
+          if (toRotate) {
+            new TxtType(elements[i], JSON.parse(toRotate), period);
+          }
+        }
+      };
+    </script>
+    <footer></footer>
+  </body>
+</html>
