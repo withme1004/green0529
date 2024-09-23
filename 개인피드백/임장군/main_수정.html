@@ -12,7 +12,11 @@
         let minbar = document.querySelector(".minor .bar");
         let bool = true;
         $("#cartegory1").click(function () {
-          $(majbar).css("display", "block");
+					if($(majbar).css("display") == "block"){
+						 $(majbar).css("display", "none");
+					}else{
+						$(majbar).css("display", "block");
+					}
         });
 				$(".bar li").click(function(){
 					let txt = $(this).text();
