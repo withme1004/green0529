@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: HankookKRTTFLight;
+            src: url(./fonts/HankookKRTTFLight.woff) format(woff);
+        }
+        @font-face {
+            font-family: HankookKRTTFRegular;
+            src: url(./fonts/HankookKRTTFRegular.woff) format(woff);
+        }
+        *{margin: 0;padding: 0;}
+        a{text-decoration: none;}
+        ul{list-style: none;}
+body{overflow:visible;}
+        .wrap{}
+        header{width: 100%;max-width: 1920px;height: 104px;padding: 22px 32px;box-sizing: border-box;position: absolute;top: 0;z-index: 999;}
+        header .top{display: flex;justify-content: space-between;}
+        header .top .logo{}
+        header .top .logo a{display: block; width: 137px;height: 62px;background-image: url(https://cdn.hankook-technologygroup.com/static/assets/img/ko/pc/common/ico_sprite.png);background-size: 960px; background-position: 0 0;vertical-align: baseline;background-repeat: no-repeat;}
+        header .top .top_right{display: flex;}
+        header .top .top_right .logo2{}
+        header .top .top_right .logo2 a{display: inline-block;width: 110px;height: 33px;background-image: url(https://cdn.hankook-technologygroup.com/static/assets/img/ko/pc/common/ico_sprite.png);background-size: 960px auto;background-repeat: no-repeat;background-position: -493px -96px;vertical-align: middle;}
+        header .top .top_right .menu{display: inline-block;width: 48px;height: 48px;padding: 6px 0;margin-left: 20px;vertical-align: middle;cursor: pointer;}
+        header .top .top_right .menu .menu_icon{width: 30px;height: 12px; position: relative;margin: 12px auto 0;}
+
+        header .top .top_right .menu span{display: block;position: absolute;height: 2px;background-color: #fff;}
+        header .top .top_right .menu span:first-child{top: 0;width: 100%;}
+        header .top .top_right .menu span:nth-child(2){top: 8px;width: 54%;}
+        header .top .top_right .menu span:nth-child(3){top: -8px;width: 80%;}
+
+        .sec1 .v_wrap{width: 100%;height: 100vh;position: relative;}
+        .sec1 .v_wrap video{width: 100%;height: 100%;object-fit: cover;}
+        .sec1 .mouse_scroll{width: 22px;height: 32px;box-shadow: inset 0 0 0 1px #fff;position: absolute;left: 50%;bottom: 2.3rem;margin-top: -35px;border-radius: 20px;}
+        .sec1 .mouse_scroll::before{content: "";width: 2px;height: 6px;background: #fff; 
+        border-radius: 2px;position: absolute;top: 4px;margin-left: -1px;left: 50%;animation-name: scroll;animation-duration: 1.5s;animation-iteration-count: infinite;}
+
+        @keyframes scroll {
+            0%{opacity: 1;}
+            100%{opacity: 0;transform: translateY(10px);}
+        }
+
+        .sec2{}
+        .sec2 .s2_txt p{width: 100%;height: 164px;font-size: 24px;padding: 48px 0 44px;text-align: center;font-family: HankookKRTTFLight;font-weight: 400;line-height: 41px;}
+        .sec2 .sec2_wrap{width: 100%;}
+        .sec2 .sec2_wrap ul{}
+        .sec2 .sec2_wrap ul li{width: 100%;height: 497px;background-repeat: no-repeat;background-position: center top;background-size: contain; position: relative;margin: 0 auto;overflow: hidden;}
+        .sec2 .sec2_wrap ul li .s2_bg{position: relative;width: 100%;height: 100%;background-size: cover;background-repeat: no-repeat;background-position: center top;}
+        .sec2 .sec2_wrap ul li:first-child .s2_bg{ background-image: url(https://cdn.hankook-technologygroup.com/innovation/thumb/pc/240830/main_b01.jpg?a=0.3733993620021496);}
+        .sec2 .sec2_wrap ul li:nth-child(2) .s2_bg{ background-image: url(https://cdn.hankook-technologygroup.com/innovation/thumb/pc/240830/main_b02.jpg?a=0.5441020739540567);}
+        .sec2 .sec2_wrap ul li:nth-child(3) .s2_bg{ background-image: url(https://cdn.hankook-technologygroup.com/innovation/thumb/pc/240726/main_b01.jpg?a=0.015991526465999106);}
+
+        .s2_txt2{width: 1180px;height: 100%;margin: 0 360px;z-index: 1;}
+        .s2_txt2 .inner{position: absolute;width: 580px;top: 50%;transform: translateY(-50%);color: #fff;}
+        .s2_txt2 .inner h2{font-size: 40px;font-family: HankookKRTTFLight;line-height: 56px;margin-bottom: 16px;}
+        .s2_txt2 .inner h2 a{color: #fff;}
+        .s2_txt2 .inner p{font-size: 16px;line-height: 28px;margin-bottom: 20px;}
+        .s2_txt2 .inner a{display: block; line-height: 48px;text-transform: capitalize;}
+        .s2_txt2 .inner a span{display: inline-block;position: relative;font-size: 0; transition: 0.3s ease-in-out;width: 150px;height: 48px;color: #fff;overflow: hidden;}
+        .s2_txt2 .inner a span:hover{font-size: 16px;font-weight: bold;}
+        .s2_txt2 .inner a span::after{content: "";position: absolute;top: 0; width: 48px;height: 48px;background-image: url(https://cdn.hankook-technologygroup.com/static/assets/img/ko/pc/common/ico_sprite.png);background-size: 960px auto;background-position: -480px -240px;vertical-align: middle;background-repeat: no-repeat;margin-left: 10px;}
+
+        .sec3{width: 100%;height: auto;}
+        .sec3 ul{width: 1180px;margin: 0 auto;}
+        .sec3 ul li{display: flex;justify-content: space-between;align-items: center;width: 100%;height: 457px;}
+        .sec3 ul li:nth-child(2){flex-direction: row-reverse;}
+        .sec3 ul li .s3_txtbox .s3_list{display: flex;gap: 10px;margin-bottom: 24px;}
+        .sec3 ul li .s3_txtbox .s3_list a{display: block;border: 1px solid #ccc;font-size: 12px;color: #000;margin: 0 2px;padding: 10px 20px 8px;line-height: 12px;font-family: HankookKRTTFRegular;position: relative;overflow: hidden;}
+        .sec3 ul li .s3_txtbox .s3_list a::after{
+            content: "";
+            position: absolute;
+            left: 0;top: -20px;width: 0;height: 150%;background: #000;transition: 0.5s;transform: scale(2) rotate(15deg);
+        }
+        .sec3 ul li .s3_txtbox .s3_list a:hover::after{
+            width: 100%;
+        }
+        .sec3 ul li .s3_txtbox .s3_txt h3{font-family: HankookKRTTFLight;font-size: 40px;margin-bottom: 16px;}
+        .sec3 ul li .s3_txtbox .s3_txt p{font-family: HankookKRTTFLight;font-size: 16px; margin-bottom: 20px;}
+        .sec3 ul li .s3_txtbox .s3_txt a span{display: inline-block; position: relative;color: #000;font-size: 0;font-weight: bold;width: 150px;height: 48px;line-height: 48px;text-transform: capitalize;transition: 0.3s ease-in-out;}
+        .sec3 ul li .s3_txtbox .s3_txt a span:hover{font-size: 16px;font-weight: bold;}
+        .sec3 > ul li .s3_txtbox .s3_txt a span::after{content: "";position: absolute;top: 0; width: 48px;height: 48px;background-image: url(https://cdn.hankook-technologygroup.com/static/assets/img/ko/pc/common/ico_sprite.png);background-size: 960px auto;background-position: -432px -240px;background-repeat: no-repeat;margin-left: 10px;vertical-align: middle;}
+        
+        .sec3 ul li .s3_imgbox{width: 580px;height: 337px;overflow: hidden;cursor: pointer;}
+        .sec3 ul li .s3_imgbox img{transform: scale(1);transition: 0.5s;}
+        .sec3 ul li .s3_imgbox img:hover{transform: scale(1.1);}
+
+        .sec4{width: 100%;height: 424px;background-image: url(https://cdn.hankook-technologygroup.com/innovation/thumb/pc/240830/main_b05.jpg);background-size: cover;background-position: left top;color: #fff;}
+        .sec4 .s4_inner{width: 1180px;height: 100%; margin: 0 auto;display: flex;align-items: center;}
+        .sec4 .s4_inner .s4_txtbox{width: 580px;height: 168px;}
+        .sec4 .s4_inner .s4_txtbox p:first-child{padding-bottom: 16px;line-height: 56px;}
+        .sec4 .s4_inner .s4_txtbox p:first-child a{color: #fff;font-family: HankookKRTTFRegular;font-size: 40px;}
+        .sec4 .s4_inner .s4_txtbox p:nth-child(2){font-family: HankookKRTTFLight;font-size: 16px;margin-bottom: 20px;}
+        .sec4 .s4_inner .s4_txtbox > a span{display: inline-block;width: 150px;height: 48px;line-height: 48px;color: #fff;text-transform: capitalize;position: relative;font-size: 0;transition: 0.3s ease-in-out;}
+        .sec4 .s4_inner .s4_txtbox > a span:hover{font-size: 16px;font-weight: bold;}
+        .sec4 .s4_inner .s4_txtbox > a span::after{content: "";position: absolute;top: 0; width: 48px;height: 48px;background-image: url(https://cdn.hankook-technologygroup.com/static/assets/img/ko/pc/common/ico_sprite.png);background-size: 960px auto;background-position: -480px -240px;vertical-align: middle;background-repeat: no-repeat;margin-left: 10px;}
+
+        .sec5{width: 100%;height: auto;}
+        .sec5 ul{width: 1180px;margin: 0 auto;}
+        .sec5 ul li{display: flex;justify-content: space-between;align-items: center;flex-direction: row-reverse; width: 100%;height: 457px;}
+        .sec5 ul li .s5_txtbox .s5_list{display: flex;gap: 10px;margin-bottom: 24px;}
+        .sec5 ul li .s5_txtbox .s5_list a{display: block;border: 1px solid #ccc;font-size: 12px;color: #000;margin: 0 2px;padding: 10px 20px 8px;line-height: 12px;font-family: HankookKRTTFRegular;position: relative;}
+        .sec5 ul li .s5_txtbox .s5_txt h3{font-family: HankookKRTTFLight;font-size: 40px;margin-bottom: 16px;}
+        .sec5 ul li .s5_txtbox .s5_txt p{font-family: HankookKRTTFLight;font-size: 16px; margin-bottom: 20px;}
+        .sec5 ul li .s5_txtbox .s5_txt a span{display: inline-block; position: relative;color: #000;font-size: 0;font-weight: bold;width: 150px;height: 48px;line-height: 48px;text-transform: capitalize;transition: 0.3s ease-in-out;}
+        .sec5 ul li .s5_txtbox .s5_txt a span:hover{font-size: 16px;font-weight: bold;}
+        .sec5 > ul li .s5_txtbox .s5_txt a span::after{content: "";position: absolute;top: 0; width: 48px;height: 48px;background-image: url(https://cdn.hankook-technologygroup.com/static/assets/img/ko/pc/common/ico_sprite.png);background-size: 960px auto;background-position: -432px -240px;background-repeat: no-repeat;margin-left: 10px;vertical-align: middle;}
+
+        .sec5 ul li .s5_imgbox{width: 580px;height: 337px;overflow: hidden;cursor: pointer;}
+        .sec5 ul li .s5_imgbox img{transform: scale(1);transition: 0.5s;}
+        .sec5 ul li .s5_imgbox img:hover{transform: scale(1.1);}
+
+        .sec6{width: 100%;padding-bottom: 140px;}
+        .sec6 .sec6_con{width: 100%;max-width: 1180px;margin: 0 auto;}
+        .sec6 .sec6_con .sec6_title{display: flex;justify-content: space-between;margin-bottom: 20px;}
+        .sec6 .sec6_con .sec6_title h3{font-size: 32px;text-transform: capitalize;}
+        .sec6 .sec6_con .sec6_title a span{display: inline-block; position: relative;color: #000;font-size: 0;font-weight: bold;width: 150px;height: 48px;line-height: 48px;text-transform: capitalize;transition: 0.3s ease-in-out;}
+        .sec6 .sec6_con .sec6_title a span:hover{font-size: 16px;font-weight: bold;}
+        .sec6 .sec6_con .sec6_title a span::after{content: "";position: absolute;top: 0;right: 0; width: 48px;height: 48px;background-image: url(https://cdn.hankook-technologygroup.com/static/assets/img/ko/pc/common/ico_sprite.png);background-size: 960px auto;background-position: -432px -240px;background-repeat: no-repeat;margin-left: 10px;vertical-align: middle;}
+
+        .sec6 .sec6_con > ul{display: flex;gap: 20px;}
+        .sec6 .sec6_con > ul li ul{display: flex;flex-direction: column; gap: 20px;}
+        .sec6 .sec6_con > ul li ul li{position: relative;}
+        .sec6 .sec6_con > ul li ul li p{width: 380px;position: absolute;left: 0;bottom: 52px;padding: 0 40px;font-size: 24px;box-sizing: border-box;color: #fff;}
+        .sec6 .sec6_con > ul li ul li p strong{width: 300px;padding-top: 16px;box-sizing: border-box;word-break: keep-all;}
+
+        .sec6 .sec6_con > ul li ul li:first-child{width: 380px;height: 620px;overflow: hidden;}
+        .sec6 .sec6_con > ul li:first-child ul li:last-child{width: 380px;height: 480px;overflow: hidden;}
+        .sec6 .sec6_con > ul li:nth-child(2) ul li:first-child{width: 380px;height: 480px;overflow: hidden;}
+        .sec6 .sec6_con > ul li:nth-child(2) ul li:last-child{width: 380px;height: 620px;overflow: hidden;}
+        .sec6 .sec6_con > ul li:nth-child(3) ul li:first-child{width: 380px;height: 620px;overflow: hidden;}
+        .sec6 .sec6_con > ul li:nth-child(3) ul li:last-child{width: 380px;height: 480px;overflow: hidden;}
+        .sec6 .sec6_con > ul li ul li img{transition: 0.5s;width: 100%;}
+        .sec6 .sec6_con > ul li ul li:hover img{width: 120%;}
+
+        footer{width: 100%;height: auto;background: #000;position: relative;}
+        footer .go_top{position: fixed;bottom:100px;right: 30px; width: 48px;height: 48px;background-color: #000;border-radius: 50%;text-align: center;z-index: 10;font-size: 10px;opacity: 0;}
+        footer .go_top a{display: block;width: 100%;height: 100%;color: #fff;}
+        footer .go_top a p{position: relative;top: -7px;}
+        footer .go_top a span{position: relative;display: inline-block;width: 30px;height: 15px;margin-top: 13px;box-sizing: border-box;}
+        footer .go_top a span::before{content: "";position: absolute;width: 17px;height: 17px;top: 50%;left: 50%;transform: translate(-50%,-50%) rotate(45deg);border-top: 2px solid #fff;border-left: 2px solid #fff;}
+
+        footer .footwrap{width: 100%;max-width: 1180px;margin: 0 auto;}
+        footer .footwrap .footer_con{display: flex;justify-content: space-between;padding: 48px 0 16px;}
+        footer .footwrap .footer_con .footer_logo a{display: block;background-image: url(https://cdn.hankook-technologygroup.com/static/assets/img/ko/pc/common/ico_sprite.png);width: 112px;height: 44px;background-size: 960px;background-repeat: no-repeat;background-position: -274px 0;text-indent: -9999px;}
+
+        footer .footwrap .footer_con .footlink{display: flex;}
+        footer .footwrap .footer_con .footlink ul{width: 300px;}
+        footer .footwrap .footer_con .footlink ul:first-of-type li{width: 100%;padding-bottom: 30px;}
+        footer .footwrap .footer_con .footlink ul:first-of-type li a{display: block; font-size: 16px;height: 18px;}
+        footer .footwrap .footer_con .footlink ul:nth-of-type(2) li{padding-bottom: 20px;}
+        footer .footwrap .footer_con .footlink ul:nth-of-type(2) li a{display: block; font-size: 14px;height: 16px;}
+        footer .footwrap .footer_con .footlink ul li:last-child{padding-bottom: 0;}
+        footer .footwrap .footer_con .footlink ul li a{color: #fff;}
+
+        footer .footwrap .footlink2{padding: 22px 0;display: flex;justify-content: flex-end;}
+        footer .footwrap .footlink2 ul{width: 600px;height: 16px;display: flex;}
+        footer .footwrap .footlink2 ul li{}
+        footer .footwrap .footlink2 ul li:after{content: "";display: inline-block;vertical-align: middle;width: 1px;height: 14px;margin: 0 16px;background: rgba(255, 255, 255, 0.15);}
+        footer .footwrap .footlink2 ul li:last-child::after{height: 0;}
+        footer .footwrap .footlink2 ul li a{font-size: 14px; color: #999;}
+
+        footer .copyright{padding: 30px 0;border-top: 1px solid #1a1a1a;}
+        footer .copyright .copy{display: flex;justify-content: space-between;align-items: center;}
+        footer .copyright .copy address{font-size: 12px;color: #fff;height: 12px;}
+
+        footer .copyright .copy .lang{display: flex;font-size: 14px;}
+        footer .copyright .copy .lang li:first-child a{color: #fff;}
+        footer .copyright .copy .lang li:nth-child(2) a{color: #666;}
+        footer .copyright .copy .lang li::after{content: "";display: inline-block;vertical-align: middle;width: 1px;height: 14px;margin: 0 16px;background: rgba(255, 255, 255, 0.15);}
+        footer .copyright .copy .lang li:last-child:after{height: 0;}
+#popup{
+    position: fixed;width: 100%;
+    left: 100%;top: 0;height: 100vh;transition: 0.5s;
+}
+#popup video{width: 100%;height: 100%;object-fit: cover;object-position: center;}
+#pop_nav{position: absolute;left: 0;top: 0;width: 100%;height: 100%;z-index: 999;background: rgba(0,0,0,0.5);}
+#pop_nav .close{float: right;font-size: 100px;color: #fff;}
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        
+        $(function(){
+            let bool=true;
+           $(".menu").click(function(){
+            if(bool){
+              $("#popup").css({"left":"0","top":"0"});
+            $(".top_right .logo2").css("display","none");  
+            }else{
+                $("#popup").css({"left":"100%","top":"0"});
+            $(".top_right .logo2").css("display","block");     
+            }
+            bool = !bool;
+           });
+           let ht = $(window).scrollTop();
+           $(window).scroll(function(){
+            let ht = $(window).scrollTop();
+            if(ht > 800){
+                $(".go_top").css("opacity","1");
+            }else{
+                $(".go_top").css("opacity","0");
+            }
+           })
+           $(".go_top").click(function(){
+            $("body").animate({ht:0},1000);
+           }) 
+        })
+    </script>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <div class="top">
+                <div class="logo"><a href="#"></a></div>
+                <div class="top_right">
+                    <div class="logo2"><a href="#"></a></div>
+                    <div class="menu">
+                        <div class="menu_icon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="menu"></div>
+        <div class="sec1">
+            <!-- 슬라이드 작업 -->
+            <div class="v_wrap">
+                <video muted autoplay loop> 
+                    <!-- loop autoplay controls-->
+                    <source src="https://cdn.hankook-technologygroup.com/static/assets/mov/htg/ES_mainvideo_20240502.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="mouse_scroll">
+            </div>
+        </div>
+        <div class="sec2">
+            <div class="s2_txt">
+                <p>우리는 혁신의 결과물이 아닌 <strong>혁신을 실현하게 만드는 방법</strong>에 대해 연구합니다.<br>혁신을 발현하게 만드는 철학과 영감에서부터<br> <strong>혁신가들의 생각과 협업하는 방식</strong>에 대해 이야기하고자 합니다.<br>더 많은 사람들이 <strong>스스로 혁신을 실현</strong>할 수 있도록 한 발 앞서 준비하겠습니다.</p>
+            </div>
+            <div class="sec2_wrap">
+                <ul>
+                    <li>
+                        <div class="s2_bg"></div>
+                        <div class="s2_txt2">
+                            <div class="inner">
+                                <h2>
+                                    <a href="#">
+                                        아이온iON과 함께하는<br>
+                                        지속 가능한 전기 포뮬러 레이스
+                                    </a>
+                                </h2>
+                                <p>포뮬러 E 2023/24 시즌 리뷰</p>
+                                <a href="#"><span class="more">read more</span></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="s2_bg"></div>
+                        <div class="s2_txt2">
+                            <div class="inner">
+                                <h2>
+                                    <a href="#">
+                                        무엇이든 만들어주는<br>
+                                        요술램프 같은 회사
+                                    </a>
+                                </h2>
+                                <p>모델솔루션</p>
+                                <a href="#"><span class="more">read more</span></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="s2_bg"></div>
+                        <div class="s2_txt2">
+                            <div class="inner">
+                                <h2>
+                                    <a href="#">
+                                        태양에너지를 수확하는 방법
+                                    </a>
+                                </h2>
+                                <p>태양에너지를 활용하는 여러가지 기술</p>
+                                <a href="#"><span class="more">read more</span></a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="sec3">   
+            <ul>
+                <li>
+                    <div class="s3_txtbox">
+                        <div class="s3_list">
+                            <a href="">#Mobility Culture</a>
+                            <a href="">#Interview</a>
+                        </div>
+                        <div class="s3_txt">
+                            <h3>모터쇼의 진화, BIMOS 2024</h3>
+                            <p>부산 모빌리티쇼 탐방기</p>
+                            <a href="#"><span class="more">read more</span></a>
+                        </div>
+                    </div>
+                    <div class="s3_imgbox">
+                        <img src="https://cdn.hankook-technologygroup.com/innovation/thumb/pc/240830/main_b03.jpg?a=0.8707287855402337" alt="s3_1">
+                    </div>
+                </li>
+                <li>
+                    <div class="s3_txtbox">
+                        <div class="s3_list">
+                                <a href="">#Mobility Culture</a>
+                                <a href="">#Brand</a>
+                                <a href="">#HankookTire</a>
+                        </div>
+                        <div class="s3_txt">
+                            <h3>전동화 깃발 향해 달리는<br>‘성난 황소’</h3>
+                            <p>람보르기니</p>
+                            <a href="#"><span class="more">read more</span></a>
+                        </div>
+                    </div>
+                    <div class="s3_imgbox">
+                        <img src="https://cdn.hankook-technologygroup.com/innovation/thumb/pc/240830/main_b04.jpg?a=0.5914432188630598" alt="s3_1">
+                    </div>
+                </li>
+                <li>
+                    <div class="s3_txtbox">
+                        <div class="s3_list">
+                                <a href="">#Hihg-tech</a>
+                                <a href="">#People & Culture</a>
+                                <a href="">#Video</a>
+                        </div>
+                        <div class="s3_txt">
+                            <h3>우주 기반의 B2C 서비스</h3>
+                            <p>인공위성의 영향력</p>
+                            <a href="#"><span class="more">read more</span></a>
+                        </div>
+                    </div>
+                    <div class="s3_imgbox">
+                        <img src="https://cdn.hankook-technologygroup.com/innovation/thumb/pc/240726/main_b03.jpg?a=0.9639384445113834" alt="s3_1">
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="sec4">
+            <div class="s4_inner">
+                <div class="s4_txtbox">
+                    <p><a href="#">한 시대를 풍미한 걸작들</a></p>
+                    <p>과거 혁신적인 상품</p>
+                    <a href="#"><span class="more">read more</span></a>
+                </div>
+            </div>
+        </div>
+        <div class="sec5">   
+            <ul>
+                <li>
+                    <div class="s5_txtbox">
+                        <div class="s5_list">
+                            <a href="">#High-tech</a>
+                            <a href="">#People & Culture</a>
+                            <a href="">#Interview</a>
+                        </div>
+                        <div class="s5_txt">
+                            <h3>묵묵히 최신 기술을 품어온<br>자동차 배터리</h3>
+                            <p>자동차 배터리원리 및 상식</p>
+                            <a href="#"><span class="more">read more</span></a>
+                        </div>
+                    </div>
+                    <div class="s5_imgbox">
+                        <img src="https://cdn.hankook-technologygroup.com/innovation/thumb/pc/240624/main_b03.jpg?a=0.4119576604487589" alt="s5_1">
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="sec6">
+            <div class="sec6_con">
+                <div class="sec6_title">
+                    <h3>more stories</h3>
+                    <a href="#"><span class="more">read more</span></a>
+                </div>
+                <ul>
+                    <li>
+                       <ul>
+                           <li>
+                                <img src="https://cdn.hankook-technologygroup.com/innovation/thumb/pc/240830/main_b06.jpg?a=0.36996884059777924" alt="1">
+                                <p><strong>문화 · 예술로 DRIVE!</strong></p>
+                            </li>
+                           <li>
+                                <img src="https://cdn.hankook-technologygroup.com/innovation/thumb/pc/240726/main_b07.jpg?a=0.41336481373286915" alt="4">
+                                <p><strong>삶을 이롭게 하는 모터스포츠 기술</strong></p>
+                            </li>
+                       </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li>
+                                <img src="https://cdn.hankook-technologygroup.com/innovation/thumb/pc/240830/main_b07.jpg?a=0.8329661867789786" alt="2">
+                                <p><strong>꼭 소리를 키우고 봐야 할<br>영화 · 영상</strong></p>
+                            </li>
+                            <li>
+                                <img src="./images/main_b01.jpg" alt="5">
+                                <p><strong>팬데믹 이전으로 부활한 CES 2024</strong></p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li>
+                                <img src="https://cdn.hankook-technologygroup.com/innovation/thumb/pc/240726/main_b06.jpg?a=0.8702606359768328" alt="3">
+                                <p><strong>죄책감을 제거하는 기술</strong></p>
+                            </li>
+                            <li>
+                                <img src="./images/main_b02.jpg" alt="6">
+                                <p><strong>닛산, 항상 도전한다</strong></p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <footer>
+            <div class="go_top">
+                <a href="#">
+                    <span></span><p>TOP</p>
+                </a>
+            </div>
+            <div class="footwrap">
+                <div class="footer_con">
+                    <div class="footer_logo"><a href="#"></a></div>
+                    <div class="footlink">
+                        <ul>
+                            <li><a href="#">Business</a></li>
+                            <li><a href="#">Sustainability</a></li>
+                            <li><a href="#">Culture</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Media</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#"><img src="https://cdn.hankook-technologygroup.com/static/assets/img/ko/pc/common/txt_foot_link.png?a=0.23190750266393945" alt="txt_foot_link"></a></li>
+                            <li>
+                                <ul>
+                                    <li><a href="#">#High-tech</a></li>
+                                    <li><a href="#">#Brand</a></li>
+                                    <li><a href="#">#People & Culture</a></li>
+                                    <li><a href="#">#Mobility Culture</a></li>
+                                    <li><a href="#">#Design</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footlink2">
+                    <ul>
+                        <li><a href="#">그룹소개</a></li>
+                        <li><a href="#">채용</a></li>
+                        <li><a href="#">윤리경영 신고</a></li>
+                        <li><a href="#">개인정보처리방침</a></li>
+                    </ul>
+                </div>
+                <div class="copyright">
+                    <div class="copy">
+                        <address>ⓒ 2024 Hankook & Company Co., Ltd.</address>
+                        <ul class="lang">
+                            <li><a href="#">KOR</a></li>
+                            <li><a href="#">ENG</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div id="popup">
+        <div class="pop">
+            <video muted loop autoplay>
+                <source src="https://cdn.hankook-technologygroup.com/static/assets/mov/htg/menu01_2.mp4" type="video/mp4">
+            </video>
+            <div id="pop_nav">
+                <div class="popup">
+                    <div class="popmenu"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

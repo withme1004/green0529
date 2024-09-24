@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){
+            $("header").hover(function(){
+                
+                $(".logo a").css("backgroundImage","url(https://www.yuhancare.com/data/yuhancare/inc/img_new/common/yuhancare_logo_all_white.png)")
+                $(".bg1").css("borderBottom","1px solid #888");
+            },function(){
+                $(".logo a").css("backgroundImage","url(./images/yuhancare_logo_white.png)");
+                $(".bg1").css("borderBottom","1px solid rgba(34, 34, 34, 0.1)");
+            });
+        });
+    </script>
+    <style>
+        @font-face {
+            font-family: Pretendard;
+            src: url(fonts/Pretendard-Light.woff) format(woff); 
+        }
+        @font-face {
+            font-family: Pretendard-R;
+            src: url(fonts/Pretendard-Regular.woff) format(woff);
+        }
+        @font-face {
+            font-family: Pretendard-S;
+            src: url(fonts/Pretendard-SemiBold.woff) format(woff); 
+        }
+        @font-face {
+            font-family: Pretendard-B;
+            src: url(fonts/Pretendard-Bold.woff) format(woff); 
+        }
+        @font-face {
+            font-family: NewOriginMyongjo;
+            src: url(fonts/NewOriginMyongjoSemiBold.woff2) format(woff2);
+        }
+        *{margin: 0;padding: 0;}
+       ul{list-style: none;}
+       a{text-decoration: none;color: #fff;}
+        select{outline: none;}
+        header{width: 100%;max-width: 1600px;margin: 0 auto;display: flex;position: absolute;left: 50%;transform: translateX(-50%);padding-top: 20px;box-sizing: border-box;z-index: 999;}
+        header .logo{width: 160px;height: 64px;position: relative;display: flex;align-items: center;}
+        header .logo a{display: block; width: 100%;height: 30px; background-size: contain;background-image: url(./images/yuhancare_logo_white.png);background-repeat: no-repeat;align-items: center;}
+        header .nav{width: 100%;max-width: 960px;display: flex;margin: 0 auto;text-align: center;line-height: 64px;position: relative;}
+        header .nav > li{width: calc(100% / 6);position: relative;}
+        header .nav > li > a{font-family: Pretendard-R;font-size: 20px;font-weight: 400;}
+        header .nav > li:hover > a{font-weight: bold;}
+        header .nav > li::after{content: ""; position: absolute; left: 0;
+        bottom: 0; width: 100%;height: 3px; background-color: #008e43; transform: scaleX(0); transition: 250ms ease-in-out;}
+        header .nav > li:hover::after{transform: scaleX(1);}
+
+
+        /* .nav bg */
+        .bg1{position: absolute;width: 100%;height: 84px;left: 0;top: 0px;border-bottom: 1px solid rgba(34, 34, 34, 0.1);z-index: 2;}
+        header:hover ~ .bg1{background: rgba(24, 24, 24, 0.9);}
+
+        /* .sub bg */
+        .bg2{position: absolute;width: 100%;height: 0;left: 0;top: 85px;}
+        header:hover ~ .bg2{height: 175px;background: rgba(24, 24, 24, 0.9);transition: 0.5s;z-index: 2;}
+
+        header .nav > li .sub{height: 0; overflow: hidden; position: absolute; left: 0; top: 64px; width: 100%;line-height: 35px;z-index: 1;}
+        header:hover .nav > li .sub{height: 176px;transition: 0.5s;}
+        header .nav > li .sub a{display: block;font-family: Pretendard-R;width: 100%;}
+        header .nav > li .sub a:hover{color: #008e43;}
+        header .nav > li .sub li:first-child{padding-top: 15px;}
+        header .nav > li:first-child .sub li{border-left: 1px solid #888;}
+        header .nav > li:nth-child(2) .sub li{border-left: 1px solid #888;}
+        header .nav > li:nth-child(3) .sub li{border-left: 1px solid #888;}
+        header .nav > li:nth-child(4) .sub li{border-left: 1px solid #888;}
+        header .nav > li:nth-child(5) .sub li{border-left: 1px solid #888;}
+        header .nav > li:nth-child(6) .sub li{border-left: 1px solid #888;border-right: 1px solid #888;}
+
+        /* 선 연장 */
+        header .nav > li:first-child .sub li:last-child,header .nav > li:nth-child(2) .sub li:last-child,header .nav > li:nth-child(3) .sub li:last-child,header .nav > li:nth-child(4) .sub li:last-child,header .nav > li:nth-child(5) .sub li:last-child,header .nav > li:nth-child(4) .sub li:last-child,header .nav > li:nth-child(6) .sub li:last-child{height: 100px; border-left: 1px solid #888;}
+
+        header .lang{padding: 10px 20px;transform: translateY(5px);}
+        header .lang select{background: transparent;border: none;color: #fff;font-size: 16px;font-family: Pretendard-R;padding-right: 5px;}
+
+        .sec1_wrap{overflow: hidden;}
+        .sec1_wrap .sec1{width: 100%;position: relative;box-sizing: border-box;}
+        .sec1_wrap .sec1 .visual_slide{height: 100vh;max-height: 1080px; position: relative;}
+        .sec1 .swiper {width: 100%;height: 100%;}
+        .sec1 .swiper-slide {text-align: center;font-size: 18px;background: #fff;display: flex;justify-content: center;align-items: center;position: relative;}
+        .sec1 .swiper-slide::after{content: "";background-image: url(https://www.yuhancare.com/data/yuhancare/inc/img_new/main/noise.png);display: block;position: absolute;left: 0;top: 0;bottom: 0;right: 0;mix-blend-mode: multiply;opacity: 0.5;}
+        .sec1 .swiper-slide img {display: block;width: 100%;height: 100%;object-fit: cover;}
+
+        .sec1 .visual_slide .center_txt{position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%); z-index: 1;font-family: Pretendard-R;text-align: center;}
+        .sec1 .visual_slide .center_txt h1{font-size: 70px; color: #fff;}
+        .sec1 .visual_slide .center_txt p{font-size: 18px;color: #fff;padding-top: 20px;position: relative;top: 70px;}
+
+        .sec1 .visual_slide .bottom_wrap{width: 100%;position: absolute;bottom: 100px;left: 0;z-index: 2;}
+        .sec1 .visual_slide .bottom_wrap .center_bottom{display: flex;gap: 65px;justify-content: center;position: relative;z-index: 2;margin-top: 250px;font-family: Pretendard-R;}
+        /* .sec1 .visual_slide .bottom_wrap .center_bottom a{font-size: 18px;position: relative;color: rgba(255, 255, 255, 0.5);} */
+        /* .sec1 .visual_slide .bottom_wrap .center_bottom li:first-child a::before{content: "";width: 150px;height: 2px;position: absolute;left: -12px;bottom: -10px;background: #fff;}
+        .sec1 .visual_slide .bottom_wrap .center_bottom li:nth-child(2) a::before{content: "";width: 150px;height: 2px;position: absolute;left: -22px;bottom: -10px;background: #fff;}
+        .sec1 .visual_slide .bottom_wrap .center_bottom li:nth-child(3) a::before{content: "";width: 150px;height: 2px;position: absolute;left: -9px;bottom: -10px;background: #fff;} */
+        .bottom_wrap .center_bottom li a{font-size: 18px;position: relative;color: rgba(255, 255, 255, 0.5);}
+        .bottom_wrap .center_bottom li a.on{color: #fff;}
+
+        .swiper-pagination-bullet{border-radius: 0;width: 140px;height: 2px;margin: 0 15px !important;position: relative; top: -70px;}
+        .swiper-pagination-bullet-active{background: #fff}
+
+        .intro{width: 100%;height: 1166px;text-align: center;padding-top: 100px;font-family: Pretendard-R;}
+        .intro h2{font-size: 42px;color: #181818;margin-bottom: 24px;font-family: Pretendard-B;}
+        .intro > p:nth-of-type(1){font-size: 24px;color: #181818;margin-bottom: 50px;}
+
+        .intro .yuhancare{width: 100%;}
+        .intro .yuhancare .item{width: 100%;max-width: 1200px;height: 210px;margin: 0 auto;position: relative;text-align: center;}
+        .intro .yuhancare .item li{width: 100%;position: absolute;left: 0;top: 0; font-size: 190px;font-weight: bold;text-align: center;line-height: 210px;color: transparent;transition: 0.5s;opacity: 0;}
+        .intro .yuhancare .item li.on{opacity: 1;}
+        .intro .yuhancare .item li:first-child{background: url(./images/text_to_img1.jpg);background-clip: text;}
+        .intro .yuhancare .item li:nth-child(2){background: url(./images/text_to_img2.jpg);background-clip: text;}
+        .intro .yuhancare .item li:nth-child(3){background: url(./images/text_to_img3.jpg);background-clip: text;}
+
+        .intro .btn{display: flex;justify-content: center;gap: 20px;}
+        .intro .btn li{margin-top: 30px;}
+        .intro .btn li a{cursor: pointer;display: block;padding: 12px 40px;border: 1px solid #181818;border-radius: 50px;font-size: 24px;font-weight: bold;color: #181818;}
+        .intro .btn li a.on{color: #fff;background: #181818;}
+
+        .intro > p:nth-of-type(2){font-size: 18px; color: #181818;padding: 50px 0;}
+        .intro .linkbox a{color: #181818;font-size: 24px;font-weight: 600;font-family: Pretendard;}
+        .intro .linkbox a::after{content: "";width: 9px;height: 24px;background-image: url(https://www.yuhancare.com/data/yuhancare/inc/img_new/common/arrow_right_black.svg);display: inline-block;background-repeat: no-repeat;background-size: 9px auto;margin-left: 12px;vertical-align: middle;}
+        .intro .omega3{width: 100%;height: 460px;margin-top: 50px;position: relative;}
+        .intro .omega3 .omega3_bg{width: 100%;height: 100%;position: absolute;top: 0;left: 0;background-color: rgba(9, 9, 9, 0.4);background-image: url(https://www.yuhancare.com/data/yuhancare/inc/img_new/main/banner1.jpg);background-repeat: no-repeat;background-size: 100%; background-position: center top;
+        background-blend-mode: multiply;transition: 1s ease-in-out;}
+        .intro .omega3:hover .omega3_bg{background-size: 105%;}
+        .intro .omega3 .omega3_wrap{width: 100%;height: 460px; position: absolute;left: 0;top: 0;display: flex;flex-direction: column;align-items: center;justify-content: center;}
+        .intro .omega3 .omega3_wrap .omega3_txt a{display: block;color: #fff;font-size: 42px;font-weight: bold;margin-bottom: 25px;font-family: Pretendard-B;}
+        .intro .omega3 .omega3_wrap .omega3_link a{display: block;border: 1px solid #fff;padding: 7px 40px;border-radius: 50px; font-size: 18px;letter-spacing: -0.4px;font-weight: 700;font-family: Pretendard;}
+        .intro .omega3 .omega3_wrap .omega3_link a::after{content: "";width: 9px;height: 15px;background-image: url(https://www.yuhancare.com/data/yuhancare/inc/img_new/common/arrow_right_white.svg);display: inline-block;background-repeat: no-repeat;margin-left: 12px;vertical-align: middle;}
+
+        .news{width: 95%;max-width: 1200px;margin: 100px auto 0;}
+        .news .news_title{display: flex;justify-content: space-between;align-items: flex-end;}
+        .news .news_title p:nth-child(1){font-size: 42px;line-height: 30px;font-family: Pretendard-B;}
+        .news .news_title p:nth-child(1) span{display: block;font-size: 26px;margin-bottom: 8px;font-weight: 500;font-family: Pretendard-R;}
+        .news .news_title p:nth-child(2) > a{display: block;color: #181818;font-size: 20px;line-height: 48px;border: 1px solid #181818;border-radius: 50px;padding: 0 17px;font-weight: bold;letter-spacing: -0.4px;font-family: Pretendard;}
+        .news .news_title p:nth-child(2) > a::after{content: "";width: 9px;height: 46px;background-image: url(https://www.yuhancare.com/data/yuhancare/inc/img_new/main/main_arrow.png);display: inline-block;background-repeat: no-repeat;line-height: 46px;background-position: center; background-size: contain;vertical-align: top;margin-left: 13px;}
+        .news ul{width: 100%;height: 300px;display: flex;gap: 15px;justify-content: center;padding: 50px 0;}
+        .news ul li{flex: 1 1 30%; height: 100%;position: relative;}
+        .news ul li img{width: 100%; height: 100%;object-fit: cover;border-radius: 20px;}
+        .news ul li p:nth-child(2){width: 390px;font-size: 20px;font-weight: 600; padding: 0 5px;color: #181818;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;margin-top: 5px;letter-spacing: -0.4px;font-family: Pretendard;}
+        .news ul li p:nth-child(1){position: relative;overflow: hidden;width: 390px; height: 300px;}
+        .link_deco1{content: "";right: -100%;bottom: -100%;background-color: rgba(0, 0, 0, 0.5);border-radius: 50%; background-image: url(https://yuhancare.com/data/yuhancare/inc/img_new/common/link_icon.svg);width: 100px;height: 100px;background-size: 30px 30px;background-repeat: no-repeat;background-position: center;position: absolute;transition: 0.5s;}
+        .news ul li p:nth-child(1):hover .link_deco1{
+            right: -20px;bottom: -20px;
+        }
+        .youtube{width: 95%;max-width: 1200px;margin: 100px auto 100px;}
+        .youtube .youtube_title{display: flex;justify-content: space-between;align-items: flex-end;margin-bottom: 50px;}
+        .youtube .youtube_title p:first-child{font-size: 42px;color: #181818;margin-bottom: 8px;font-weight: bold;line-height: 30px;font-family: Pretendard-B;}
+        .youtube .youtube_title p:first-child span{display: block;font-size: 26px;color: #181818;margin-bottom: 8px;font-weight: 500;font-family: Pretendard-R;}
+        .youtube .youtube_title p:nth-child(2) a{display: inline-block;color: #181818;font-size: 20px;font-weight: 600;padding: 0 17px;line-height: 46px;border: 1px solid #181818;border-radius: 50px;font-family: Pretendard;}
+        .youtube .youtube_title p:nth-child(2) > a::after{content: "";width: 9px;height: 46px;background-image: url(https://www.yuhancare.com/data/yuhancare/inc/img_new/main/main_arrow.png);display: inline-block;background-repeat: no-repeat;line-height: 46px;background-position: center; background-size: contain;vertical-align: top;margin-left: 13px;}
+
+        .youtube .youtube_item{width: 95%;max-width: 1200px;height: 475px;display: grid;grid-template-columns: repeat(4,288px);grid-template-rows: repeat(2,1fr);gap: 15px;}
+        .youtube .youtube_item div{border-radius: 20px;overflow: hidden; position: relative;}
+        .youtube .youtube_item div img{width: 100%;height: 100%;object-fit: cover;}
+        .youtube .youtube_item .one{grid-column: 1 / span 2; grid-row: 1 / 3;}
+        .youtube .youtube_item div:hover .link_deco{opacity: 1;transition: 0.5s;}
+
+        .people{width: 95%;max-width: 1200px;height: 240px;margin: 0 auto; border-radius: 20px;position: relative;display: flex;align-items:center;justify-content: space-evenly;margin-top: 150px;border: 1px solid;}
+        .people .swiper{overflow: visible;width: 1200px;}
+        /* .people > p:first-child > img{position: absolute;left: 10px;top: -120px;} */
+        .people img{position: relative;top: -50px;opacity: 0;}
+        .people .swiper-slide{background: #f0f0f0;}
+        .people .swiper-slide .ilhan_txt{text-align: center;width: 700px;}
+        .people .swiper-slide .ilhan_txt p{font-size: 24px;color: #181818;font-family: NewOriginMyongjo;position: relative;top: -180px; right: -450px;}
+        /* .people .txt_people p:nth-child(2){margin-top: 50px;}
+        .people .txt_people p:nth-child(2) a{display: inline-block; color: #181818;border: 1px solid #181818; border-radius: 50px;line-height: 46px;font-size: 18px;width: 220px;font-family: Pretendard;font-weight: 600;}
+        .people .txt_people p:nth-child(2) a::after{content: "";width: 9px;height: 46px;display: inline-block;background-image: url(https://www.yuhancare.com/data/yuhancare/inc/img_new/main/main_arrow.png);background-repeat: no-repeat;background-position: center;vertical-align: top;background-size: contain;margin-left: 13px;} */
+        .people .mySwiper2 span{position: absolute; top: 200px; transform: translateX(670px);z-index: 10;}
+        .people .mySwiper2 span a{display: inline-block; color: #181818;border: 1px solid #181818; border-radius: 50px;line-height: 46px;font-size: 18px;width: 220px;font-family: Pretendard;font-weight: 600;text-align: center;}
+        .people .mySwiper2 span a::after{content: "";width: 9px;height: 46px;display: inline-block;background-image: url(https://www.yuhancare.com/data/yuhancare/inc/img_new/main/main_arrow.png);background-repeat: no-repeat;background-position: center;vertical-align: top;background-size: contain;margin-left: 13px;}
+
+        .sec04{width: 100%;padding: 100px 0;}
+        .sec04 .sec04_inner{width: 95%;max-width: 1200px;margin: 0 auto;}
+        .sec04 .sec04_inner li{position: relative;}
+        .sec04 .sec04_inner li:hover{background-color: rgba(241, 241, 241, 0.5);}
+        .sec04 .sec04_inner li:first-child{border-top: 2px solid #181818;border-bottom: 2px solid #b9b9b9;box-sizing: border-box;}
+        .sec04 .sec04_inner li a{display: flex;align-items: center;height: 92px;padding: 0 15px;color: #181818;font-family: Pretendard;font-weight: 600;}
+        .sec04 .sec04_inner li a span{display: inline-block; width: 300px;font-size: 26px;font-weight: 700;font-family: Pretendard-B;}
+        .sec04 .sec04_inner li a span::after{content: "";width: 30px;height: 30px;display: block;background: #000 url(https://www.yuhancare.com/data/yuhancare/inc/img_new/common/arrow_right_white.svg) no-repeat;position: absolute;top: calc(50% - 15px);right: 15px;border-radius: 50%;background-position: center;}
+        .sec04 .sec04_inner li a p{font-size: 18px;font-weight: 600;width: calc(100% - 330px);word-break: keep-all;line-height: 28px;line-height: 26px;letter-spacing: -0.4px;}
+        .sec04 .sec04_inner li:nth-child(2){border-bottom: 2px solid #b9b9b9;}
+        .sec04 .sec04_inner li:nth-child(3){border-bottom: 2px solid #181818;}
+
+        .sec05{width: 100%;height: 500px;position: relative;}
+        .sec05 .bg{width: 100%;height: 100%;background: rgba(0, 0, 0, 0.4) url(https://www.yuhancare.com/data/yuhancare/inc/img_new/main/office_bg.jpg) no-repeat center / 100% 100%;background-blend-mode: multiply;transform-origin: center;transition: 1s;}
+        .sec05:hover .bg{background-size: 110% 110%;}
+        .sec05 .sec05_title{color: #fff;text-align: center;position: absolute;left: 50%;top: 50%;transform: translate(-50%,-50%);}
+    
+        .sec05 .sec05_title a p{font-size: 42px;font-weight: 700;margin-bottom: 27px;font-family: Pretendard-B;}
+        .sec05 .sec05_title a p br{display: none;}
+        .sec05 .sec05_title a span{padding: 0 26px;border: 2px solid #fff;border-radius: 20px;height: 40px;box-sizing: border-box;font-size: 18px;font-weight: 700;display: inline-flex;justify-content: center;align-items: center;line-height: 18px;font-family: Pretendard-B;}
+        .sec05 .sec05_title a span::after{content: "";width: 7px;height: 100%;display: inline-block;background: url(https://www.yuhancare.com/data/yuhancare/inc/img_new/common/arrow_right_white.svg) no-repeat center/contain;margin-left: 10px;}
+
+        footer{width: 95%;max-width: 1200px;margin: 0 auto;padding-bottom: 50px;}
+        footer .footer_top{padding-top: 45px;margin-bottom: 30px;display: flex;justify-content: space-between;}
+        footer .footer_top .footer_logo{width: 181px;height: 39px;}
+        footer .footer_top .footer_logo img{width: 100%;height: 100%;object-fit: contain;}
+        footer .footer_top .family select{width: 180px;height: 36px;border-radius: 20px;border: none;background: #e5e5e5;padding: 0 15px;font-weight: bold;font-family: Pretendard-B;font-size: 16PX;}
+        footer .footer_bot .linkbox ul{display: flex;gap: 50px;margin-bottom: 26px;}
+        footer .footer_bot .linkbox ul li{flex-shrink: 0;flex-grow: 0;}
+        footer .footer_bot .linkbox ul li a{color: #181818;font-weight: bold;font-family: Pretendard-R;}
+        footer .footer_bot .crop_info span{font-size: 16px;margin-right: 20px;color: #181818;position: relative;font-family: Pretendard;font-weight: 400;}
+        footer .footer_bot .crop_info span::before{content: "";width: 1px;height: 14px;display: block;top: calc(50% - 7px);right: -12px;position: absolute;background: #d2d2d2;}
+        footer .footer_bot .crop_info span:last-child:before{width: 0;}
+        footer .footer_bot .copyright{font-size: 14px;color: #181818; margin-top: 20px;font-family: Pretendard;font-weight: 400;}
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <div class="logo"><a href="#"></a></div>
+            <ul class="nav">
+                <li><a href="#">회사소개</a>
+                    <ul class="sub">
+                        <li><a href="#">기업소개</a></li>
+                        <li><a href="#">설립자 유일한</a></li>
+                        <li><a href="#">연혁</a></li>
+                        <li><a href="#"></a></li>
+                    </ul>
+                </li>
+                <li><a href="#">사업소개</a>
+                    <ul class="sub">
+                        <li><a href="#">브랜드</a></li>
+                        <li><a href="#">R&D</a></li>
+                        <li><a href="#">F&B</a></li>
+                        <li><a href="#"></a></li>
+                    </ul>
+                </li>
+                <li><a href="#">기업문화</a>
+                    <ul class="sub">
+                        <li><a href="#">인재상</a></li>
+                        <li><a href="#">복리후생</a></li>
+                        <li><a href="#">업무환경</a></li>
+                        <li><a href="#">채용<span></span></a></li>
+                    </ul>
+                </li>
+                <li><a href="#">지속가능성</a>
+                    <ul class="sub">
+                        <li><a href="#">사회</a></li>
+                        <li><a href="#">환경</a></li>
+                        <li><a href="#">윤리경영</a></li>
+                        <li><a href="#">제보센터</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">미디어</a>
+                    <ul class="sub">
+                        <li><a href="#">보도자료</a></li>
+                        <li><a href="#">SNS<span></span></a></li>
+                        <li><a href="#"></a></li>
+                    </ul>
+                </li>
+                <li><a href="#">고객지원</a>
+                    <ul class="sub">
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">오시는 길</a></li>
+                        <li><a href="#">문의하기</a></li>
+                    </ul> 
+                </li>
+            </ul>
+            <div class="lang">
+                <select name="lang" id="lang-select">
+                    <option value="KOR">KOR</option>
+                    <option value="ENG">ENG</option>
+                </select>
+            </div>
+        </header>
+        <div class="bg1"></div>
+        <div class="bg2"></div>
+        
+        <div class="sec1_wrap">
+            <div class="sec1">
+                <div class="visual_slide">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="https://www.yuhancare.com/data/yuhancare/inc/img_new/main/visual_1.jpg" alt="visual_1">
+                                <div class="center_txt">
+                                    <h1>세상에 없던 원료</h1>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://www.yuhancare.com/data/yuhancare/inc/img_new/main/visual_2.jpg" alt="visual_2">
+                                <div class="center_txt">
+                                    <h1>세상을 위한 제품</h1>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://www.yuhancare.com/data/yuhancare/inc/img_new/main/visual_3.jpg" alt="visual_3">
+                                <div class="center_txt">
+                                    <h1>세상을 바꾸는 기술</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <div class="center_txt">
+                        <!-- <h1>세상에 없던 원료</h1> -->
+                        <p class="slogan">천연물의 가치를 발견해 건강한 세상을 만들어 갑니다.</p>
+                    </div>
+                    <div class="bottom_wrap">
+                        <ul class="center_bottom">
+                            <li><a href="#">01. Ingredient</a></li>
+                            <li><a href="#">02. Product</a></li>
+                            <li><a href="#">03. Technology</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="intro">
+            <h2>Redefine the Origin</h2>
+            <p>천연물의 잠재력을 연구하고<br>건강 그 이상의가치로 연결하고자 합니다.</p>
+            <div class="yuhancare">
+                <ul class="item">
+                    <li>YUHANCARE</li>
+                    <li>YUHANCARE</li>
+                    <li>YUHANCARE</li>
+                </ul>
+                <ul class="btn">
+                    <li><a href="#">기업소개</a></li>
+                    <li><a href="#">사업소개</a></li>
+                    <li><a href="#">기업문화</a></li>
+                </ul>
+            </div>
+            <p>
+                천연물의 과학적 연구를 토대로 고객의 삶에 새로운 의식과<br>가치 있는 경험을 전하는 유한건강생활을 소개합니다.
+            </p>
+            <div class="linkbox">
+                <a href="#">바로가기</a>
+            </div>
+
+            <div class="omega3">
+                <div class="omega3_bg"></div>
+                <div class="omega3_wrap">
+                    <div class="omega3_txt">
+                        <a href="#">해양 생태계를<br>파괴하지 않는 오메가3</a>
+                    </div>
+                    <div class="omega3_link">
+                        <a href="#">자세히 알아보기</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="news">
+            <div class="news_title">
+                <p><span>news</span>보도자료</p>
+                <p><a href="#">미디어 바로가기</a></p>
+            </div>
+            <ul>
+                <li>
+                    <a href="#">
+                        <p>
+                            <img src="https://www.yuhancare.com/data/yuhancare/inc/img_new/media/news/78.jpg" alt="news01"> 
+                            <span class="link_deco1"></span>
+                        </p>
+                        <p>뉴오리진 a2우유, 가정의 달 맞아 귀여운 곰돌이 ‘팩 홀더’ 출시와 함께 브랜드 위크 진행</p>
+                       
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <p><img src="https://www.yuhancare.com/data/yuhancare/inc/img_new/media/news/77.jpg" alt="news02"></p>
+                        <p>뉴오리진 a2우유, 편의점까지 진출하며 대세우유 입증</p>
+                        <div class="link_deco1"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <p><img src="https://www.yuhancare.com/data/yuhancare/inc/img_new/media/news/76.jpg" alt="news03"></p>
+                        <p>뉴오리진, 혈당까지 관리해 살 찌는 체질 막아주는 ‘코어리셋 혈당컷 다이어트’ 출시</p>
+                        <div class="link_deco1"></div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="youtube">
+            <div class="youtube_title">
+                <p><span>유한건강생활</span>YOUTUBE</p>
+                <p><a href="#">유튜브 바로가기</a></p>
+            </div>
+            <div class="youtube_item">
+                <div class="one">
+                    <a href="#">
+                        <img src="https://yuhancare.com/data/yuhancare/inc/img_new/media/youtube/39.jpg" alt="01">
+                        <div class="link_deco"></div>
+                    </a>
+                </div>
+                <div class="two">
+                    <a href="#">
+                        <img src="https://yuhancare.com/data/yuhancare/inc/img_new/media/youtube/38.jpg" alt="02">
+                        <div class="link_deco"></div>
+                    </a>
+                </div>
+                <div class="three">
+                    <a href="#">
+                        <img src="https://yuhancare.com/data/yuhancare/inc/img_new/media/youtube/34.jpg" alt="03">
+                        <div class="link_deco"></div>
+                    </a>
+                </div>
+                <div class="fore">
+                    <a href="#">
+                        <img src="https://yuhancare.com/data/yuhancare/inc/img_new/media/youtube/33.jpg" alt="04">
+                        <div class="link_deco"></div>
+                    </a>
+                </div>
+                <div class="five">
+                    <a href="#">
+                        <img src="https://yuhancare.com/data/yuhancare/inc/img_new/media/youtube/31.jpg" alt="05">
+                        <div class="link_deco"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="people">
+            <div class="swiper mySwiper2">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                        <img src="https://www.yuhancare.com/data/yuhancare/inc/img_new/main/ilhan1.png" alt="ilhan1">
+                        <div class="ilhan_txt">
+                            <p>“정직, 이것이 유한의 영원한 전통이 되어야 한다.”</p>
+                        </div>
+                  </div>
+                  <div class="swiper-slide">
+                        <img src="https://www.yuhancare.com/data/yuhancare/inc/img_new/main/ilhan2.png" alt="ilhan2">
+                        <div class="ilhan_txt">
+                            <p>“기업은 한두 사람의 손에 의해서 발전되지 않는다.<br> 여러 사람의 두뇌가 참여함으로써 비로소 발전되는 것이다.”</p>
+                        </div>
+                  </div>
+                  <div class="swiper-slide">
+                        <img src="https://www.yuhancare.com/data/yuhancare/inc/img_new/main/ilhan3.png" alt="ilhan3">
+                        <div class="ilhan_txt">
+                            <p>“기업에서 얻은 이익은 그 기업을 키워 준<br>사회에 환원하여야 한다.”</p>
+                        </div>
+                  </div>
+                  <div class="swiper-slide">
+                        <img src="https://www.yuhancare.com/data/yuhancare/inc/img_new/main/ilhan4.png" alt="ilhan4">
+                        <div class="ilhan_txt">
+                            <p>“건강한 국민, 병들지 아니한 국민만이<br>주권을 누릴 수가 있는 것이다.”
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <span><a href="#">설립자 유일한</a></span>
+            </div>
+        </div>
+
+        <div class="sec04">
+            <div class="sec04_inner">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <span>윤리경영</span>
+                            <p>유일한 박사님의 창업이념을 바탕으로 기업의 사회적 책임을 다하는 윤리경영을 실천하고 있습니다.</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>제보센터</span>
+                            <p>윤리제보센터에서 회사 및 임직원의 위법행위나 부패행위에 대한 제보를 받고 있습니다.</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>문의하기</span>
+                            <p>유한건강생활의 건강한 여정에 궁금한 점이 있으시다면 언제든 편하게 문의해주세요.</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="sec05">
+            <div class="bg"></div>
+            <div class="sec05_title">
+                <a href="#">
+                    <p>유한건강생활<br> 오피스</p>
+                    <span>OFFICE TOUR</span>
+                </a>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer_wrap">
+                <div class="footer_top">
+                    <div class="footer_logo"><img src="https://www.yuhancare.com/data/yuhancare/inc/img_new/common/footer_logo.png" alt="logo"></div>
+                    <div class="family">
+                        <select name="family_site" id="footer-select">
+                            <option value="">FAMILY SITE</option>
+                            <option value="뉴오리진">뉴오리진</option>
+                            <option value="유한양행">유한양행</option>
+                            <option value="유한킴벌리">유한킴벌리</option>
+                            <option value="주식회사 유한화학">주식회사 유한화학</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="footer_bot">
+                    <div class="linkbox">
+                        <ul>
+                            <li><a href="#">사업자정보확인</a></li>
+                            <li><a href="#">개인정보처리방침</a></li>
+                            <li><a href="#">이메일무단수집거부</a></li>
+                            <li><a href="#">문의하기</a></li>
+                        </ul>
+                    </div>
+                    <div class="crop_info">
+                        <span>대표이사 : 손정수</span>
+                        <span>사업자등록번호 : 182-86-00679</span>
+                        <span>주소 : 서울특별시 영등포구 여의대로 108, 파크원 타워2 34층</span>  
+                    </div>
+                    <div class="crop_info">
+                        <span>대표번호 : 1670-6527</span>
+                        <span>FAX : 02-2078-5499</span>
+                        <span>이메일 : yuhancare@yuhancare.com</span>  
+                    </div>
+                    <p class="copyright">ⓒ 2024 YUHANCARE All Rights Reserved</p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+        <script>
+             let item = document.querySelectorAll(".intro .yuhancare .item li")
+            let btn = document.querySelectorAll(".intro .btn li")
+
+            item[0].classList.add("on")
+            btn[0].querySelector("a").classList.add("on")
+
+            function myfnc(){
+                btn.forEach(function(value,key){
+                    value.querySelector("a").classList.remove("on");
+                })
+            }
+
+            btn.forEach(function(value,key){
+                value.onclick = function(e){
+                    e.preventDefault();
+                    myfnc();
+                    item.forEach(function(value,key){
+                        value.classList.remove("on");
+                    })
+                    value.querySelector("a").classList.add("on");
+                    item[key].classList.add("on");
+
+                }
+            });
+
+            let cb = document.querySelectorAll(".bottom_wrap .center_bottom li");
+            cb[0].querySelector("a").classList.add("on");
+            var swiper = new Swiper(".mySwiper", {
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                autoplay: {
+                    delay: 4000,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true,
+                },
+                on: {
+                    slideChange: function(){
+                        
+                        for(let i=0;i<3;i++){
+                            cb[i].querySelector("a").classList.remove("on");
+                        }
+                        cb[this.realIndex].querySelector("a").classList.add("on");
+                    }
+                }
+            });
+            cb.forEach(function(v,k){
+                v.onclick = function(){
+                    swiper.slideTo(k);
+                }
+            });
+            $(".people .swiper-slide").eq(0).find("img").css("opacity","1")
+            var swiper2 = new Swiper(".mySwiper2", {
+                effect:"fade",
+                loop: true,
+                // autoplay: {
+                //     delay: 5000,
+                //     disableOnInteraction: false,
+                //     pauseOnMouseEnter: true,
+                // },
+                on:{
+                    slideChange:function(){
+                        console.log(this.realIndex);
+                      // $(".people .swiper-slide").find("img").css("opacity","0");
+                     $(".people .swiper_slide").eq(this.realIndex).find("img").css("opacity","1")   
+                    }
+                }
+            });
+        </script>
+    </div>
+</body>
+</html>
