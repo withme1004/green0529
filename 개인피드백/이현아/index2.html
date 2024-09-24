@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <style>
+    *{margin: 0; padding: 0;}
+    #wrap{width: 100%;height: 100%;margin: 0 auto;}
+    #wrap .logo{width: 100%;height: 80px;position: fixed; background-color: rgba(0,0,0,0.5);left: 0;top: 0;display: flex;justify-content: space-between;align-items: center;z-index: 999;}
+    #wrap .logo .inner{width: 100%;max-width: 1200px;margin: 0 auto;}
+    #wrap .bg video{width: 100%; height: 100vh; object-fit: cover;}
+    .slide-area,.slide-area1{display: flex;justify-content: flex-end;height: 100vh;align-items: center;}
+    .slide-area .swiper{margin-left: 0;margin-right: 0;}
+    .swiper {
+      width: 1524px;
+      height: 964px;
+      border: 1px solid;
+      overflow: visible;
+    }
+    .slide-area .swiper .swiper-slide{background: #fff;}
+    .swiper-slide {
+      /* text-align: center; */
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .slide-area .swiper-slide img {
+      display: block;
+      width: 1042px;
+      height: 700px;
+      object-fit: cover;
+      border-radius: 30px;
+    }
+    .swiper-slide .text p:first-child{
+      color: #00a870; font-size: 56px; font-weight: bold; line-height: 68px;
+    }
+
+    .swiper-slide .text p:last-child{
+      color: #3c536f; font-size: 24px; line-height: 30px; margin-top: 24px;
+    }
+    /* .swiper-slide1{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    } */
+    .swiper-slide > img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+			
+    }
+		.slide_wrap{display: flex;}
+    /* .swiper-slide1 .txt{position: relative;}
+    .swiper-slide1 .txt p{position: absolute; left: 0;top: 0;}
+    .swiper-slide1 .txt p:first-child{font-size: 42px;}
+    .swiper-slide1 .txt p:last-child{font-size: 24px;} */
+  </style>
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<script>
+		$(function(){
+			$(window).scroll(function(){
+				let ht = $(this).scrollTop();
+				console.log(ht);
+				if(ht >0 && ht<=1100){
+					$("header .logo").css("background-color", "rgba(255,255,255,1)");
+					$(".slide-area").css({position:"sticky",top:"0"});
+				}else if(ht>1100 && ht<=2000){
+					$(".slide-area").css({position:"static",top:"0"});
+					$(".slide-area1").css({position:"sticky",top:"0"});
+				}else if(ht > 2000){
+					$(".slide-area1").css({position:"static",top:"0"});
+				}
+				else{
+					$("header .logo").css("background-color", "rgba(0,0,0,0.5)");
+				}
+			})
+		})
+	</script>
+</head>
+<body>
+  <div id="wrap">
+    <header>
+      <div class="logo">
+        <div class="inner">
+          <p><img src="./images/로고화이트.png" alt=""></p>
+        </div>
+      </div>
+      <div class="bg">
+        <!-- <p><img src="./images/temp_main_pc_gcar.50b686704eb8f513a1ea.png" alt=""></p> -->
+        <video loop playsinline poster="images/poster.png" muted autoplay>
+          <source src="images/main.mp4" type="video/mp4">
+        </video>
+      </div>
+    </header>
+    <main>
+      <div class="slide-area">
+        <div class="swiper mySwiper" >
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="text">
+                <p>#필요한만큼만</p>
+                <p>30분 부터 10분 단위로<br>내가 필요한 딱 그만큼만 빌리세요</p>
+              </div>
+              <img src="./images/img1.png" alt="">
+            </div>
+            <div class="swiper-slide">
+              <div class="text">
+                <p>#내주위어디든</p>
+                <p>G car Zone을 찾을 필요가 없어요.<br>내 주위 3분 거리 어디에나 있어요.</p>
+              </div>
+              <img src="./images/img2.png" alt="">
+            </div>
+            <div class="swiper-slide">
+              <div class="text">
+                <p>#다양한차종</p>
+                <p>60여 종 이상 전기차, 수입차까지<br>지루할 틈 없이 골라 탈 수 있어요.</p>
+              </div>
+              <img src="./images/img3.png" alt="">
+            </div>
+            <div class="swiper-slide">
+              <div class="text">
+                <p>#간편하게</p>
+                <p>예약부터 차량 이용까지<br>스마트폰으로 간편하게 이용하세요.</p>
+              </div>
+              <img src="./images/img4.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slide-area1">
+        <div class="swiper mySwiper1">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="txt_wrap">
+								<div class="txt">
+									<p>가장 경제적인<br>업무용 차량입니다.</p>
+									<p>G car Biz</p>
+								</div>
+															<!-- <div class="txt">
+									<p>반납 걱정은 그만,<br>원하는 곳에 반납하세요.</p>
+									<p>G car 편도 서비스</p>
+								</div>
+															<div class="txt">
+									<p>G car를 더욱<br>자유롭게 즐겨보세요.</p>
+									<p>G car 구독 서비스</p>
+								</div> -->
+							</div>
+              <div class="slide_wrap">
+								<p><img src="./images/imgsub01.png" alt=""></p>
+								<p><img src="./images/imgsub02.png" alt=""></p><p><img src="./images/imgsub03.png" alt=""></p>
+							</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        // direction: "vertical",
+        effect:"fade",
+        slidesPerView: 1,
+        //spaceBetween: 30,
+        mousewheel: true,
+      });
+      var swiper1 = new Swiper(".mySwiper1", {
+        // direction: "vertical",
+        //slidesPerView: "auto",
+        spaceBetween: 30,
+        //mousewheel: true,
+      });
+    </script>
+</body>
+</html>
