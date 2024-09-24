@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	
+	<style>
+		.btn{font-size: 20px;background: #ccc;padding: 5px 10px;border-radius: 10px;color: #fff;transform: scale(0.8);border: none;}
+	</style>
+	<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+	<button class="btn">Buy</button>
+	
+	<script>
+		let btn = gsap.to(".btn", {
+			scale:1,yoyo:true,repeat:-1,paused:true
+		});
+		/*document.querySelector(".btn").onmouseenter = function(){
+			btn.restart();
+		}
+		document.querySelector(".btn").onmouseleave = function(){
+			btn.pause();
+			gsap.to(".btn", {
+			scale:0.8});
+		}*/
+		$(".btn").hover(function(){
+			btn.restart();
+		},function(){
+			btn.pause();
+			gsap.to(".btn", {
+			scale:0.8});
+		})
+	</script>
+</body>
+</html>
