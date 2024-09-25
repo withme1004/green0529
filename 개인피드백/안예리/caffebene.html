@@ -468,7 +468,7 @@
                     <li><a href="#">이용약관</a></li>
                     <li><a href="#"><span>고객센터 1688-4666</span></a></li>
                     <li>
-                        <a href="#"><img src="./images/ico-arr-top.png" alt="arrtop"></a>
+                        <a href="#" class="Top"><img src="./images/ico-arr-top.png" alt="arrtop"></a>
                     </li>
                 </ul>
            </li>
@@ -493,8 +493,12 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script>
+        $(".Top").click(function(e){
+            e.preventDefault();
+            $("html, body").stop().animate({scrollTop: 0},800);
+        })
         var swiper = new Swiper(".mySwiper", {
             loop: true,
             autoplay: {
