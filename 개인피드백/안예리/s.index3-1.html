@@ -8,18 +8,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script>
-        $(function(){
-            $("header").hover(function(){
-                
-                $(".logo a").css("backgroundImage","url(https://www.yuhancare.com/data/yuhancare/inc/img_new/common/yuhancare_logo_all_white.png)")
-                $(".bg1").css("borderBottom","1px solid #888");
-            },function(){
-                $(".logo a").css("backgroundImage","url(./images/yuhancare_logo_white.png)");
-                $(".bg1").css("borderBottom","1px solid rgba(34, 34, 34, 0.1)");
-            });
-        });
-    </script>
+  
+    
     <style>
         @font-face {
             font-family: Pretendard;
@@ -110,19 +100,35 @@
         .intro{width: 100%;height: 1166px;text-align: center;padding-top: 100px;font-family: Pretendard-R;}
         .intro h2{font-size: 42px;color: #181818;margin-bottom: 24px;font-family: Pretendard-B;}
         .intro > p:nth-of-type(1){font-size: 24px;color: #181818;margin-bottom: 50px;}
-
+        
         .intro .yuhancare{width: 100%;}
+        .intro .yuhancare .topImage{width: 1200px;height: 210px;margin: 0 auto;position: relative;}
+        .intro  .yuhancare .topImage .mask{position: absolute;width: 1200px;height: 210px;left: 0;top: 0;}
+        .zoom_circle {
+        background-size: 1200px;
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        clip-path: circle(0%);}
+        .zoom_circle.on {
+        clip-path: circle(100%);
+        transition: clip-path 1s 800ms ease-out;}
+        .intro  .yuhancare .topImage .mask span:first-child{background:url(./images/text_to_img1.jpg);}
+        .intro  .yuhancare .topImage .mask span:nth-child(2){background:url(./images/text_to_img2.jpg);}
+        .intro  .yuhancare .topImage .mask span:nth-child(3){background:url(./images/text_to_img3.jpg);}
         .intro .yuhancare .item{width: 100%;max-width: 1200px;height: 210px;margin: 0 auto;position: relative;text-align: center;}
         .intro .yuhancare .item li{width: 100%;position: absolute;left: 0;top: 0; font-size: 190px;font-weight: bold;text-align: center;line-height: 210px;color: transparent;transition: 0.5s;opacity: 0;}
         .intro .yuhancare .item li.on{opacity: 1;}
-        .intro .yuhancare .item li:first-child{background: url(./images/text_to_img1.jpg);background-clip: text;}
+        .intro .yuhancare .item li:first-child{background: url(./images/text_to_img1.jpg);background-clip:text;}
         .intro .yuhancare .item li:nth-child(2){background: url(./images/text_to_img2.jpg);background-clip: text;}
         .intro .yuhancare .item li:nth-child(3){background: url(./images/text_to_img3.jpg);background-clip: text;}
 
-        .intro .btn{display: flex;justify-content: center;gap: 20px;}
-        .intro .btn li{margin-top: 30px;}
-        .intro .btn li a{cursor: pointer;display: block;padding: 12px 40px;border: 1px solid #181818;border-radius: 50px;font-size: 24px;font-weight: bold;color: #181818;}
-        .intro .btn li a.on{color: #fff;background: #181818;}
+        .intro .btn{display: flex;justify-content: center;gap: 20px;margin-top: 30px;position: relative;z-index: 999;}
+        .intro .btn li{cursor: pointer;padding: 12px 40px;border: 1px solid #181818;border-radius: 50px;font-size: 24px;font-weight: bold;color: #181818;}
+        .intro .btn li.on{color: #fff;background: #181818;}
 
         .intro > p:nth-of-type(2){font-size: 18px; color: #181818;padding: 50px 0;}
         .intro .linkbox a{color: #181818;font-size: 24px;font-weight: 600;font-family: Pretendard;}
@@ -214,6 +220,32 @@
         footer .footer_bot .copyright{font-size: 14px;color: #181818; margin-top: 20px;font-family: Pretendard;font-weight: 400;}
 
     </style>
+    <script>
+        $(function(){
+            $("header").hover(function(){
+                
+                $(".logo a").css("backgroundImage","url(https://www.yuhancare.com/data/yuhancare/inc/img_new/common/yuhancare_logo_all_white.png)")
+                $(".bg1").css("borderBottom","1px solid #888");
+            },function(){
+                $(".logo a").css("backgroundImage","url(./images/yuhancare_logo_white.png)");
+                $(".bg1").css("borderBottom","1px solid rgba(34, 34, 34, 0.1)");
+            });
+          
+            $(".intro .yuhancare .item li").eq(0).addClass("on");
+            $(".mask .zoom_circle").eq(0).addClass("on");
+            $(".intro .btn li").eq(0).addClass("on");
+            $(".intro .btn li").click(function(){
+                let i = $(this).index();
+                console.log(i);
+                $(".intro .btn li").removeClass("on");
+                $(".intro .yuhancare .item li").removeClass("on");
+                $(".intro .btn li").eq(i).addClass("on");
+                $(".intro .yuhancare .item li").eq(i).addClass("on");
+                $(".mask span").removeClass("on");
+                $(".mask span").eq(i).addClass("on");
+            })
+        });
+    </script>
 </head>
 <body>
     <div class="wrap">
@@ -322,15 +354,22 @@
             <h2>Redefine the Origin</h2>
             <p>천연물의 잠재력을 연구하고<br>건강 그 이상의가치로 연결하고자 합니다.</p>
             <div class="yuhancare">
-                <ul class="item">
-                    <li>YUHANCARE</li>
-                    <li>YUHANCARE</li>
-                    <li>YUHANCARE</li>
-                </ul>
+                <div class="topImage">
+                    <div class="mask">
+                        <span class="zoom_circle"></span>
+                        <span class="zoom_circle"></span>
+                        <span class="zoom_circle"></span>
+                    </div>
+                    <ul class="item">
+                        <li>YUHANCARE</li>
+                        <li>YUHANCARE</li>
+                        <li>YUHANCARE</li>
+                    </ul>
+                </div>
                 <ul class="btn">
-                    <li><a href="#">기업소개</a></li>
-                    <li><a href="#">사업소개</a></li>
-                    <li><a href="#">기업문화</a></li>
+                    <li>기업소개</li>
+                    <li>사업소개</li>
+                    <li>기업문화</li>
                 </ul>
             </div>
             <p>
@@ -534,30 +573,30 @@
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
         <script>
-             let item = document.querySelectorAll(".intro .yuhancare .item li")
-            let btn = document.querySelectorAll(".intro .btn li")
+            //  let item = document.querySelectorAll(".intro .yuhancare .item li")
+            // let btn = document.querySelectorAll(".intro .btn li")
 
-            item[0].classList.add("on")
-            btn[0].querySelector("a").classList.add("on")
+            // item[0].classList.add("on")
+            // btn[0].querySelector("a").classList.add("on")
 
-            function myfnc(){
-                btn.forEach(function(value,key){
-                    value.querySelector("a").classList.remove("on");
-                })
-            }
+            // function myfnc(){
+            //     btn.forEach(function(value,key){
+            //         value.querySelector("a").classList.remove("on");
+            //     })
+            // }
 
-            btn.forEach(function(value,key){
-                value.onclick = function(e){
-                    e.preventDefault();
-                    myfnc();
-                    item.forEach(function(value,key){
-                        value.classList.remove("on");
-                    })
-                    value.querySelector("a").classList.add("on");
-                    item[key].classList.add("on");
+            // btn.forEach(function(value,key){
+            //     value.onclick = function(e){
+            //         e.preventDefault();
+            //         myfnc();
+            //         item.forEach(function(value,key){
+            //             value.classList.remove("on");
+            //         })
+            //         value.querySelector("a").classList.add("on");
+            //         item[key].classList.add("on");
 
-                }
-            });
+            //     }
+            // });
 
             let cb = document.querySelectorAll(".bottom_wrap .center_bottom li");
             cb[0].querySelector("a").classList.add("on");
