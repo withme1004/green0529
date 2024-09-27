@@ -4,6 +4,24 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
+	<style>
+		*{margin: 0;padding: 0;}
+		body{color: #fff;background: #111;}
+		#parallax{overflow: hidden;}
+		.item{position: relative;height: 100vh;display: flex;justify-content: center;align-items: center;}
+		section:nth-child(2n){background: #222;}
+		.num{position: absolute;right: 20px;bottom: 20px;font-size: 5vw;}
+		.item_img{width: 10vw;height: 10vw;background-size: cover;background-position: center;margin: 1vw;}
+		#section1 .item_img{background-image: url(https://cdn.pixabay.com/photo/2024/02/05/10/48/bird-8554204_1280.jpg);}
+		#section2 .item_img{background-image: url(https://cdn.pixabay.com/photo/2024/02/05/10/48/bird-8554204_1280.jpg);}
+		#section3 .item_img{background-image: url(https://cdn.pixabay.com/photo/2024/02/05/10/48/bird-8554204_1280.jpg);width: 100px;height: 100px;border-radius: 50px;}
+		#section4 .item_img{background-image: url(https://cdn.pixabay.com/photo/2024/03/21/14/36/forest-8647829_1280.jpg);}
+		#section8 .item_img{background-image: url(https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832_1280.jpg);}
+		#section9 .item_img{background-image: url(https://cdn.pixabay.com/photo/2013/10/09/02/27/lake-192990_1280.jpg);}
+		.item_text{font-size: 5vw;}
+		#section7 .item_text{position: absolute;left: 50%;top: 50%;transform: translate(-50%,-50%);background: #111;padding: 30px;text-align: center;width: 100%;opacity: 0;}
+		#section5,#section8{flex-direction: column;}
+	</style>
 </head>
 <body>
 	<main id="parallax">
