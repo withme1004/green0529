@@ -17,11 +17,46 @@
         margin: 0 auto;
         text-align: center;
       }
-     
+     .text{margin: 100px 0;height: 100px;position: relative;}
+     .text li{position: absolute;left: 0;top: 0;background:#fff;opacity: 0;}
+     .text li.on{opacity: 1;}
+     .desc{display: flex;justify-content: space-around;height: 200px;align-items: center;}
+     .desc li{display: flex;align-items: center;}
+     .desc li > p{width: 132px;height: 132px;line-height: 132px;position: relative;}
+     .desc li > p.on::after{content: "";position: absolute;width: 132px;height: 132px;border-radius: 50%;left: 50%;top: 50%;transform: translate(-50%,-50%);border: 2px solid red;box-sizing: border-box;}
+     .desc li > p img{width: 96px;border: 10px solid #fff;box-sizing: border-box;vertical-align: middle;}
+     .desc li > p img.on{width: 128px;}
+     .desc li .people{width: 0;overflow: hidden;white-space: nowrap;
+      transition: width 0.65s ease-out;}
+     .desc li .people.on{width: 120px;}
     </style>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script>
-      
+      $(function(){
+        // $(".text li").eq(0).addClass("on");
+        // $(".desc li").eq(0).find("p").addClass("on");
+        // $(".desc li").eq(0).find("img").addClass("on");
+        // $(".desc li").eq(0).find(".people").addClass("on");
+        $(".desc li").click(function(){
+          let i = $(this).index();
+          $(".text li").removeClass("on");
+          $(".text li").eq(i).addClass("on");
+          $(".desc li p").removeClass("on");
+          $(".desc li").eq(i).find("p").addClass("on");
+          $(".desc li img").removeClass("on");
+          $(".desc li").eq(i).find("img").addClass("on");
+          $(".desc li .people").removeClass("on");
+          $(".desc li").eq(i).find(".people").addClass("on");
+        });
+        let num = 1;
+        setTimeout(function(){
+          $(".desc li").eq(0).trigger("click");
+        })
+        setInterval(function(){
+          $(".desc li").eq(num).trigger("click");//0,1,2,3
+          num = (num +1) % $(".desc li").length;
+        },2000);
+      });
     </script>
   </head>
   <body>
@@ -59,7 +94,7 @@
               alt=""
             />
           </p>
-          <div class="people">
+          <div class="people on">
             <p class="mb">봉선아 활동가</p>
             <span class="mb_text">기술직 활동가</span>
           </div>
