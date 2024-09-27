@@ -33,10 +33,10 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script>
       $(function(){
-        // $(".text li").eq(0).addClass("on");
-        // $(".desc li").eq(0).find("p").addClass("on");
-        // $(".desc li").eq(0).find("img").addClass("on");
-        // $(".desc li").eq(0).find(".people").addClass("on");
+        $(".text li").eq(0).addClass("on");
+        $(".desc li").eq(0).find("p").addClass("on");
+        $(".desc li").eq(0).find("img").addClass("on");
+        $(".desc li").eq(0).find(".people").addClass("on");
         $(".desc li").click(function(){
           let i = $(this).index();
           $(".text li").removeClass("on");
@@ -49,9 +49,9 @@
           $(".desc li").eq(i).find(".people").addClass("on");
         });
         let num = 1;
-        setTimeout(function(){
-          $(".desc li").eq(0).trigger("click");
-        })
+        // setTimeout(function(){
+        //   $(".desc li").eq(0).trigger("click");
+        // })
         setInterval(function(){
           $(".desc li").eq(num).trigger("click");//0,1,2,3
           num = (num +1) % $(".desc li").length;
