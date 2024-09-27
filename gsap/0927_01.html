@@ -17,7 +17,7 @@
 		#section3 .item_img{background-image: url(https://cdn.pixabay.com/photo/2024/02/05/10/48/bird-8554204_1280.jpg);width: 100px;height: 100px;border-radius: 50px;}
 		#section4 .item_img{background-image: url(https://cdn.pixabay.com/photo/2024/03/21/14/36/forest-8647829_1280.jpg);}
 		#section8 .item_img{background-image: url(https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832_1280.jpg);}
-		#section9 .item_img{background-image: url(https://cdn.pixabay.com/photo/2013/10/09/02/27/lake-192990_1280.jpg);}
+		#section9 .item_img{background-image: url(https://cdn.pixabay.com/photo/2013/10/09/02/27/lake-192990_1280.jpg);border-radius: 50%;}
 		.item_text{font-size: 5vw;}
 		#section7 .item_text{position: absolute;left: 50%;top: 50%;transform: translate(-50%,-50%);background: #111;padding: 30px;text-align: center;width: 100%;opacity: 0;}
 		#section5,#section8{flex-direction: column;}
@@ -158,6 +158,98 @@
 	ScrollTrigger.create({
 		animation: ani4,
 		trigger:"#section4",
+		//markers:true,
+		start:"top top",
+		//end:"+=2000",
+		pin:true,
+		scrub:1,
+		id:"box1",
+		anticipatePin: 1,
+	})
+	const ani5 = gsap.timeline();
+	ani5
+	.to("#section5 .t1",{
+		xPercent:300,
+	},"txt5")
+	.to("#section5 .t2",{
+		xPercent:-300,
+	},"txt4")
+	.to("#section5 .t3",{
+		xPercent:300,
+	},"txt5")
+	.to("#section5 .t4",{
+		xPercent:-300,
+	},"txt4");
+	ScrollTrigger.create({
+		animation: ani5,
+		trigger:"#section5",
+		//markers:true,
+		start:"top top",
+		//end:"+=2000",
+		pin:true,
+		scrub:1,
+		id:"box1",
+		anticipatePin: 1,
+	});
+	const ani6 = gsap.timeline();
+	ani6.to("#section6 .item_text",{
+		scale:60,
+	}).to("#section6 .item_text",{
+		opacity:0,
+	});
+	ScrollTrigger.create({
+		animation: ani6,
+		trigger:"#section6",
+		//markers:true,
+		start:"top top",
+		//end:"+=2000",
+		pin:true,
+		scrub:1,
+		id:"box1",
+		anticipatePin: 1,
+	})
+	const ani7 = gsap.timeline({
+		defaults:{scale:0,opacity:1}
+	});
+	ani7.from("#section7 .t1",{})
+	    .from("#section7 .t2",{})
+	    .from("#section7 .t3",{})
+	    .from("#section7 .t4",{})
+	    .from("#section7 .t5",{})
+	    .from("#section7 .t6",{})
+	    .from("#section7 .t7",{})
+	ScrollTrigger.create({
+		animation: ani7,
+		trigger:"#section7",
+		//markers:true,
+		start:"top top",
+		//end:"+=2000",
+		pin:true,
+		scrub:1,
+		id:"box1",
+		anticipatePin: 1,
+	})
+	const ani8 = gsap.timeline();
+	ani8.from("#section8 .t1",{x:innerWidth * 1})
+	    .from("#section8 .t2",{x:innerWidth * -1})
+	    .from("#section8 .t3",{x:innerWidth * 1})
+	    .from("#section8 .i1",{x:innerWidth * 1,rotation:360,scale:5,});
+	ScrollTrigger.create({
+		animation: ani8,
+		trigger:"#section8",
+		//markers:true,
+		start:"top top",
+		//end:"+=2000",
+		pin:true,
+		scrub:1,
+		id:"box1",
+		anticipatePin: 1,
+	})
+	const ani9 = gsap.timeline();
+	ani9.to("#section9 .i1",{scale:20,}).to("#section9 .i1",{scale:1,});
+	ScrollTrigger.create({
+		animation: ani9,
+		trigger:"#section9",
 		markers:true,
 		start:"top top",
 		//end:"+=2000",
