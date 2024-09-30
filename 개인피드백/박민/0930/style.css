@@ -1,0 +1,615 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: mainfont;
+  src: url(../webfonts/Montserrat-SemiBold.woff) format("woff");
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+body {
+  height: auto;
+}
+.head {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 72px;
+  font-weight: bold;
+  z-index: 999;
+}
+.head.scrolled {
+  background-color: #fff;
+}
+header .inner {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  padding: 0 40px;
+}
+header .logo svg {
+  width: 80px;
+  height: 68px;
+  fill: #fff;
+  cursor: pointer;
+}
+header .logo svg path {
+  fill: #fff;
+}
+
+header .inner > ul {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 1280px;
+  height: 100%;
+  gap: 15px;
+}
+header .inner > ul > li {
+  position: relative;
+}
+
+header .inner > ul > li > p {
+  position: relative;
+  color: #fff;
+  margin: 0 32px;
+  padding: 25px 0;
+  font-family: mainfont;
+  text-transform: uppercase;
+  cursor: pointer;
+  overflow: hidden;
+  display: inline-block;
+}
+.head .inner > ul > li > p.on {
+  color: #111;
+}
+header .inner > ul > li p::after {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100px;
+  height: 2px;
+  background: #fff;
+  transform: translateX(-100%);
+  transition: 0.4s;
+}
+header .inner > ul > li:hover p::after {
+  transform: translateX(0);
+}
+header .inner > ul > li ul {
+  background: #fff;
+  padding: 16px;
+  color: #666;
+  display: none;
+  font-weight: 500;
+  position: absolute;
+  top: 73px;
+  left: 10px;
+  filter: drop-shadow(0px 1px 8px rgba(0, 0, 0, 0.08));
+}
+header .inner > ul > li:hover ul {
+  display: block;
+}
+header .inner > ul > li ul li {
+  margin-bottom: 16px;
+  white-space: nowrap;
+}
+header .inner > ul > li ul li:hover {
+  color: #211955;
+  cursor: pointer;
+}
+header .inner > ul > li ul li:last-child {
+  margin-bottom: 0;
+}
+
+.main {
+  width: 100%;
+}
+.main video {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.main .txt1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 200px;
+  padding: 180px 40px 0;
+  max-width: 1280px;
+  height: 100%;
+  margin: 0 auto;
+  z-index: 2;
+  background: #fff;
+  transition: 0.5s;
+}
+.main .txt1.active {
+  background: none;
+}
+.main .txt1.hide {
+  opacity: 0;
+  z-index: 0;
+}
+#fullpage .s0 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  opacity: 0;
+  transition: 0.75s;
+}
+#fullpage .s0.active {
+  opacity: 1;
+  z-index: 2;
+}
+.main .txt1 .txtSub {
+  position: absolute;
+  top: 30%;
+}
+.main img {
+  object-fit: cover;
+}
+.main .txt1 .txtSub img:first-child {
+  margin-bottom: 30px;
+}
+.main .txt1 .txtSub img:nth-child(2) {
+  display: inline-block;
+  height: 300px;
+}
+.main .txt1 .txtSub img:last-child {
+  vertical-align: top;
+  position: absolute;
+  top: 0;
+}
+.hll > img {
+  filter: invert();
+  width: 1200px;
+  height: 378px;
+  position: absolute;
+  bottom: 0;
+}
+
+.main .txt2 {
+  width: 100%;
+  max-width: 1280px;
+  position: absolute;
+  padding: 0 40px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+}
+.main .txt2 .txtBot {
+  margin-top: 100px;
+  padding: 0 306px;
+  color: #fff;
+  width: 894px;
+  font-weight: bold;
+}
+.main .txt2 .txtBot p {
+  font-size: 18px;
+}
+.main .txt2 .txtBot span {
+  font-size: 16px;
+  display: inline-block;
+  margin-top: 60px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  padding-left: 24px;
+  padding-right: 48px;
+  height: 52px;
+  line-height: 52px;
+  cursor: pointer;
+  text-transform: uppercase;
+  position: relative;
+}
+.main .txt2 .txtBot span::after {
+  content: "";
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  background-image: url(https://www.hll.kr/resources/images/main/ico-more-w.png);
+  background-position: center;
+  background-size: cover;
+  transform: translateY(-50%);
+}
+
+/* sub 공통 */
+/* .sub{width: 100%; height: 100vh; margin: 0 auto; background: #fff;} */
+.sub .inner {
+  width: 1200px;
+  height: 720px;
+  position: relative;
+  margin: 0 auto;
+}
+.sub .inner .brand p {
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 16px;
+}
+.sub .inner .brand span {
+  display: inline-block;
+  height: 52px;
+  border: 1px solid;
+  padding-left: 24px;
+  padding-right: 52px;
+  line-height: 52px;
+  text-transform: uppercase;
+  margin-top: 32px;
+  position: relative;
+  font-weight: 500;
+  cursor: pointer;
+}
+.sub .inner .brand span::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: url(../images/ico-more.png);
+  background-position: center;
+  background-size: cover;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 8px;
+}
+.sub .pic img {
+  object-fit: cover;
+  vertical-align: top;
+  position: absolute;
+  display: block;
+}
+.s1 .pic img:nth-child(1) {
+  top: 0;
+  left: 0;
+  width: 23.5%;
+}
+.s1 .pic img:nth-child(2) {
+  top: 0;
+  left: 25.5%;
+  width: 24.5%;
+}
+.s1 .pic img:nth-child(3) {
+  top: 0;
+  right: 0;
+  width: 45.5%;
+}
+.s1 .brand {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.s2 .inner .pic img:nth-child(1) {
+  width: 45.5%;
+  top: 0;
+  left: 0;
+}
+.s2 .inner .pic img:nth-child(2) {
+  width: 49%;
+  top: 0;
+  right: 0;
+}
+.s2 .brand {
+  position: absolute;
+  bottom: 0;
+  left: calc(50% + 12px);
+}
+
+.s3 .inner .pic img:nth-child(1) {
+  width: 24.5%;
+  top: 0;
+  left: 0;
+}
+.s3 .inner .pic img:nth-child(2) {
+  width: 24.5%;
+  top: 0;
+  left: 26.5%;
+}
+.s3 .inner .pic img:nth-child(3) {
+  width: 45.5%;
+  top: 0;
+  right: 0;
+}
+.s3 .brand {
+  position: absolute;
+  bottom: 0;
+}
+
+.s4 .inner .pic img:nth-child(1) {
+  width: 55%;
+  top: 0;
+  left: 0;
+}
+.s4 .inner .pic img:nth-child(2) {
+  width: 24.5%;
+  top: 0;
+  right: 0;
+}
+.s4 .inner .pic img:nth-child(3) {
+  width: 24.25%;
+  top: 437px;
+  left: 0;
+}
+.s4 .brand {
+  position: absolute;
+  bottom: 0;
+  left: calc(50% + 12px);
+}
+
+.s5 .inner .pic img:nth-child(1) {
+  width: 55%;
+  top: 0;
+  right: 318px;
+}
+.s5 .inner .pic img:nth-child(2) {
+  width: 24.25%;
+  top: 437px;
+  right: 318px;
+}
+.s5 .inner .pic img:nth-child(3) {
+  width: 24.5%;
+  top: 337px;
+  right: 0;
+}
+.s5 .brand {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.s6 .inner .pic img:nth-child(1) {
+  width: 45.5%;
+  top: 0;
+  left: 0;
+}
+.s6 .inner .pic img:nth-child(2) {
+  width: 49%;
+  top: 0;
+  right: 0;
+}
+.s6 .brand {
+  position: absolute;
+  bottom: 0;
+  left: calc(50% + 12px);
+}
+.s6 .brand img {
+  width: 216px;
+  height: 99px;
+  vertical-align: middle;
+}
+
+.s7 .inner .pic img:nth-child(1) {
+  width: 24.5%;
+  top: 0;
+  left: 0;
+}
+.s7 .inner .pic img:nth-child(2) {
+  width: 24.25%;
+  top: 0;
+  left: 26.5%;
+}
+.s7 .inner .pic img:nth-child(3) {
+  width: 45.5%;
+  top: 0;
+  right: 0;
+}
+.s7 .brand {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.s8 {
+  background: #000;
+  width: 100%;
+  height: 100vh;
+  padding-top: 30px;
+  padding-bottom: 70px;
+  overflow: hidden;
+}
+.s8 .footerInner {
+  margin-left: 42.5%;
+  margin-top: 40px;
+}
+.s8 .footerInner p {
+  font-size: 18px;
+  margin-top: 32px;
+  color: #fff;
+  font-weight: 500;
+}
+.s8 .footerInner span {
+  display: inline-block;
+  height: 52px;
+  border: 1px solid;
+  padding-left: 24px;
+  padding-right: 52px;
+  line-height: 52px;
+  text-transform: uppercase;
+  margin-top: 40px;
+  position: relative;
+  font-weight: 500;
+  cursor: pointer;
+  color: #fff;
+}
+.s8 .footerInner span::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: url(../images/ico-more-w.png);
+  background-position: center;
+  background-size: cover;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 8px;
+}
+
+.s9 {
+  width: 100%;
+  height: 100vh;
+  padding-bottom: 50px;
+  overflow: hidden;
+}
+.s9 .footerInner {
+  margin-left: 42.5%;
+  margin-top: 40px;
+}
+.s9 .footerInner p {
+  font-size: 18px;
+  margin-top: 32px;
+  font-weight: 500;
+}
+.footerInner img {
+  width: 57vw;
+}
+.s9 .footerInner span {
+  display: inline-block;
+  height: 52px;
+  border: 1px solid;
+  padding-left: 24px;
+  padding-right: 52px;
+  line-height: 52px;
+  text-transform: uppercase;
+  margin-top: 40px;
+  position: relative;
+  font-weight: 500;
+  cursor: pointer;
+}
+.s9 .footerInner span::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: url(../images/ic_plus_16.png);
+  background-position: center;
+  background-size: cover;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 8px;
+}
+.s9 .footerInner span:last-child {
+  margin-left: 20px;
+}
+
+footer {
+  width: 100%;
+  max-width: 1915px;
+  margin: 0 auto;
+}
+footer .footTop {
+  width: 100%;
+  border-top: 1px solid #dbdbdb;
+  border-bottom: 1px solid #dbdbdb;
+}
+footer .list {
+  display: flex;
+  padding: 21px 0;
+  justify-content: flex-start;
+  gap: 8px 32px;
+  width: 1200px;
+  color: #666;
+  font-weight: 500;
+  margin: 0 auto;
+}
+footer .list li {
+  cursor: pointer;
+}
+footer .list li:nth-child(2) {
+  font-weight: 700;
+  color: #111;
+}
+
+footer .footCenter {
+  width: 1280px;
+  display: flex;
+  padding: 40px 0;
+  margin: 0 auto;
+}
+footer .footCenter .logo {
+  padding-left: 40px;
+}
+footer .footCenter .txt {
+  margin-left: 110px;
+  font-weight: 500;
+  padding-right: 40px;
+}
+footer .footCenter .txt h1 {
+  font-size: 20px;
+  margin-bottom: 17px;
+  color: #111;
+}
+footer .footCenter .txt span {
+  margin-bottom: 8px;
+  display: inline-block;
+  font-size: 14px;
+  color: #666;
+}
+footer .footCenter .txt span:nth-child(2),
+footer .footCenter .txt span:nth-child(5) {
+  margin-right: 17px;
+  position: relative;
+}
+footer .footCenter .txt span:nth-child(2):after,
+footer .footCenter .txt span:nth-child(5):after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  right: -9px;
+  top: 5px;
+  width: 1px;
+  height: 11px;
+  background-color: #dbdbdb;
+}
+footer .footCenter .txt p {
+  font-size: 14px;
+  margin-top: 12px;
+  color: #666;
+}
+
+footer .footLast {
+  height: 64px;
+  border-top: 1px solid #dbdbdb;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .footLast p {
+  font-family: mainfont;
+  color: #666;
+  cursor: pointer;
+}
+footer .footLast span {
+  position: relative;
+}
+footer .footLast span::after {
+  content: "";
+  position: absolute;
+  margin-left: 8px;
+  width: 16px;
+  height: 16px;
+  background: url(../images/ico_arrow_up_16.svg);
+  background-position: center;
+  background-size: cover;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
