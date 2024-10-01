@@ -1,0 +1,174 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.section {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+}
+.main4 {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.main4 .mySwiper {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+}
+
+.main4 .mySwiper .swiper-container {
+  width: 700px;
+  margin: 0 auto;
+  background: #fff;
+  display: flex;
+}
+.main4 .mySwiper .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main4 .mySwiper .swiper-slide img {
+  width: 90%;
+}
+.main4 .mySwiper1 {
+  position: absolute;
+  z-index: 3;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 600px;
+  transform: translateY(-50%);
+  border: 1px solid;
+}
+.main4 .mySwiper1 .swiper-container {
+  position: relative;
+  width: 1200px;
+  margin: 0 auto;
+  height: 600px;
+  background: #fff;
+}
+.main4 .mySwiper1 .swiper-slide {
+  background: #fff;
+}
+.main4 .mySwiper1 .swiper-slide a {
+  display: flex;
+}
+.main4 .mySwiper1 .swiper-slide div {
+  display: block;
+  width: 50%;
+  /* padding-bottom: 35%; */
+  position: relative;
+}
+.main4 .mySwiper1 .swiper-slide img {
+  display: block;
+  width: 90%;
+  position: absolute;
+}
+.main4 .mySwiper1 .swiper-slide .info {
+  width: calc(50% - 1px);
+  padding: 20px 75px 0;
+  text-align: left;
+  background: #fff;
+}
+.main4 .mySwiper1 .swiper-slide .info .label {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+.main4 .mySwiper1 .swiper-slide .info .label.yellow {
+  color: #ffb400;
+}
+.main4 .mySwiper1 .swiper-slide .info .label.blue {
+  color: #095dba;
+}
+.main4 .mySwiper1 .swiper-slide .info strong {
+  display: block;
+  font-size: 28px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.main4 .mySwiper1 .swiper-slide .info p {
+  position: relative;
+  margin-top: 39px;
+  padding-top: 28px;
+  font-size: 18px;
+  line-height: 2.222em;
+  color: #444;
+}
+.main4 .mySwiper1 .swiper-slide .info p:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 60px;
+  border-top: 2px solid #ffb400;
+}
+
+.main4 .mySwiper1 .paginate {
+  position: absolute;
+  bottom: 0;
+
+  text-align: center;
+
+  z-index: 90;
+}
+.main4 .mySwiper1 .paginate .swiper-pagination-bullet {
+  position: relative;
+  opacity: 1;
+  border-radius: 0;
+  background: #ddd;
+  margin: 0 10px;
+  transition: all 300ms;
+}
+.main4 .mySwiper1 .paginate .swiper-pagination-bullet:before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  right: 2px;
+  bottom: 2px;
+  background: #fff;
+  transition: all 300ms;
+}
+
+.main4 .mySwiper1 .paginate .swiper-pagination-bullet-active {
+  width: 70px;
+  background: #ffb400;
+}
+.main4 .mySwiper1 .paginate .swiper-pagination-bullet-active:before {
+  opacity: 0;
+}
+
+.main4 .mySwiper1 .btn {
+  position: absolute;
+  top: 50%;
+  width: 37px;
+  height: 71px;
+  margin-top: -35px;
+  background: url(http://www.mdmworld.co.kr/assets/pc/images/main/btn-roll.png)
+    0 0 no-repeat;
+  border: 0;
+  text-indent: -9999px;
+  z-index: 100;
+  cursor: pointer;
+}
+.main4 .mySwiper1 .btn.prev {
+  left: -69px;
+}
+.main4 .mySwiper1 .btn.next {
+  right: -69px;
+  background-position: 100% 0;
+}
