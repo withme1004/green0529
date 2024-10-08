@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>허스트중앙 통합멤버십 | Hearst Joongang membership</title>
+    <link rel="stylesheet" href="css/main1.css" />
+    <link rel="stylesheet" href="css/jquery.fullPage.css" />
+    <link rel="stylesheet" href="css/aos.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="js/scrolloverflow.js"></script>
+    <script src="js/jquery.fullPage.js"></script>
+    <script src="js/aos.js"></script>
+    <script>
+      $(function () {
+        const sectionLength = $(".section").length;
+        let myV = $("#myVideo").get(0);
+        function init() {
+          $(".section").eq(0).find("[data-aos]").removeClass("aos-animate");
+          setTimeout(() => {
+            $(".section").eq(0).addClass("start");
+            $(".section").eq(0).find("[data-aos]").addClass("aos-animate");
+          }, 2200);
+        }
+        var wheelCount = 0;
+        $("#fullpage").fullpage({
+          verticalCentered: true,
+          sectionsColor: [
+            "",
+            "#111",
+            "",
+            "#fff",
+            "#fff",
+            "#ff1493",
+            "#111",
+            "#969c98",
+            "#fff",
+            "#f2efe8",
+            "#111",
+            "#f7f7f7",
+            "#fff",
+          ],
+          afterLoad: function (anchorLink, index) {
+            const realIndex = index - 1;
+            sectionIndex = realIndex;
+            if (index !== sectionLength) {
+              $(".section").find("[data-aos]").removeClass("aos-animate");
+            }
+            if (realIndex === 0) {
+              $(".gnb").hover(
+                function () {
+                  $("header").css("background-color", "#fff");
+                  $(".head .logo").html(
+                    '<img src="images/logoblack.svg" alt="logoblack" />'
+                  );
+                },
+                function () {
+                  $("header").css("background-color", "transparent");
+                  $(".head .logo").html(
+                    '<img src="images/logowhite.svg" alt="logowhite" />'
+                  );
+                }
+              );
+              $(".section")
+                .eq(index - 1)
+                .addClass("after-load");
+              if (!$(".section").eq(index).hasClass("after-load")) {
+                AOS.init();
+              }
+              if (!myV === false) {
+                $("#myVideo").on("loadeddata", function () {
+                  init();
+                  setInterval(function () {
+                    if ($("#myVideo").prop("ended")) {
+                      init();
+                    }
+                  }, 200);
+                });
+              } else {
+                init();
+              }
+            } else {
+              $(".section")
+                .eq(realIndex)
+                .find("[data-aos]")
+                .addClass("aos-animate");
+              if (
+                index == 4 ||
+                index == 5 ||
+                index == 9 ||
+                index == 10 ||
+                index == 12 ||
+                index == 13
+              ) {
+                $(".head .logo").html(
+                  '<img src="images/logoblack.svg" alt="logoblack" />'
+                );
+                $(".dep1 > li > a").css("color", "#111");
+                $(".headRight li a").css("color", "#111");
+                $(".hamberger p").html(
+                  '<img src="images/hambergerbl.png" alt="hambergerbl" />'
+                );
+                $(".gnb").hover(
+                  function () {
+                    $("header").css("background-color", "#fff");
+                    $(".head .logo").html(
+                      '<img src="images/logoblack.svg" alt="logoblack" />'
+                    );
+                  },
+                  function () {
+                    $("header").css("background-color", "transparent");
+                    $(".head .logo").html(
+                      '<img src="images/logoblack.svg" alt="logowhite" />'
+                    );
+                  }
+                );
+                let bool = true;
+              } else {
+                $(".head .logo").html(
+                  '<img src="images/logowhite.svg" alt="logowhite" />'
+                );
+                $(".dep1 > li > a").css("color", "#fff");
+                $(".headRight li a").css("color", "#fff");
+                $(".hamberger p").html(
+                  '<img src="images/hambergerwh.png" alt="hambergerwh" />'
+                );
+                $(".gnb").hover(
+                  function () {
+                    $("header").css("background-color", "#fff");
+                    $(".head .logo").html(
+                      '<img src="images/logoblack.svg" alt="logoblack" />'
+                    );
+                  },
+                  function () {
+                    $("header").css("background-color", "transparent");
+                    $(".head .logo").html(
+                      '<img src="images/logowhite.svg" alt="logowhite" />'
+                    );
+                  }
+                );
+              }
+            }
+          },
+          onLeave: function (origin, destination, direction, index) {
+            if (origin == 1 && wheelCount < 1) {
+              setTimeout(() => {
+                $(".txt1").find("[data-aos]").removeClass("aos-animate");
+              }, 750);
+            }
+
+            $(".section")
+              .eq(origin)
+              .find("[data-aos]")
+              .removeClass("aos-animate");
+          },
+        });
+        $(".close").click(function () {
+          $(".mobNav").css("display", "none");
+          $("body").off("scroll touchmove mousewheel");
+        });
+        $(".hamberger p").click(function () {
+          $(".mobNav").css("display", "block");
+          $("body").on("scroll touchmove mousewheel", function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            return false;
+          });
+        });
+        $(".navBox li").click(function () {
+          let i = $(this).index();
+          console.log(i);
+          if ($(".navBox li").eq(i).find(".dep2").css("display") == "block") {
+            $(".navBox li").eq(i).find(".dep2").css("display", "none");
+          } else {
+            $(".navBox li").eq(i).find(".dep2").css("display", "block");
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="mobNav">
+      <div class="top">
+        <div class="logo">
+          <img src="images/logoblack.svg" alt="logoblack" />
+        </div>
+        <div class="close">
+          <img src="images/icoclose.svg" alt="icoclose" />
+        </div>
+      </div>
+      <ul class="navBox">
+        <li>
+          <div class="dep1">
+            <h3>서비스 소개</h3>
+            <span>
+              <img src="images/mobnavplus.svg" alt="mobnavplus" />
+            </span>
+          </div>
+          <div class="dep2">
+            <a href="">About Us</a>
+          </div>
+        </li>
+        <li>
+          <div class="dep1">
+            <h3>멤버십</h3>
+            <span><img src="images/mobnavplus.svg" alt="mobnavplus" /></span>
+          </div>
+          <div class="dep2">
+            <a href="">포인트 안내</a>
+            <a href="">포인트 관리</a>
+            <a href="">포인트 샵</a>
+          </div>
+        </li>
+        <li>
+          <div class="dep1">
+            <h3>고객센터</h3>
+            <span><img src="images/mobnavplus.svg" alt="mobnavplus" /></span>
+          </div>
+          <div class="dep2">
+            <a href="">공지사항</a>
+            <a href="">FAQ</a>
+            <a href="">1:1문의</a>
+          </div>
+        </li>
+        <li>
+          <div class="dep1">
+            <h3>마이페이지</h3>
+            <span><img src="images/mobnavplus.svg" alt="mobnavplus" /></span>
+          </div>
+          <div class="dep2">
+            <a href="">마이홈</a>
+            <a href="">회원정보수정</a>
+            <a href="">포인트관리</a>
+            <a href="">포인트샵</a>
+            <a href="">1:1문의내역</a>
+            <a href="">나의스크랩</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <header>
+      <div class="head">
+        <div class="logo">
+          <img src="images/logowhite.svg" alt="logowhite" />
+        </div>
+        <div class="gnb">
+          <ul class="dep1">
+            <li>
+              <a href="">서비스 소개</a>
+              <ul class="dep2">
+                <li><a href="">About Us</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="">멤버십</a>
+              <ul class="dep2">
+                <li><a href="">포인트 안내</a></li>
+                <li><a href="">포인트 관리</a></li>
+                <li><a href="">포인트 샵</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="">고객센터</a>
+              <ul class="dep2">
+                <li><a href="">공지사항</a></li>
+                <li><a href="">FAQ</a></li>
+                <li><a href="">1:1문의</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="">마이페이지</a>
+              <ul class="dep2">
+                <li><a href="">마이홈</a></li>
+                <li><a href="">회원정보수정</a></li>
+                <li><a href="">포인트관리</a></li>
+                <li><a href="">포인트샵</a></li>
+                <li><a href="">1:1문의내역</a></li>
+                <li><a href="">나의스크랩</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div class="bgWhite"></div>
+        </div>
+        <ul class="headRight">
+          <li><a href="">SIGNUP</a></li>
+          <li><a href="">LOGIN</a></li>
+        </ul>
+        <div class="hamberger">
+          <p><img src="images/hambergerWh.png" alt="hambhambergerWherger" /></p>
+        </div>
+      </div>
+    </header>
+    <main id="fullpage">
+      <div class="section" id="section0">
+        <video id="myVideo" loop muted data-autoplay class="pc">
+          <source src="videos/mainpc.mp4" type="video/mp4" />
+        </video>
+        <video id="myVideo" loop muted data-autoplay class="mob">
+          <source src="videos/mainmob.mp4" type="video/mp4" />
+        </video>
+        <div class="mainPage memPage darkPage video">
+          <div class="txt">
+            <p data-aos="fade-up">허스트중앙 통합멤버십으로</p>
+            <p data-aos="fade-up" data-aos-delay="200">
+              다채로운 매거진 콘텐츠와<br />
+              취향 맞춤 서비스를 한번에!
+            </p>
+            <p data-aos="fade-up" data-aos-delay="400">
+              엘르, 코스모폴리탄, 하퍼스 바자, 에스콰이어의 다채로운 콘텐츠와<br />
+              에세이, 직업 정보, 아트 정보 등 취향 맞춤형 서비스까지
+            </p>
+            <div data-aos="fade-up" data-aos-delay="600">
+              <a href="" class="mainLink">
+                <span>멤버십 가입하기</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section" id="section1">
+        <div class="mainPage memPage darkPage point">
+          <div
+            class="obj pc"
+            data-aos="fade-in"
+            data-aos-delay="300"
+            data-aos-duration="1000"
+          >
+            <p>
+              <img src="images/pointpc.png" alt="pointpc" />
+            </p>
+          </div>
+          <div class="txt">
+            <p data-aos="fade-up">가입 즉시 축하 포인트 지급</p>
+            <p data-aos="fade-up" data-aos-delay="200">
+              가입 축하 포인트 받고<br />
+              콘텐츠 읽고<br class="mob" />
+              포인트도 모아요!
+            </p>
+            <p data-aos="fade-up" data-aos-delay="400">
+              가입 후에는 매일 기사를 읽을 때마다 포인트 적립<br />
+              재미있는 콘텐츠도 보고, 포인트도 쌓아보세요!
+            </p>
+            <div
+              data-aos="fade-in"
+              data-aos-delay="500"
+              data-aos-duration="1000"
+            >
+              <a href="" class="mainLink">
+                <span>매거진 보러가기</span>
+              </a>
+            </div>
+          </div>
+          >
+          <ul class="mob">
+            <li>
+              <img src="images/pointmobobj1.png" alt="pointmobobj1" />
+            </li>
+            <li>
+              <img src="images/pointmobobj2.png" alt="pointmobobj2" />
+            </li>
+            <li>
+              <p><img src="images/pointmobobj3.png" alt="pointmobobj3" /></p>
+            </li>
+            <li>
+              <p><img src="images/pointmobobj4.png" alt="pointmobobj4" /></p>
+            </li>
+            <li>
+              <p><img src="images/pointmobobj1.png" alt="pointmobobj1" /></p>
+            </li>
+            <li>
+              <p><img src="images/pointmobobj2.png" alt="pointmobobj2" /></p>
+            </li>
+            <li>
+              <p><img src="images/pointmobobj3.png" alt="pointmobobj3" /></p>
+            </li>
+            <li>
+              <p><img src="images/pointmobobj4.png" alt="pointmobobj4" /></p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="section" id="section2">
+        <div class="mainPage memPage darkPage coupon">
+          <div
+            class="obj pc"
+            data-aos="fade-in"
+            data-aos-delay="300"
+            data-aos-duration="1000"
+          >
+            <p><img src="images/couponpc.png" alt="couponpc" /></p>
+          </div>
+          <div class="obj mob">
+            <p><img src="images/couponmob.png" alt="couponmob" /></p>
+          </div>
+          <div class="txt">
+            <p data-aos="fade-up">차곡차곡 쌓은 포인트는</p>
+            <p data-aos="fade-up" data-aos-delay="200">
+              포인트 전환하고<br />
+              모바일 상품권으로 바꿔보세요!
+            </p>
+            <p data-aos="fade-up" data-aos-delay="400">
+              마이페이지에서 모은 포인트를 확인하고<br />
+              똑똑하게 사용해보세요
+            </p>
+            <div
+              data-aos="fade-in"
+              data-aos-delay="500"
+              data-aos-duration="1000"
+            >
+              <a href="" class="mainLink">
+                <span>포인트 샵 바로가기</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section" id="section3">
+        <div class="mainPage brightPage whiteBg">
+          <div class="txt">
+            <p data-aos="fade-up">지금 바로 만나보세요!</p>
+            <p data-aos="fade-up" data-aos-delay="200">
+              허스트중앙의 다양한 미디어 서비스
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="section" id="section4">
+        <div class="mainPage brightPage brandPage elle">
+          <div
+            class="obj pc"
+            data-aos="fade-in"
+            data-aos-delay="300"
+            data-aos-duration="1000"
+          >
+            <p>
+              <img src="images/ellepc.png" alt="ellepc" />
+            </p>
+          </div>
+          <div class="txt">
+            <p data-aos="fade-up">
+              <img src="images/ellelogo.svg" alt="ellelogo" />
+            </p>
+            <p data-aos="fade-up" data-aos-delay="200">
+              NO.1 FASHION & LIFESTYLE MEDIA
+            </p>
+            <p data-aos="fade-up" data-aos-delay="400">
+              글로벌 2,100만 독자와 함께<br />
+              세계 최대 네트워크를 자랑하는 No.1 패션 미디어
+            </p>
+            <div
+              data-aos="fade-in"
+              data-aos-delay="500"
+              data-aos-duration="1000"
+            >
+              <a href="" class="mainLink">
+                <span>바로가기</span>
+              </a>
+            </div>
+          </div>
+          <ul class="mob">
+            <li>
+              <p><img src="images/ellemob1.jpg" alt="ellemob1" /></p>
+            </li>
+            <li>
+              <p><img src="images/ellemob2.jpg" alt="ellemob2" /></p>
+            </li>
+            <li>
+              <p><img src="images/ellemob3.jpg" alt="ellemob3" /></p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="section" id="section5">
+        <div class="mainPage darkPage brandPage cosmopolitan">
+          <div
+            class="obj pc"
+            data-aos="fade-in"
+            data-aos-delay="300"
+            data-aos-duration="1000"
+          >
+            <p><img src="images/cosmopolitanpc.png" alt="cosmopolitanpc" /></p>
+          </div>
+          <div class="txt">
+            <p data-aos="fade-up">
+              <img src="images/cosmopolitanlogo.svg" alt="cosmopolitanlogo" />
+            </p>
+            <p data-aos="fade-up" data-aos-delay="200">FUN, FEARLESS, FEMALE</p>
+            <p data-aos="fade-up" data-aos-delay="400">
+              국내 최대 판매 부수와 높은 정기구독률을 자랑하는<br />
+              글로벌 라이프스타일 미디어
+            </p>
+            <div
+              data-aos="fade-in"
+              data-aos-delay="500"
+              data-aos-duration="1000"
+            >
+              <a href="" class="mainLink">
+                <span>바로가기</span>
+              </a>
+            </div>
+          </div>
+          <ul class="mob">
+            <li>
+              <p>
+                <img src="images/cosmopolitanmob1.jpg" alt="cosmopolitanmob1" />
+              </p>
+            </li>
+            <li>
+              <p>
+                <img src="images/cosmopolitanmob2.jpg" alt="cosmopolitanmob2" />
+              </p>
+            </li>
+            <li>
+              <p>
+                <img src="images/cosmopolitanmob3.jpg" alt="cosmopolitanmob3" />
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="section" id="section6">
+        <div class="mainPage darkPage brandPage bazaar">
+          <div
+            class="obj pc"
+            data-aos="fade-in"
+            data-aos-delay="300"
+            data-aos-duration="1000"
+          >
+            <p><img src="images/bazaarpc.png" alt="bazaarpc" /></p>
+          </div>
+          <div class="txt">
+            <p data-aos="fade-up">
+              <img src="images/bazaarlogo.svg" alt="bazaarlogo" />
+            </p>
+            <p data-aos="fade-up" data-aos-delay="200">FIRST IN FASHION</p>
+            <p data-aos="fade-up" data-aos-delay="400">
+              현대 여성의 문화와 라이프스타일에<br />
+              통찰력과 영감을 제공하는 전문 매거진
+            </p>
+            <div
+              data-aos="fade-in"
+              data-aos-delay="500"
+              data-aos-duration="1000"
+            >
+              <a href="" class="mainLink">
+                <span>바로가기</span>
+              </a>
+            </div>
+          </div>
+          <ul class="mob">
+            <li>
+              <p><img src="images/bazaarmob1.jpg" alt="bazaarmob1" /></p>
+            </li>
+            <li>
+              <p><img src="images/bazaarmob2.jpg" alt="bazaarmob2" /></p>
+            </li>
+            <li>
+              <p><img src="images/bazaarmob3.jpg" alt="bazaarmob3" /></p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="section" id="section7">
+        <div class="mainPage darkPage brandPage esquire">
+          <div
+            class="obj pc"
+            data-aos="fade-in"
+            data-aos-delay="300"
+            data-aos-duration="1000"
+          >
+            <p><img src="images/esquirepc.png" alt="esquirepc" /></p>
+          </div>
+          <div class="txt">
+            <p data-aos="fade-up">
+              <img src="images/esquirelogo.svg" alt="esquirelogo" />
+            </p>
+            <p data-aos="fade-up" data-aos-delay="200">MAN AT HIS BEST</p>
+            <p data-aos="fade-up" data-aos-delay="400">
+              취향이 남다른 남자들을 위한<br />
+              지적인 바이블
+            </p>
+            <div
+              data-aos="fade-in"
+              data-aos-delay="500"
+              data-aos-duration="1000"
+            >
+              <a href="" class="mainLink">
+                <span>바로가기</span>
+              </a>
+            </div>
+          </div>
+          <ul class="mob">
+            <li>
+              <p><img src="images/esquiremob1.jpg" alt="esquiremob1" /></p>
+            </li>
+            <li>
+              <p><img src="images/esquiremob2.jpg" alt="esquiremob2" /></p>
+            </li>
+            <li>
+              <p><img src="images/esquiremob3.jpg" alt="esquiremob3" /></p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="section" id="section8">
+        <div class="mainPage brightPage whiteBg">
+          <div class="txt">
+            <p data-aos="fade-up">다채롭게 경험해보세요</p>
+            <p data-aos="fade-up" data-aos-delay="200">
+              개인 취향에 맞춘 테마별 서비스
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="section" id="section9">
+        <div class="mainPage brightPage appPage ellevoice">
+          <div class="wrap">
+            <div class="txt" data-aos="fade-up">
+              <p>엘르보이스</p>
+              <p>
+                여성의 삶,<br />
+                레퍼런스가 필요할 때
+              </p>
+              <p>
+                작가, 북튜버, 아나운서, 기자 싱어송라이터까지!<br />
+                동시대를 살아가는 여성들의 에세이<br class="mob" />
+                뉴스레터를 구독해보세요.
+              </p>
+              <div>
+                <a href="" class="mainLink">
+                  <span>바로가기</span>
+                </a>
+              </div>
+            </div>
+            <picture
+              class="pc"
+              data-aos="fade-up"
+              data-aos-delay="200"
+              data-aos-duration="500"
+            >
+              <img src="images/ellevoicepc.png" alt="ellevoicepc" />
+            </picture>
+            <picture class="mob">
+              <img src="images/ellevoicemob.png" alt="ellevoicemob" />
+            </picture>
+          </div>
+        </div>
+      </div>
+      <div class="section" id="section10">
+        <div class="mainPage darkPage appPage artwalk">
+          <div class="wrap">
+            <div class="txt" data-aos="fade-up">
+              <p>예술산책</p>
+              <p>
+                ‘예술'을 ‘산책'하듯 가볍게 즐기는<br />
+                아트 큐레이션 서비스
+              </p>
+              <p>
+                지금 국내의 아트신에서 펼쳐지고 있는<br />
+                주요 전시와 이슈들을 확인해보세요!
+              </p>
+              <div>
+                <a class="mainLink" href=""><span>바로가기</span></a>
+              </div>
+            </div>
+            <picture
+              class="pc"
+              data-aos="fade-up"
+              data-aos-delay="200"
+              data-aos-duration="500"
+            >
+              <img src="images/artwalkpc.png" alt="artwalkpc" />
+            </picture>
+            <picture class="mob">
+              <img src="images/artwalkmob.png" alt="artwalkmob" />
+            </picture>
+          </div>
+        </div>
+      </div>
+      <div class="section" id="section11">
+        <div class="mainPage brightPage appPage eee">
+          <div class="wrap">
+            <div class="txt" data-aos="fade-up">
+              <p>eee</p>
+              <p>
+                에스콰이어 에디터가<br />
+                기록하는 핫플 수첩
+              </p>
+              <p>
+                맛집부터 카페, 여행, 노포까지<br />
+                에디터의 시각으로 수집한 공간에서<br />
+                나만의 취향을 발견해보세요.
+              </p>
+              <div>
+                <a href="" class="mainLink">
+                  <span>바로가기</span>
+                </a>
+              </div>
+            </div>
+            <picture
+              class="pc"
+              data-aos="fade-up"
+              data-aos-delay="200"
+              data-aos-duration="500"
+            >
+              <img src="images/eeepc.png" alt="eeepc" />
+            </picture>
+            <picture class="mob">
+              <img src="images/eeemob.png" alt="eeemob" />
+            </picture>
+          </div>
+        </div>
+      </div>
+      <footer class="section fp-auto-height" id="section12">
+        <div class="foot">
+          <ul class="footTop">
+            <li><a href="">이용약관</a></li>
+            <li><a href="">개인정보처리방침</a></li>
+            <li><a href="">이메일무단수집금지</a></li>
+            <li><a href="">윤리경영</a></li>
+          </ul>
+          <div class="footBot">
+            <address>
+              <span>허스트중앙(유)</span>
+              <span>서울시 강남구 도산대로 156(논현동)</span>
+              <span>대표자 : 강주연</span><br />
+              <span>사업자등록번호 : 104-81-55280</span>
+              <span>통신판매업신고 : 제 2014-서울강남-00333호</span>
+            </address>
+            <p class="copyright">
+              © 2024 Hearst Joongang. All Rights Reserved.
+            </p>
+          </div>
+        </div>
+      </footer>
+    </main>
+    <div class="float">
+      <ul class="navBar">
+        <li><a href="">회사소개</a></li>
+        <li><a href="">ELLE</a></li>
+        <li><a href="">Cosmopolitan</a></li>
+        <li><a href="">Harper's BAZAAR</a></li>
+        <li><a href="">Esquire</a></li>
+        <li><a href="">엘르보이스</a></li>
+        <li><a href="">예술산책</a></li>
+        <li><a href="">eee</a></li>
+      </ul>
+      <input type="radio" name="radio" id="float" />
+      <label for="float"><img src="images/float.png" alt="float" /></label>
+    </div>
+    <script src="js/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script>
+      let btn = document.querySelector("label");
+      let nav = document.querySelector(".navBar");
+      btn.onclick = function () {
+        this.classList.toggle("on");
+        nav.classList.toggle("on");
+      };
+    </script>
+  </body>
+</html>
